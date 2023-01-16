@@ -1,0 +1,59 @@
+/* Reseteo propiedades por defecto y fuente */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a:link, a:visited, a:active{
+    text-decoration:none;
+}
+
+/* Inicio estilos index */
+
+#index-body{
+    background-color: white;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .85rem;
+}
+
+#menu{
+    background-color: rgb(113, 128, 113);
+}
+
+#menuIzquierda{
+    display: flex;
+}
+
+#menuDerecha{
+    display: flex;
+}
+
+.elementoMenu{
+    margin-left: .4rem;
+    margin-right: .4rem;
+}
+
+#menuDerecha a{
+    background-color: aqua;
+    padding: .35rem;
+    border-radius: .4rem;
+}
+/* Fin estilos index */
