@@ -1,58 +1,48 @@
+DROP DATABASE IF EXISTS animal_shelter;
+
 CREATE DATABASE animal_shelter;
 
 USE animal_shelter;
 
--- Tabla de animales
-CREATE TABLE animals (
+/* Tabla tipo de usuairos */
+CREATE TABLE tipos_usuarios (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    usuario VARCHAR(255) NOT NULL
+);
+
+/* Tabla usuarios */
+CREATE TABLE usuarios (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    passwd VARCHAR(255) NOT NULL,
+    dni VARCHAR(9) NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    apellidos VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    tipo INT NOT NULL,
+    FOREIGN KEY (tipo) REFERENCES tipos_usuarios(id)
+);
+
+/* Tabla animales */
+CREATE TABLE animals (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
     species VARCHAR(255) NOT NULL,
     gender ENUM('male', 'female') NOT NULL,
     birthdate DATE NOT NULL,
     picture VARCHAR(255) NOT NULL
 );
 
--- Tabla de adoptantes
-CREATE TABLE adopters (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    address VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
-);
-
--- Tabla de adopciones
+/* Tabla adopciones */
 CREATE TABLE adoptions (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     adoption_date DATE NOT NULL,
     animal_id INT NOT NULL,
-    adopter_id INT NOT NULL,
+    adoptante_id INT NOT NULL,
     FOREIGN KEY (animal_id) REFERENCES animals(id),
-    FOREIGN KEY (adopter_id) REFERENCES adopters(id)
-);
-
--- Tabla de voluntarios
-CREATE TABLE volunteers (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
-);
-
--- Tabla de proveedores
-CREATE TABLE providers (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    company_name VARCHAR(255) NOT NULL,
-    contact VARCHAR(255) NOT NULL,
-    products_services VARCHAR(255) NOT NULL
-);
-
--- Tabla de eventos
-CREATE TABLE events (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    date DATE NOT NULL,
-    location VARCHAR(255) NOT NULL,
-    description VARCHAR(255) NOT NULL
+    FOREIGN KEY (adoptante_id) REFERENCES usuarios(id)
 );
 
 -- Tabla de donaciones
@@ -60,15 +50,8 @@ CREATE TABLE donations (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     donation_date DATE NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
-    payment_method VARCHAR(255) NOT NULL
-);
-
--- Tabla de veterinarios
-CREATE TABLE veterinarians (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    specialty VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL
+    donador_id INT,
+    FOREIGN KEY (donador_id) REFERENCES usuarios(id)
 );
 
 -- Tabla de historial médico
@@ -78,15 +61,7 @@ CREATE TABLE medical_history (
     treatment VARCHAR(255) NOT NULL,
     observations VARCHAR(255) NOT NULL,
     animal_id INT NOT NULL,
-    veterinarian_id INT NOT NULL,
+    id_veterinario INT NOT NULL,
     FOREIGN KEY (animal_id) REFERENCES animals(id),
-    FOREIGN KEY (veterinarian_id) REFERENCES veterinarians(id)
-);
-
--- Tabla de usuarios
-CREATE TABLE users (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    access_level ENUM('administrator', 'standard', 'read-only') NOT NULL
+    FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
 );
