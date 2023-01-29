@@ -4,25 +4,18 @@ CREATE DATABASE animal_shelter;
 
 USE animal_shelter;
 
-/* Tabla tipo de usuairos */
-CREATE TABLE tipos_usuarios (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    usuario VARCHAR(255) NOT NULL
-);
-
 /* Tabla usuarios */
 CREATE TABLE usuarios (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     passwd VARCHAR(255) NOT NULL,
+    gender ENUM('admin', 'veterinario','otro') NOT NULL,
     dni VARCHAR(9) NOT NULL,
     nombre VARCHAR(255) NOT NULL,
     apellidos VARCHAR(255) NOT NULL,
     direccion VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    tipo INT NOT NULL,
-    FOREIGN KEY (tipo) REFERENCES tipos_usuarios(id)
+    email VARCHAR(255) NOT NULL
 );
 
 /* Tabla animales */
