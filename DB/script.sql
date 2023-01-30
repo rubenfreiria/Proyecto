@@ -1,60 +1,62 @@
-DROP DATABASE IF EXISTS animal_shelter;
+DROP DATABASE IF EXISTS protectora_teis;
 
-CREATE DATABASE animal_shelter;
+CREATE DATABASE protectora_teis;
 
-USE animal_shelter;
+USE protectora_teis;
 
 /* Tabla usuarios */
 CREATE TABLE usuarios (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    passwd VARCHAR(255) NOT NULL,
-    gender ENUM('admin', 'veterinario','otro') NOT NULL,
-    dni VARCHAR(9) NOT NULL,
-    nombre VARCHAR(255) NOT NULL,
-    apellidos VARCHAR(255) NOT NULL,
-    direccion VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    nombre_usuario VARCHAR(20) NOT NULL,
+    passwd VARCHAR(36) NOT NULL,
+    nivel_acceso ENUM('admin', 'veterinario', 'otro') NOT NULL,
+    dni VARCHAR(9) NOT NULL UNIQUE,
+    nombre VARCHAR(40) NOT NULL,
+    apellidos VARCHAR(60) NOT NULL,
+    direccion VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE
 );
 
 /* Tabla animales */
-CREATE TABLE animals (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    species VARCHAR(255) NOT NULL,
-    gender ENUM('male', 'female') NOT NULL,
-    birthdate DATE NOT NULL,
-    picture VARCHAR(255) NOT NULL
+CREATE TABLE animales (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(40) NOT NULL,
+    genero ENUM('macho', 'hembra') NOT NULL,
+    especie ENUM('perro', 'gato') NOT NULL,
+    raza VARCHAR(40) NOT NULL,
+    fecha_nacimineto DATE NOT NULL,
+    foto VARCHAR(200) NOT NULL
 );
 
 /* Tabla adopciones */
-CREATE TABLE adoptions (
+CREATE TABLE adopciones (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    adoption_date DATE NOT NULL,
-    animal_id INT NOT NULL,
-    adoptante_id INT NOT NULL,
-    FOREIGN KEY (animal_id) REFERENCES animals(id),
-    FOREIGN KEY (adoptante_id) REFERENCES usuarios(id)
+    fecha_adopcion DATE NOT NULL,
+    id_animal INT NOT NULL,
+    id_adoptante INT NOT NULL,
+    FOREIGN KEY (id_animal) REFERENCES animales(id),
+    FOREIGN KEY (id_adoptante) REFERENCES usuarios(id)
 );
 
--- Tabla de donaciones
-CREATE TABLE donations (
+/* Tabla de donaciones */
+CREATE TABLE donaciones (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    donation_date DATE NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL,
+    fecha_donacion DATE NOT NULL,
+    cantidad DECIMAL(10, 2) NOT NULL,
     donador_id INT,
     FOREIGN KEY (donador_id) REFERENCES usuarios(id)
 );
 
--- Tabla de historial médico
-CREATE TABLE medical_history (
+/* Tabla de historial médico */
+/* Comprobar si se puede crear la clave con las dos foreing keys */
+CREATE TABLE historial_medico (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    visit_date DATE NOT NULL,
-    treatment VARCHAR(255) NOT NULL,
-    observations VARCHAR(255) NOT NULL,
-    animal_id INT NOT NULL,
+    fecha_visita DATE NOT NULL,
+    tratamiento VARCHAR(255) NOT NULL,
+    observaciones VARCHAR(255) NOT NULL,
+    id_animal INT NOT NULL,
     id_veterinario INT NOT NULL,
-    FOREIGN KEY (animal_id) REFERENCES animals(id),
+    FOREIGN KEY (id_animal) REFERENCES animales(id),
     FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
 );
