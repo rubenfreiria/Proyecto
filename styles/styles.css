@@ -8,8 +8,30 @@
   --main-grey: #ededed;
 }
 
-/* Fuentes */
+/* Fin definicion de variables */
+
+/* Inicio fuentes */
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap");
+
+/* Fin fuentes */
+
+/* Inicio estilo botones */
+
+button {
+  margin-top: 8px;
+  padding: 9px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+button:hover {
+  background-color: var(--ligth-red);
+}
+
+/* Final estilo botones */
 
 /* Reseteo propiedades por defecto y fuente */
 
@@ -39,7 +61,7 @@ a:active {
 /* Inicio estilos index */
 
 #index-body {
-  background-color: white;
+  background-color: var(--main-white);
 }
 
 #menu {
@@ -51,7 +73,7 @@ a:active {
 }
 
 #menu {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--main-black);
 }
 
 #menuIzquierda {
@@ -70,14 +92,19 @@ a:active {
 }
 
 #menuDerecha a {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 0.35rem;
-  border-radius: 0.4rem;
-  color: black;
+  padding: 9px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+#menuDerecha a:hover {
+  background-color: var(--ligth-red);
 }
 
 #h3Menu {
-  color: black;
+  color: var(--main-white);
 }
 
 #logoHeader {
@@ -85,25 +112,39 @@ a:active {
   height: 50px;
 }
 
+#index-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
 video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 105%;
+  width: 100%;
+  max-width: 100%;
   min-height: 100%;
-  transform: translateX(calc((100% - 100vw) / 2));
   z-index: -2;
 }
 /* Fin estilos index */
 
-/* Inicio estilos login */
+/* Inicio estilos login y register*/
 
-#containerForm {
+#containerFormLogin {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 350px;
   height: 400px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+}
+
+#containerFormRegister {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 560px;
   border-radius: 6px;
   background-color: var(--main-grey);
 }
@@ -115,7 +156,14 @@ video {
   margin-top: 72px;
 }
 
-.formBackToIndex {
+.backToIndex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--main-black);
+}
+
+.h3Login {
   margin-top: 28px;
   margin-bottom: 16px;
 }
@@ -128,6 +176,7 @@ form {
 }
 
 .elementoForm {
+  width: 200px;
   margin-bottom: 18px;
   padding: 8px;
   background-color: var(--main-white);
@@ -136,18 +185,6 @@ form {
   border-color: var(--main-black);
 }
 
-.btnForm {
-  margin-top: 8px;
-  padding: 9px;
-  border-radius: 14px;
-  border: none;
-  background-color: var(--main-red);
-  color: var(--main-white);
-}
-
-.btnForm:hover {
-  background-color: var(--ligth-red);
-}
 .cambioForm {
   margin-top: 32px;
 }
@@ -155,4 +192,8 @@ form {
 .cambioForm a {
   color: #0095f6;
 }
-/* Fin estilos login */
+.cambioForm a:hover {
+  color: #29a9ff;
+}
+
+/* Fin estilos login y register*/
