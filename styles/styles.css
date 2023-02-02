@@ -1,3 +1,16 @@
+/* Definicion de colores que se usaran varias veces */
+
+:root {
+  --main-black: #0f1618;
+  --main-red: #dc191b;
+  --ligth-red: #e63f41;
+  --main-white: #fff;
+  --main-grey: #ededed;
+}
+
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap");
+
 /* Reseteo propiedades por defecto y fuente */
 
 * {
@@ -9,7 +22,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 body {
@@ -82,3 +95,64 @@ video {
   z-index: -2;
 }
 /* Fin estilos index */
+
+/* Inicio estilos login */
+
+#containerForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 400px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+}
+
+.formFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.formBackToIndex {
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+.elementoForm {
+  margin-bottom: 18px;
+  padding: 8px;
+  background-color: var(--main-white);
+  color: var(--main-black);
+  border-radius: 8px;
+  border-color: var(--main-black);
+}
+
+.btnForm {
+  margin-top: 8px;
+  padding: 9px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+.btnForm:hover {
+  background-color: var(--ligth-red);
+}
+.cambioForm {
+  margin-top: 32px;
+}
+
+.cambioForm a {
+  color: #0095f6;
+}
+/* Fin estilos login */
