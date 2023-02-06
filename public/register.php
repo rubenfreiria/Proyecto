@@ -9,7 +9,7 @@
   </head>
   <body class="formFlex">
     <div id="containerFormRegister">
-      <a class="backToIndex" href="../index.html"
+      <a class="backToIndex" href="../index.php"
         ><h3 class="h3Login">Protectora</h3>
         <img id="logoHeader" src="../img/logos/logo.png"
       /></a>
@@ -57,7 +57,7 @@
         <button class="btnForm" type="submit">Enviar</button>
       </form>
       <p class="cambioForm">
-        Ya tienes cuenta?<a href="login.html"> Iniciar sesión</a>
+        Ya tienes cuenta?<a href="login.php"> Iniciar sesión</a>
       </p>
     </div>
   </body>

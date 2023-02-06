@@ -17,12 +17,12 @@
             src="./img/logos/logoWhite.png"
           />
           <h3>
-            <a class="elementoMenu" id="h3Menu" href="index.html">Protectora</a>
+            <a class="elementoMenu" id="h3Menu" href="index.php">Protectora</a>
           </h3>
         </div>
         <div id="menuDerecha">
-          <a class="elementoMenu" href="html/register.html">Registrarse</a>
-          <a class="elementoMenu" href="html/login.html">Login</a>
+          <a class="elementoMenu" href="public/register.php">Registrarse</a>
+          <a class="elementoMenu" href="public/login.php">Login</a>
         </div>
       </nav>
     </header>
