@@ -61,7 +61,49 @@ CREATE TABLE historial_medico (
     FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
 );
 
-INSERT INTO usuarios (nombre_usuario, passwd, nivel_acceso, dni, nombre, apellidos, direccion, telefono, email)
-VALUES ('admin', 'Abcd1234.', 'admin', '12345678P', 'Pepe', 'Perez', 'Calle Falsa 123', '678123456', 'pepe@pepe.com');
-VALUES ('paquito48', 'renaido', 'otro', '89347578A', 'Paco', 'Lopez', 'Calle no falsa 54', '694527090', 'paquito46@example.com');
-VALUES ('federico_01', 'veteteis', 'veterinario', '16754320O', 'Federico', 'García', 'Avenida de Galicia 12', '60645342', 'federico@protectorateis.com');
+INSERT INTO
+    usuarios (
+        nombre_usuario,
+        passwd,
+        nivel_acceso,
+        dni,
+        nombre,
+        apellidos,
+        direccion,
+        telefono,
+        email
+    )
+VALUES
+    (
+        'admin',
+        'Abcd1234.',
+        'admin',
+        '12345678P',
+        'Pepe',
+        'Perez',
+        'Calle Falsa 123',
+        '678123456',
+        'pepe@pepe.com'
+    ),
+    (
+        'paquito48',
+        'renaido',
+        'otro',
+        '89347578A',
+        'Paco',
+        'Lopez',
+        'Calle no falsa 54',
+        '694527090',
+        'paquito46@example.com'
+    ),
+    (
+        'federico_01',
+        'veteteis',
+        'veterinario',
+        '16754320O',
+        'Federico',
+        'García',
+        'Avenida de Galicia 12',
+        '60645342',
+        'federico@protectorateis.com'
+    );
