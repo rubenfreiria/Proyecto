@@ -2,7 +2,7 @@
 /* Funcion que devuelve true si los campos del formulario están completos */
 function comprobarFormLogin()
 {
-  if ($_POST['loginEmail'] != "" && $_POST['loginPassword'] != "") {
+  if (!empty($_POST['loginEmail']) && !empty($_POST['loginPassword'])) {
     return true;
   } else {
     return false;
@@ -20,9 +20,10 @@ function comprobarUserEnDB()
     } catch (PDOException $e) {
       die("ERROR: " . $e->getMessage() . "<br>" . $e->getCode());
     }
-    $consulta = "SELECT * FROM usuarios WHERE email = '$loginEmail' AND passwd = '$loginpasswd';";
+    $consulta = "SELECT * FROM usuarios WHERE email = '$loginEmail';";
     $resultado = $pdo->query($consulta);
-    if ($resultado->rowCount() > 0) {
+    $user = $resultado->fetch(PDO::FETCH_ASSOC);
+    if ($resultado->rowCount() > 0 && password_verify($loginpasswd, $user['passwd'])) {
       //El usuario existe y las credenciales son correctas
       return true;
     } else {
@@ -37,6 +38,7 @@ function comprobarUserEnDB()
 
 $resultadoComprobarUserEnDB = comprobarUserEnDB();
 if ($resultadoComprobarUserEnDB == true) {
+  echo "Tiro jiji";
   /* Caso de datos introducidos correctos. Continuar haciendo el inicio de sesion */
 } else {
   echo "El usuario no existe o las credenciales son incorrectas.";

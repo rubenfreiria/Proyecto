@@ -76,7 +76,7 @@ INSERT INTO
 VALUES
     (
         'admin',
-        'Abcd1234.',
+        '$2y$10$1UYunAqyJErWotljCrgkSeE6RrH5q48ZOusvdueNK.PbKQKHpaoPa',
         'admin',
         '12345678P',
         'Pepe',
@@ -87,7 +87,7 @@ VALUES
     ),
     (
         'paquito48',
-        'renaido',
+        '$2y$10$YwJZS8GYOiEx9AgsL.xoK.6cjLEBnbIfmlB5I/773tuM7KEnJMswu',
         'otro',
         '89347578A',
         'Paco',
@@ -98,7 +98,7 @@ VALUES
     ),
     (
         'federico_01',
-        'veteteis',
+        '$2y$10$Xdgf46oCeyhR6RJXiDCBbe0GZALHVkycBDJ2YmSs0mbHpU1voTj26',
         'veterinario',
         '16754320O',
         'Federico',
