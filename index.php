@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="./img/logos/logoWhite.png" />
-  <link rel="stylesheet" href="styles\styles.css" />
+  <link rel="stylesheet" href=".\styles\styles.css" />
   <title>Protectora</title>
 </head>
 
@@ -35,10 +35,10 @@
     </div>
   </section>
   <main id="index-main">
-    <h1>Texto</h1>
-    <h1>De</h1>
-    <h1>Ejemplo</h1>
-    <video src="video/vd01.mp4" autoplay="true" muted="true" loop="true"></video>
+    <h1 class="slide-bottom">Texto</h1>
+    <h1 class="slide-bottom">De</h1>
+    <h1 class="slide-bottom">Ejemplo</h1>
+    <video src=".\video\vd01.mp4" autoplay="true" muted="true" loop="true"></video>
   </main>
   <section id="quienesSomos">
     <div id="containerQuienesSomos">

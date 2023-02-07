@@ -147,6 +147,20 @@ a:active {
   color: var(--main-white);
 }
 
+/* Animacion de desplazarse hacia abajo para el texto con el video de fondo */
+.slide-bottom {
+  animation: slide-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* Menucontainer para movil */
 @media screen and (max-width: 660px) {
   #menuContainer {
@@ -276,12 +290,12 @@ a:active {
   box-shadow: 4px 2px 2px #e63f429c;
 }
 
-.cardQuePuedohacer p{
+.cardQuePuedohacer p {
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
-.cardQuePuedohacer button{
+.cardQuePuedohacer button {
   font-size: 15px;
 }
 
