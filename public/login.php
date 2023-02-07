@@ -15,7 +15,7 @@
       <h3 class="h3Login">Protectora</h3>
       <img id="logoHeader" src="../img/logos/logo.png" />
     </a>
-    <form action="procesoLogin.php" method="post">
+    <form action="comprobarUserEnBD.php" method="post">
       <input type="email" name="loginEmail" id="loginEmail" class="elementoForm" placeholder="Correo electronico"
         required />
       <input type="password" name="loginPassword" id="loginPassword" class="elementoForm" placeholder="Contaseña"
