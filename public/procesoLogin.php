@@ -1,4 +1,15 @@
 <?php
+
+/* Funcion para conectarse a la base de datos usando PDO */
+function conectarBD() {
+  try {
+    $pdo = new PDO('mysql:dbname=protectora_teis;host=localhost', 'root', '');
+  } catch (PDOException $e) {
+    die("ERROR: " . $e->getMessage() . "<br>" . $e->getCode());
+  }
+  return $pdo;
+}
+
 /* Funcion que devuelve true si los campos del formulario están completos */
 function comprobarFormLogin()
 {
@@ -18,12 +29,7 @@ function comprobarUserEnDB()
   if ($resultadoComprobarLogin == true) {
     $loginEmail = $_POST['loginEmail'];
     $loginpasswd = $_POST['loginPassword'];
-    //Conexion a BD usando PDO
-    try {
-      $pdo = new PDO('mysql:dbname=protectora_teis;host=localhost', 'root', '');
-    } catch (PDOException $e) {
-      die("ERROR: " . $e->getMessage() . "<br>" . $e->getCode());
-    }
+    $pdo = conectarBD();
     $consulta = "SELECT * FROM usuarios WHERE email = '$loginEmail';";
     $resultado = $pdo->query($consulta);
     $user = $resultado->fetch(PDO::FETCH_ASSOC);
