@@ -8,7 +8,7 @@ USE protectora_teis;
 CREATE TABLE usuarios (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre_usuario VARCHAR(20) NOT NULL,
-    passwd VARCHAR(36) NOT NULL,
+    passwd VARCHAR(200) NOT NULL,
     nivel_acceso ENUM('admin', 'veterinario', 'otro') NOT NULL,
     dni VARCHAR(9) NOT NULL UNIQUE,
     nombre VARCHAR(40) NOT NULL,
