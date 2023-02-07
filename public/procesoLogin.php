@@ -9,12 +9,16 @@ function comprobarFormLogin()
   }
 }
 
+/* Funcion que comprueba si los datos instroducidos en el formulario de login sean correctos
+Si son correctos devuelve true, si falla el correo o la contrasenha, devuelve false*/
 function comprobarUserEnDB()
 {
   $resultadoComprobarLogin = comprobarFormLogin();
+  //Llama a la funcion comprobarFormLogin()
   if ($resultadoComprobarLogin == true) {
     $loginEmail = $_POST['loginEmail'];
     $loginpasswd = $_POST['loginPassword'];
+    //Conexion a BD usando PDO
     try {
       $pdo = new PDO('mysql:dbname=protectora_teis;host=localhost', 'root', '');
     } catch (PDOException $e) {
