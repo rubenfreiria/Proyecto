@@ -25,7 +25,7 @@ CREATE TABLE animales (
     genero ENUM('macho', 'hembra') NOT NULL,
     especie ENUM('perro', 'gato') NOT NULL,
     raza VARCHAR(40) NOT NULL,
-    fecha_nacimineto DATE NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
     foto VARCHAR(200) NOT NULL
 );
 
@@ -110,7 +110,7 @@ VALUES
     );
 
     /* Insert tabla animales */
-    INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimineto, foto) VALUES
+    INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimiento, foto) VALUES
     ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "luna.jpeg"),
     ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "max.jpeg"),
     ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "buddy.jpeg"),
@@ -134,5 +134,5 @@ VALUES
     ("2022-10-12", 3, 2), 
     ("2022-09-30", 4, 2), 
     ("2022-07-15", 6, 3), 
-    ("2022-05-01", 8, 3), 
+    ("2022-05-01", 8, 3); 
     

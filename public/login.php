@@ -13,7 +13,7 @@
   <div id="containerFormLogin">
     <a class="backToIndex" href="../index.php">
       <h3 class="h3Login">Protectora</h3>
-      <img id="logoHeader" src="../img/logos/logo.png" />
+      <img id="logoHeader" src="../media/logos/logo.png" />
     </a>
     <form action="../modules/comprobarUserEnBD.php" method="post">
       <input type="email" name="loginEmail" id="loginEmail" class="elementoForm" placeholder="Correo electronico"

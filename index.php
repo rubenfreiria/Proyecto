@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="./img/logos/logoWhite.png" />
+  <link rel="icon" type="image/png" href="./media/logos/logoWhite.png" />
   <link rel="stylesheet" href=".\styles\styles.css" />
   <title>Protectora</title>
 </head>
@@ -14,7 +14,7 @@
   <header>
     <nav id="menu">
       <div id="menuIzquierda">
-        <img class="elementoMenu" id="logoHeader" src="./img/logos/logoWhite.png" />
+        <img class="elementoMenu" id="logoHeader" src="./media/logos/logoWhite.png" />
         <h3>
           <a class="elementoMenu" id="h3Menu" href="index.php">Protectora</a>
         </h3>
@@ -46,7 +46,7 @@
       <p>Somos una asoción protectora de animales que está ubicada en Teis</p>
     </div>
     <div id="containerImgPerroEncerrado">
-      <img src="./img/perroJaula.jpg" alt="perroEncerrado" />
+      <img src="./media/perroJaula.jpg" alt="perroEncerrado" />
     </div>
   </section>
   <section id="quePuedoHacer">
@@ -72,16 +72,15 @@
   <footer id="footer-index">
     <div id="social">
       <a>
-        <img id="twitter" src="./img/social/instagram.svg" alt="twitter" />
+        <img id="twitter" src="./media/social/instagram.svg" alt="twitter" />
       </a>
       <a>
-        <img id="instagram" src="./img/social/tiktok.svg" alt="instagram" />
+        <img id="instagram" src="./media/social/tiktok.svg" alt="instagram" />
       </a>
       <a>
-        <img id="tiktok" src="./img/social/twitter.svg" alt="tiktok" />
+        <img id="tiktok" src="./media/social/twitter.svg" alt="tiktok" />
       </a>
     </div>
   </footer>
 </body>
-
 </html>
