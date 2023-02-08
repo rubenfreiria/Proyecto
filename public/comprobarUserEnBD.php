@@ -29,9 +29,9 @@ function comprobarUserEnDB()
 
 $resultadoComprobarUserEnDB = comprobarUserEnDB();
 if ($resultadoComprobarUserEnDB == true) {
-  echo "Tiro jiji";
-  /* Caso de datos introducidos correctos. Continuar haciendo el inicio de sesion */
+    echo "Tiro jiji";
+    /* Caso de datos introducidos correctos. Continuar haciendo el inicio de sesion */
 } else {
-  echo "El usuario no existe o las credenciales son incorrectas.";
+    echo "El usuario no existe o las credenciales son incorrectas.";
 }
 ?>
