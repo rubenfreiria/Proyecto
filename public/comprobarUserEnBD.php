@@ -10,7 +10,7 @@ function comprobarUserEnDB()
     if ($resultadoComprobarLogin == true) {
         $loginEmail = $_POST['loginEmail'];
         $loginpasswd = $_POST['loginPassword'];
-        $pdo = conectarBD();
+        $pdo = conectarBD("admin");
         $consulta = "SELECT * FROM usuarios WHERE email = '$loginEmail';";
         $resultado = $pdo->query($consulta);
         $user = $resultado->fetch(PDO::FETCH_ASSOC);

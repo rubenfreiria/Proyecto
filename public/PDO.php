@@ -1,6 +1,7 @@
 <?php
 /* Funcion para conectarse a la base de datos usando PDO */
-function leer_config($fichero_config_BBDD, $esquema) {
+function leer_config($fichero_config_BBDD, $esquema)
+{
     /*
      * $fichero_config_BBDD es la ruta del fichero con los datos de conexión a la BBDD
      * $esquema es la ruta del fichero XSD para validar la estructura del fichero anterior
@@ -28,11 +29,23 @@ function leer_config($fichero_config_BBDD, $esquema) {
     return $resul;
 }
 
-function conectarBD()
+function conectarBD($permisos)
 {
     try {
-        $res = leer_config(dirname(__FILE__) . "./config/configuracion.xml", dirname(__FILE__) . "./config/configuracion.xsd");
-        $pdo = new PDO($res[0], $res[1], $res[2]);
+        /* Usuarios disponibles para la base de datos, cada uno con
+        su fichero de configuracion */
+        if ($permisos === "admin") {
+            $res = leer_config(dirname(__FILE__) . "./config/configuracionAdmin.xml", dirname(__FILE__) . "./config/configuracion.xsd");
+            $pdo = new PDO($res[0], $res[1], $res[2]);
+        }
+        if ($permisos === "veterinario") {
+            $res = leer_config(dirname(__FILE__) . "./config/configuracionVeterinario.xml", dirname(__FILE__) . "./config/configuracion.xsd");
+            $pdo = new PDO($res[0], $res[1], $res[2]);
+        }
+        if ($permisos === "otro") {
+            $res = leer_config(dirname(__FILE__) . "./config/configuracionOtro.xml", dirname(__FILE__) . "./config/configuracion.xsd");
+            $pdo = new PDO($res[0], $res[1], $res[2]);
+        }
         return $pdo;
     } catch (PDOException $e) {
         echo $e->getMessage();
