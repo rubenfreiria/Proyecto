@@ -57,7 +57,7 @@
         <button class="btnForm" type="submit">Enviar</button>
       </form>
       <p class="cambioForm">
-        Ya tienes cuenta?<a href="login.php"> Iniciar sesión</a>
+        Ya tienes cuenta?<a href="./login.php"> Iniciar sesión</a>
       </p>
     </div>
   </body>

@@ -38,7 +38,7 @@
     <h1 class="slide-bottom">Texto</h1>
     <h1 class="slide-bottom">De</h1>
     <h1 class="slide-bottom">Ejemplo</h1>
-    <video src=".\video\vd01.mp4" autoplay="true" muted="true" loop="true"></video>
+    <video src=".\media\video\vd01.mp4" autoplay="true" muted="true" loop="true"></video>
   </main>
   <section id="quienesSomos">
     <div id="containerQuienesSomos">
