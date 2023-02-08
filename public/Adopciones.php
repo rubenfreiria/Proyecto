@@ -9,10 +9,10 @@
     <title>Adopciones</title>
 </head>
 
-<body id="bodyAdopciones">
+<body>
     <h1>Adopciones</h1>
 
-    <main id="mainAdopciones">
+    <main>
         <?php
         include('../modules/PDO.php');
         /* En produccion usar otro usuario con menos permisos que admin */
@@ -20,12 +20,9 @@
         $consulta = "SELECT nombre, genero, raza, fecha_nacimiento, foto FROM animales;";
         $resultado = $pdo->query($consulta);
         $datosAnimal = $resultado->fetchAll(PDO::FETCH_ASSOC);
-        
-        /* Genera automaticamente el contenido recogiendo todos los datos de la base de datos */
-        $contador = 0;
         foreach ($datosAnimal as $animal) {
-            echo "<div>" . $datosAnimal[$contador]["nombre"] . "</div>";
-            $contador++;
+            echo"<div>" . $animal['nombre'] . "</div><br>";
+            echo"<div>" . $animal['genero'] . "</div><br>";
         }
         ?>
     </main>
