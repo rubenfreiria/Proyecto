@@ -61,6 +61,7 @@ CREATE TABLE historial_medico (
     FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
 );
 
+/* Insert a tabla usuarios */
 INSERT INTO
     usuarios (
         nombre_usuario,
@@ -107,3 +108,31 @@ VALUES
         '60645342',
         'federico@protectorateis.com'
     );
+
+    /* Insert tabla animales */
+    INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimineto, foto) VALUES
+    ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "luna.jpeg"),
+    ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "max.jpeg"),
+    ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "buddy.jpeg"),
+    ("Rocky", "macho", "perro", "Bulldog Francés", "2009-12-07", "rocky.jpeg"),
+    ("Daisy", "hembra", "perro", "Beagle", "2010-09-13", "daisy.jpeg"),
+    ("Charlie", "macho", "gato", "Siames", "2009-05-06", "charlie.jpeg"),
+    ("Simba", "macho", "gato", "Persa", "2011-08-04", "simba.jpeg"),
+    ("Sasha", "hembra", "gato", "Sphynx", "2008-12-01", "sasha.jpeg"),
+    ("Mimi", "hembra", "gato", "Angora", "2011-01-26", "mimi.jpeg"),
+    ("Tigre", "macho", "gato", "Maine Coon", "2009-04-08", "tigre.jpeg"),
+    ("Nala", "hembra", "gato", "Siamés", "2008-02-23", "nala.jpeg"),
+    ("Rufus", "macho", "perro", "Chihuahua", "2010-11-05", "rufus.jpeg"),
+    ("Lola", "hembra", "perro", "Cocker Spaniel", "2011-07-12", "lola.jpeg"),
+    ("Rock", "macho", "perro", "Doberman", "2007-12-31", "rock.jpeg"),
+    ("Lulu", "hembra", "perro", "Poodle", "2008-06-06", "lulu.jpeg"),
+    ("Bear", "macho", "perro", "San Bernardo", "2010-02-08", "bear.jpeg");
+
+    /* Insert tabla adopciones */
+    INSERT INTO adopciones (fecha_adopcion, id_animal, id_adoptante) VALUES 
+    ("2022-12-01", 1, 1), 
+    ("2022-10-12", 3, 2), 
+    ("2022-09-30", 4, 2), 
+    ("2022-07-15", 6, 3), 
+    ("2022-05-01", 8, 3), 
+    
