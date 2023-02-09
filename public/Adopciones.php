@@ -9,10 +9,10 @@
     <title>Adopciones</title>
 </head>
 
-<body>
+<body id="bodyAdopciones">
     <h1>Adopciones</h1>
 
-    <main>
+    <main id="mainAdopciones">
         <?php
         include('../modules/PDO.php');
         $pdo = conectarBD("otro");
@@ -20,8 +20,17 @@
         $resultado = $pdo->query($consulta);
         $datosAnimal = $resultado->fetchAll(PDO::FETCH_ASSOC);
         foreach ($datosAnimal as $animal) {
-            echo"<div>" . $animal['nombre'] . "</div><br>";
-            echo"<div>" . $animal['genero'] . "</div><br>";
+            echo "<div class='animal'>";
+            echo "<div class='animalImagen'>";
+            echo "<img src=" . $animal['foto'] . " alt='foto_animal' />";
+            echo "</div>";
+            echo "<div class='animalInfo'>";
+            echo "<p>Nombre: " . $animal['nombre'] . "</p>";
+            echo "<p>Raza: " . $animal['raza'] . "</p>";
+            echo "<p>Sexo: " . $animal['genero'] . "</p>";
+            echo "<p>Fecha de nacimiento: " . $animal['fecha_nacimiento'] . "</p>";
+            echo "</div>";
+            echo "</div>";
         }
         ?>
     </main>

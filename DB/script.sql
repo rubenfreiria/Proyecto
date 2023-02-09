@@ -111,22 +111,22 @@ VALUES
 
     /* Insert tabla animales */
     INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimiento, foto) VALUES
-    ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "luna.jpeg"),
-    ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "max.jpeg"),
-    ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "buddy.jpeg"),
-    ("Rocky", "macho", "perro", "Bulldog Francés", "2009-12-07", "rocky.jpeg"),
-    ("Daisy", "hembra", "perro", "Beagle", "2010-09-13", "daisy.jpeg"),
-    ("Charlie", "macho", "gato", "Siames", "2009-05-06", "charlie.jpeg"),
-    ("Simba", "macho", "gato", "Persa", "2011-08-04", "simba.jpeg"),
-    ("Sasha", "hembra", "gato", "Sphynx", "2008-12-01", "sasha.jpeg"),
-    ("Mimi", "hembra", "gato", "Angora", "2011-01-26", "mimi.jpeg"),
-    ("Tigre", "macho", "gato", "Maine Coon", "2009-04-08", "tigre.jpeg"),
-    ("Nala", "hembra", "gato", "Siamés", "2008-02-23", "nala.jpeg"),
-    ("Rufus", "macho", "perro", "Chihuahua", "2010-11-05", "rufus.jpeg"),
-    ("Lola", "hembra", "perro", "Cocker Spaniel", "2011-07-12", "lola.jpeg"),
-    ("Rock", "macho", "perro", "Doberman", "2007-12-31", "rock.jpeg"),
-    ("Lulu", "hembra", "perro", "Poodle", "2008-06-06", "lulu.jpeg"),
-    ("Bear", "macho", "perro", "San Bernardo", "2010-02-08", "bear.jpeg");
+    ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "../media/fotosAdopciones/luna.jpg"),
+    ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "../media/fotosAdopciones/luna.jpg"),
+    ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "../media/fotosAdopciones/luna.jpg"),
+    ("Rocky", "macho", "perro", "Bulldog Francés", "2009-12-07", "../media/fotosAdopciones/luna.jpg"),
+    ("Daisy", "hembra", "perro", "Beagle", "2010-09-13", "../media/fotosAdopciones/luna.jpg"),
+    ("Charlie", "macho", "gato", "Siames", "2009-05-06", "../media/fotosAdopciones/luna.jpg"),
+    ("Simba", "macho", "gato", "Persa", "2011-08-04", "../media/fotosAdopciones/luna.jpg"),
+    ("Sasha", "hembra", "gato", "Sphynx", "2008-12-01", "../media/fotosAdopciones/luna.jpg"),
+    ("Mimi", "hembra", "gato", "Angora", "2011-01-26", "../media/fotosAdopciones/luna.jpg"),
+    ("Tigre", "macho", "gato", "Maine Coon", "2009-04-08", "../media/fotosAdopciones/luna.jpg"),
+    ("Nala", "hembra", "gato", "Siamés", "2008-02-23", "../media/fotosAdopciones/luna.jpg"),
+    ("Rufus", "macho", "perro", "Chihuahua", "2010-11-05", "../media/fotosAdopciones/luna.jpg"),
+    ("Lola", "hembra", "perro", "Cocker Spaniel", "2011-07-12", "../media/fotosAdopciones/luna.jpg"),
+    ("Rock", "macho", "perro", "Doberman", "2007-12-31", "../media/fotosAdopciones/luna.jpg"),
+    ("Lulu", "hembra", "perro", "Poodle", "2008-06-06", "../media/fotosAdopciones/luna.jpg"),
+    ("Bear", "macho", "perro", "San Bernardo", "2010-02-08", "../media/fotosAdopciones/luna.jpg");
 
     /* Insert tabla adopciones */
     INSERT INTO adopciones (fecha_adopcion, id_animal, id_adoptante) VALUES 
