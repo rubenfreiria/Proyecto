@@ -25,7 +25,7 @@
             echo "<img src=" . $animal['foto'] . " alt='foto_animal' />";
             echo "</div>";
             echo "<div class='animalInfo'>";
-            echo "<p>Nombre: " . $animal['nombre'] . "</p>";
+            echo "<p id='animalNombre'>Nombre: " . $animal['nombre'] . "</p>";
             echo "<p>Raza: " . $animal['raza'] . "</p>";
             echo "<p>Sexo: " . $animal['genero'] . "</p>";
             echo "<p>Fecha de nacimiento: " . $animal['fecha_nacimiento'] . "</p>";
