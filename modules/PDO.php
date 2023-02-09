@@ -29,6 +29,7 @@ function leer_config($fichero_config_BBDD, $esquema)
     return $resul;
 }
 
+
 function conectarBD($permisos)
 {
     try {
