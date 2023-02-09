@@ -348,7 +348,6 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   background-color: var(--main-black);
 }
 
@@ -439,6 +438,7 @@ form {
 
 #mainAdopciones {
   width: 100%;
+  max-width: 1800px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -484,5 +484,10 @@ form {
 display: flex;
 justify-content: center;
 padding-top: 16px;
+}
+
+#divBtnAdoptar b{
+
+  font-size: 15px;
 }
 /* Fin estilos adopciones */
