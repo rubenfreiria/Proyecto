@@ -15,11 +15,19 @@
       <h3 class="h3Login">Protectora</h3>
       <img id="logoHeader" src="../media/logos/logo.png" />
     </a>
-    <form action="../modules/comprobarUserEnBD.php" method="post">
+    <form action="../modules/iniciaSesion.php" method="post">
       <input type="email" name="loginEmail" id="loginEmail" class="elementoForm" placeholder="Correo electronico"
         required />
       <input type="password" name="loginPassword" id="loginPassword" class="elementoForm" placeholder="Contaseña"
         required />
+        <?php
+    session_start();
+    if (isset($_SESSION["error_message"])) {
+        echo "<p>" . $_SESSION["error_message"] . "</p>";
+        unset($_SESSION["error_message"]);
+    }
+    session_destroy();
+    ?>
       <button class="btnForm" type="submit">Enviar</button>
     </form>
     <p class="cambioForm">
