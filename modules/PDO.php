@@ -51,10 +51,7 @@ function conectarBD($permisos)
         } else if ($permisos === "otro") {
             $res = leer_config(dirname(__FILE__) . "./config/configuracionOtro.xml", dirname(__FILE__) . "./config/configuracion.xsd");
             $pdo = new PDO($res[0], $res[1], $res[2]);
-        } else {
-            header("Location: ../public/error.html");
-            die();
-        }
+        } 
         return $pdo;
     } catch (PDOException $e) {
         echo $e->getMessage();
