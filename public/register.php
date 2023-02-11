@@ -13,7 +13,7 @@
         ><h3 class="h3Login">Protectora</h3>
         <img id="logoHeader" src="../media/logos/logo.png"
       /></a>
-      <form action="">
+      <form action="../modules/insertRegisterUser.php" method="post">
         <input
           type="email"
           name="registerEmail"
@@ -36,7 +36,7 @@
           id="registerApellidos"
           class="elementoForm"
           placeholder="Apellidos"
-          required
+          
         />
         <input
           type="tel"
@@ -54,6 +54,14 @@
           placeholder="Contaseña"
           required
         />
+        <?php
+      session_start();
+      if (isset($_SESSION["error_register"])) {
+        echo "<p>" . $_SESSION["error_register"] . "</p>";
+        unset($_SESSION["error_register"]);
+      }
+      session_destroy();
+      ?>
         <button class="btnForm" type="submit">Enviar</button>
       </form>
       <p class="cambioForm">

@@ -20,14 +20,14 @@
         required />
       <input type="password" name="loginPassword" id="loginPassword" class="elementoForm" placeholder="Contaseña"
         required />
-        <?php
-    session_start();
-    if (isset($_SESSION["error_message"])) {
-        echo "<p>" . $_SESSION["error_message"] . "</p>";
-        unset($_SESSION["error_message"]);
-    }
-    session_destroy();
-    ?>
+      <?php
+      session_start();
+      if (isset($_SESSION["error_login"])) {
+        echo "<p>" . $_SESSION["error_login"] . "</p>";
+        unset($_SESSION["error_login"]);
+      }
+      session_destroy();
+      ?>
       <button class="btnForm" type="submit">Enviar</button>
     </form>
     <p class="cambioForm">

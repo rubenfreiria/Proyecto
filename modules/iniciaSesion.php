@@ -16,7 +16,7 @@ function iniciaSesion()
         echo $_SESSION["email"];
     } else {
         session_start();
-        $_SESSION["error_message"] = "Email o contraseña incorrecto";
+        $_SESSION["error_login"] = "Email o contraseña incorrecto";
         header("Location: ../public/login.php");
         exit;
     }
