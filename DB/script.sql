@@ -7,13 +7,10 @@ USE protectora_teis;
 /* Tabla usuarios */
 CREATE TABLE usuarios (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nombre_usuario VARCHAR(20) NOT NULL,
     passwd VARCHAR(200) NOT NULL,
     nivel_acceso ENUM('admin', 'veterinario', 'otro') NOT NULL,
-    dni VARCHAR(9) NOT NULL UNIQUE,
     nombre VARCHAR(40) NOT NULL,
     apellidos VARCHAR(60) NOT NULL,
-    direccion VARCHAR(100) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE
 );
@@ -64,47 +61,35 @@ CREATE TABLE historial_medico (
 /* Insert a tabla usuarios */
 INSERT INTO
     usuarios (
-        nombre_usuario,
         passwd,
         nivel_acceso,
-        dni,
         nombre,
         apellidos,
-        direccion,
         telefono,
         email
     )
 VALUES
     (
-        'admin',
         '$2y$10$1UYunAqyJErWotljCrgkSeE6RrH5q48ZOusvdueNK.PbKQKHpaoPa',
         'admin',
-        '12345678P',
         'Pepe',
         'Perez',
-        'Calle Falsa 123',
         '678123456',
         'pepe@pepe.com'
     ),
     (
-        'paquito48',
         '$2y$10$YwJZS8GYOiEx9AgsL.xoK.6cjLEBnbIfmlB5I/773tuM7KEnJMswu',
         'otro',
-        '89347578A',
         'Paco',
         'Lopez',
-        'Calle no falsa 54',
         '694527090',
         'paquito46@example.com'
     ),
     (
-        'federico_01',
         '$2y$10$Xdgf46oCeyhR6RJXiDCBbe0GZALHVkycBDJ2YmSs0mbHpU1voTj26',
         'veterinario',
-        '16754320O',
         'Federico',
         'García',
-        'Avenida de Galicia 12',
         '60645342',
         'federico@protectorateis.com'
     );

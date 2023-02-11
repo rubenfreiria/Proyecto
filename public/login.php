@@ -23,7 +23,7 @@
       <?php
       session_start();
       if (isset($_SESSION["error_login"])) {
-        echo "<p>" . $_SESSION["error_login"] . "</p>";
+        echo "<p id='infoLoginYRegister'>" . $_SESSION["error_login"] . "</p>";
         unset($_SESSION["error_login"]);
       }
       session_destroy();

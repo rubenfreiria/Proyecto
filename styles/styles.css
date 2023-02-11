@@ -215,6 +215,7 @@ a:active {
   font-size: 40px;
   padding-right: 16px;
   padding-left: 16px;
+  margin-bottom: 16px;
 }
 
 #containerQuienesSomos p {
@@ -424,6 +425,10 @@ form {
   color: #29a9ff;
 }
 
+#infoLoginYRegister{
+  padding-left: 50px;
+  padding-right: 50px;
+}
 /* Fin estilos login y register*/
 
 /* Inicio estilos adopciones */
