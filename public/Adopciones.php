@@ -72,6 +72,7 @@
             </a>
         </div>
     </footer>
+    <button class="scroll-top-btn hidden">&#11014;</button>
+  <script src="../js/scrollTopBtn.js"></script>
 </body>
-
 </html>

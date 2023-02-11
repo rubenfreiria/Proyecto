@@ -425,7 +425,7 @@ form {
   color: #29a9ff;
 }
 
-#infoLoginYRegister{
+#infoLoginYRegister {
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -461,7 +461,7 @@ form {
 
 .animal:hover {
   box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.5);
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .animalImagen {
@@ -487,23 +487,50 @@ form {
   border-bottom-right-radius: 16px;
 }
 
-.animalInfo p{
+.animalInfo p {
   font-size: 20px;
   padding-bottom: 6px;
 }
 
-#animalNombre{
+#animalNombre {
   font-size: 30px;
   padding-bottom: 12px;
 }
 
-#divBtnAdoptar{
-display: flex;
-justify-content: center;
-padding-top: 16px;
+#divBtnAdoptar {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
 }
 
-#divBtnAdoptar b{
+#divBtnAdoptar b {
   font-size: 15px;
 }
 /* Fin estilos adopciones */
+
+/* Inicio estilos scroll top btn */
+
+.scroll-top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  bottom: 18px;
+  right: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+/* Fin estilos scroll top btn */
