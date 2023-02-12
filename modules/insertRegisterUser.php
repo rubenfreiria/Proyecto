@@ -2,6 +2,12 @@
 include("./comprobarFormRegister.php");
 include('./PDO.php');
 
+/**
+ * [Funcion que inserta en la base de datos el usuario a registrar
+ * si este no se encuentra vacio y si los campos eatan correctamente subiertos]
+ *
+ * @return  [void]  [nos muestra por pantalla que ha creado el usuario o un aviso de lo que ha pasado]
+ */
 function insertRegisterUser()
 {
     $comprobacion = comprobarEmailRegistradoBD();
