@@ -21,7 +21,7 @@
       <input type="text" name="registerName" id="registerName" class="elementoForm" placeholder="Nombre" required />
       <input type="text" name="registerApellidos" id="registerApellidos" class="elementoForm" placeholder="Apellidos"
         required />
-      <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono" required />
+      <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono" required/>
       <input type="password" name="registerPassword" id="registerPassword" class="elementoForm" placeholder="Contaseña"
         required />
       <?php
