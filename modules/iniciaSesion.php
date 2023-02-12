@@ -12,13 +12,20 @@ function iniciaSesion()
     $resultadoComprobarUserEnDB = comprobarUserEnDB();
     if ($resultadoComprobarUserEnDB == true) {
         session_start();
-        $_SESSION["email"] = $_POST['loginEmail'];
-        echo $_SESSION["email"];
+        $loginEmail = $_POST['loginEmail'];
+        $pdo = conectarBD("admin");
+        $consulta = "SELECT id FROM usuarios WHERE email = '$loginEmail';";
+        $ejecucion = $pdo->query($consulta);
+        $resultado = $ejecucion->fetch(PDO::FETCH_ASSOC);
+        $userID = $resultado["id"];
+        $_SESSION["userID"] = $userID;
+        header("Location: ../index.php");
+        exit();
     } else {
         session_start();
         $_SESSION["error_login"] = "Email o contraseña incorrecto";
         header("Location: ../public/login.php");
-        exit;
+        exit();
     }
 }
 

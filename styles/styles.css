@@ -86,6 +86,16 @@ a:active {
   align-items: center;
 }
 
+#formCerrarSesion{
+  height: 100%;
+}
+
+#btnCerrarSesion{
+  margin-bottom: 36px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 .elementoMenu {
   margin-left: 4px;
   margin-right: 4px;

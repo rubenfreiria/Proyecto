@@ -20,14 +20,23 @@
                 </h3>
             </div>
             <div id="menuDerecha">
-                <a class="elementoMenu" href="../public/register.php">Registrarse</a>
-                <a class="elementoMenu" href="../public/login.php">Login</a>
+                <a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
+                <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>
+                <?php
+                session_start();
+                if (isset($_SESSION["userID"])) {
+                    echo "<script src='../js/removeInicioSesion.js'></script>";
+                    echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
+                  <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
+                </form>";
+                }
+                ?>
             </div>
         </nav>
     </header>
     <section>
         <div id="menuContainer">
-            <a class="menuLink" href="./adopciones.php">Adopciones</a>
+            <a class="menuLink" href="../public/adopciones.php">Adopciones</a>
             <a class="menuLink" href="">Donaciones</a>
             <a class="menuLink" href="">Noticias</a>
             <a class="menuLink" href="">Calendario</a>

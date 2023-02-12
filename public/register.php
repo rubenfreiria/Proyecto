@@ -11,29 +11,6 @@
 </head>
 
 <body>
-  <header>
-    <nav id="menu">
-      <div id="menuIzquierda">
-        <img class="elementoMenu" id="logoHeader" src="../media/logos/logoWhite.png" />
-        <h3>
-          <a class="elementoMenu" id="h3Menu" href="../index.php">Protectora</a>
-        </h3>
-      </div>
-      <div id="menuDerecha">
-        <a class="elementoMenu" href="../public/register.php">Registrarse</a>
-        <a class="elementoMenu" href="../public/login.php">Login</a>
-      </div>
-    </nav>
-  </header>
-  <section>
-    <div id="menuContainer">
-      <a class="menuLink" href="./adopciones.php">Adopciones</a>
-      <a class="menuLink" href="">Donaciones</a>
-      <a class="menuLink" href="">Noticias</a>
-      <a class="menuLink" href="">Calendario</a>
-      <a class="menuLink" href="">Contacto</a>
-    </div>
-  </section>
   <div class="formFlex">
     <div id="containerFormRegister">
       <a class="backToIndex" href="../index.php">
