@@ -27,8 +27,8 @@
                         <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
                 </form>";
                 } else {
-                    echo '<a class="elementoMenu" id="inicioSesionA" href="public/register.php">Registrarse</a>
-                          <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';
+                    echo '<a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
+                          <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>';
                 }
                 ?>
             </div>
