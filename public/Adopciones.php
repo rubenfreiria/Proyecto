@@ -20,15 +20,15 @@
                 </h3>
             </div>
             <div id="menuDerecha">
-                <a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
-                <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>
                 <?php
                 session_start();
                 if (isset($_SESSION["userID"])) {
-                    echo "<script src='../js/removeInicioSesion.js'></script>";
-                    echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
-                  <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
+                    echo "<form id='formCerrarSesion' action='./modules/cerrarSesion.php' method='post'>
+                        <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
                 </form>";
+                } else {
+                    echo '<a class="elementoMenu" id="inicioSesionA" href="public/register.php">Registrarse</a>
+                          <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';
                 }
                 ?>
             </div>
