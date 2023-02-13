@@ -23,7 +23,7 @@
                 <?php
                 session_start();
                 if (isset($_SESSION["userID"])) {
-                    echo "<form id='formCerrarSesion' action='./modules/cerrarSesion.php' method='post'>
+                    echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
                         <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
                 </form>";
                 } else {

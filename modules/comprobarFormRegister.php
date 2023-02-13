@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * [Comprueba que el formilario de register esté cubierto]
+ *
+ * @return  [type]  [Devuelve true si esta bien o false si no]
+ */
 function comprobarFormRegister()
 {
     if (!empty($_POST['registerEmail']) && !empty($_POST['registerName']) && !empty($_POST['registerApellidos']) && !empty($_POST['registerPhone']) && !empty($_POST['registerPassword'])) {
