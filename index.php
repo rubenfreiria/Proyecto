@@ -45,7 +45,7 @@
     </div>
   </section>
   <main id="index-main">
-    <h1 class="slide-bottom">Texto</h1>
+    <h1 class="slide-bottom">Perro</h1>
     <h1 class="slide-bottom">De</h1>
     <h1 class="slide-bottom">Ejemplo</h1>
     <video src=".\media\video\vd01.mp4" autoplay="true" muted="true" loop="true"></video>
@@ -79,6 +79,7 @@
       </div>
     </div>
   </section>
+
   <footer id="footer-index">
     <div id="social">
       <a>

@@ -86,11 +86,11 @@ a:active {
   align-items: center;
 }
 
-#formCerrarSesion{
+#formCerrarSesion {
   height: 100%;
 }
 
-#btnCerrarSesion{
+#btnCerrarSesion {
   margin-bottom: 36px;
   font-size: 15px;
   cursor: pointer;
@@ -432,6 +432,7 @@ form {
 .cambioForm a {
   color: #0095f6;
 }
+
 .cambioForm a:hover {
   color: #29a9ff;
 }
@@ -545,3 +546,97 @@ form {
   opacity: 0;
 }
 /* Fin estilos scroll top btn */
+
+/* Inicio administracion */
+#containerFaltanPermisos {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#faltanPermisos {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#h2FaltanPermisos {
+  padding: 12px;
+  text-align: center;
+}
+
+#aAzul {
+  color: #0095f6;
+}
+#aAzul:hover {
+  color: #29a9ff;
+}
+
+#containerFormAdmin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 640px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+}
+
+#registerAdminPermisos {
+  border-width: 2px;
+  border-color: var(--main-black);
+}
+/* Fin administracion */
+
+/* Inicio panel administracion */
+#containerPanelAdministracion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.administracionPanel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 32px;
+  background-color: var(--main-grey);
+  width: 320px;
+  height: 200px;
+}
+
+#administracionH1{
+  margin-top: 36px;
+  font-size: 28px;
+}
+
+#administracionH2{
+  font-size: 22px;
+  margin-top: -18px;
+}
+
+.containerBotonesFormAdministracion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerBotonesFormAdministracion button{
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 12px;
+}
+
+.containerBotonesFormAdministracion button a{
+  color: var(--main-white);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Fin panel de administracion */

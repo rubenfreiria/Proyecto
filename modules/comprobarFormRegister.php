@@ -3,7 +3,7 @@
 /**
  * [Comprueba que el formilario de register esté cubierto]
  *
- * @return  [type]  [Devuelve true si esta bien o false si no]
+ * @return  [int]  [Devuelve true si esta bien o false si no]
  */
 function comprobarFormRegister()
 {
