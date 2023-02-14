@@ -384,7 +384,7 @@ a:active {
   align-items: center;
   flex-direction: column;
   width: 350px;
-  height: 560px;
+  height: 580px;
   border-radius: 6px;
   background-color: var(--main-grey);
 }
@@ -568,6 +568,13 @@ form {
   text-align: center;
 }
 
+.containerH1yLogo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--main-black);
+}
+
 #aAzul {
   color: #0095f6;
 }
@@ -580,7 +587,7 @@ form {
   align-items: center;
   flex-direction: column;
   width: 350px;
-  height: 640px;
+  height: 600px;
   border-radius: 6px;
   background-color: var(--main-grey);
 }
@@ -589,10 +596,20 @@ form {
   border-width: 2px;
   border-color: var(--main-black);
 }
+
+.aFormAdministracion {
+  margin-top: 14px;
+  margin-bottom: -8px;
+}
+
+.aFormAdministracion a{
+  margin-left: 4px;
+  margin-right: 4px;
+}
 /* Fin administracion */
 
 /* Inicio panel administracion */
-#containerPanelAdministracion{
+#containerPanelAdministracion {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -611,12 +628,12 @@ form {
   height: 200px;
 }
 
-#administracionH1{
+#administracionH1 {
   margin-top: 36px;
   font-size: 28px;
 }
 
-#administracionH2{
+#administracionH2 {
   font-size: 22px;
   margin-top: -18px;
 }
@@ -627,13 +644,13 @@ form {
   justify-content: center;
 }
 
-.containerBotonesFormAdministracion button{
+.containerBotonesFormAdministracion button {
   margin-top: 20px;
   margin-left: 10px;
   padding: 12px;
 }
 
-.containerBotonesFormAdministracion button a{
+.containerBotonesFormAdministracion button a {
   color: var(--main-white);
   font-size: 16px;
   font-weight: bold;
