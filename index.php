@@ -23,10 +23,14 @@
       <div id="menuDerecha">
         <?php
         session_start();
+        include("./modules/comprobarNivelAcceso.php");
         if (isset($_SESSION["userID"])) { 
           echo "<form id='formCerrarSesion' action='./modules/cerrarSesion.php' method='post'>
                   <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
                 </form>";
+                /* if (comprobarNivelAcceso()=="admin") {
+                  echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'>Administracion</button>";
+                } */
         } else {
           echo '<a class="elementoMenu" id="inicioSesionA" href="public/register.php">Registrarse</a>
                 <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';

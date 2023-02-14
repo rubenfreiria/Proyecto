@@ -2,7 +2,7 @@
 include('PDO.php');
 function comprobarNivelAcceso()
 {
-    session_start();
+    
     if (isset($_SESSION["userID"])) {
         $userID = $_SESSION["userID"];
         $pdo = conectarBD("admin");

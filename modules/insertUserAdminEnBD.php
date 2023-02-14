@@ -16,7 +16,7 @@ function insertRegisterAdmin()
 
         $encryptedPasswd = password_hash($_POST['registerPassword'], PASSWORD_DEFAULT);
         $insert = $pdo->prepare("INSERT INTO usuarios (nivel_acceso, email, nombre, apellidos, telefono, passwd) VALUES (:nivel_acceso, :email, :nombre, :apellidos, :telefono, :passwd)");
-        $insert->bindParam(':nivel_acceso', $_POST["nivel_acceso"]);
+        $insert->bindParam(':nivel_acceso', $_POST["registerPermisos"]);
         $insert->bindParam(':email', $_POST["registerEmail"]);
         $insert->bindParam(':nombre', $_POST["registerName"]);
         $insert->bindParam(':apellidos', $_POST["registerApellidos"]);
