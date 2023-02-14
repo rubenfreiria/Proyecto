@@ -39,7 +39,7 @@
     <div id="menuContainer">
       <a class="menuLink" href="public/adopciones.php">Adopciones</a>
       <a class="menuLink" href="">Donaciones</a>
-      <a class="menuLink" href="">Noticias</a>
+      <a class="menuLink" href="public/noticias.php">Noticias</a>
       <a class="menuLink" href="">Calendario</a>
       <a class="menuLink" href="">Contacto</a>
     </div>
