@@ -13,6 +13,7 @@
 <body>
   <?php
   include("../modules/comprobarNivelAcceso.php");
+  session_start();
   if (comprobarNivelAcceso() == "admin") {
     echo "<div id='containerPanelAdministracion'>
         <h1 id='administracionH1'>Panel de administracion</h1>

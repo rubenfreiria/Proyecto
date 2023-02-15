@@ -13,6 +13,7 @@
 <body>
   <?php
   include("../modules/comprobarNivelAcceso.php");
+  session_start();
   if (comprobarNivelAcceso() == "admin") {
     echo "<div class='formFlex'>
         <div id='containerFormAdmin'>

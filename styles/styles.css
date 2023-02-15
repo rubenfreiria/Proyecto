@@ -602,7 +602,7 @@ form {
   margin-bottom: -8px;
 }
 
-.aFormAdministracion a{
+.aFormAdministracion a {
   margin-left: 4px;
   margin-right: 4px;
 }
@@ -654,6 +654,12 @@ form {
   color: var(--main-white);
   font-size: 16px;
   font-weight: bold;
+}
+
+#btnPanelAdministracion {
+  margin-bottom: 8px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* Fin panel de administracion */
