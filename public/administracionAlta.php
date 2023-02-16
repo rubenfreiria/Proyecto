@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
   <link rel="stylesheet" href="../styles/styles.css" />
-  <title>Administracion</title>
+  <title>Alta usuarios</title>
 </head>
 
 <body>
@@ -86,7 +86,6 @@
       echo "<p id='infoLoginYRegister'>" . $_SESSION['registro_exitoso'] . "</p>";
       unset($_SESSION['registro_exitoso']);
     }
-    /* session_destroy(); */
     echo "<button class='btnForm' type='submit'>Enviar</button>
           </form>
           
@@ -101,10 +100,6 @@
                 </div>";
   }
   ?>
-
-
-
-
 </body>
 
 </html>

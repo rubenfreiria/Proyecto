@@ -663,3 +663,11 @@ form {
 }
 
 /* Fin panel de administracion */
+
+/* Inicio estilos dar de baja */
+
+table{
+  border: 1px solid var(--main-black);
+}
+
+/* Fin estilos dar de bajo */
