@@ -666,8 +666,41 @@ form {
 
 /* Inicio estilos dar de baja */
 
-table{
-  border: 1px solid var(--main-black);
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
-/* Fin estilos dar de bajo */
+#trRed {
+  background-color: var(--ligth-red);
+  color: var(--main-white);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+td{
+  padding: 12px; 
+} 
+
+#containerDarDeBaja{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ #h1DarDeBaja{
+  margin-top: 32px;
+ }
+
+/* Fin estilos dar de baja */

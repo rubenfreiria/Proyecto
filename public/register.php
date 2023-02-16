@@ -19,13 +19,13 @@
       </a>
       <form action="../modules/insertRegisterUser.php" method="post">
         <input type="email" name="registerEmail" id="registerEmail" class="elementoForm"
-          placeholder="Correo electronico" required />
-        <input type="text" name="registerName" id="registerName" class="elementoForm" placeholder="Nombre" required />
-        <input type="text" name="registerApellidos" id="registerApellidos" class="elementoForm" placeholder="Apellidos"
+          placeholder="Correo electronico" maxlength="32" required />
+        <input type="text" name="registerName" id="registerName" class="elementoForm" placeholder="Nombre" maxlength="16" required />
+        <input type="text" name="registerApellidos" id="registerApellidos" class="elementoForm" placeholder="Apellidos" maxlength="28"
           required />
-        <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono"
+        <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono" maxlength="9"
           required />
-        <input type="password" name="registerPassword" id="registerPassword" class="elementoForm"
+        <input type="password" name="registerPassword" id="registerPassword" class="elementoForm" 
           placeholder="Contaseña" required />
         <?php
         session_start();
