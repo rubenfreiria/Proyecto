@@ -14,95 +14,38 @@
   <div id="containerDarDeBaja">
     <h1 id="h1DarDeBaja">Dar de baja</h1>
 
-    <form action="">
-      <TABLE>
+    <form action="../modules/procesarBaja.php" method="post">
+      <table>
         <tr id="trRed">
-          <TD>id</TD>
+          <td>id</td>
           <td>Nivel de acceso</td>
-          <TD>nombre</TD>
-          <TD>apellidos</TD>
-          <TD>telefono</TD>
-          <TD>email</TD>
+          <td>nombre</td>
+          <td>apellidos</td>
+          <td>telefono</td>
+          <Td>email</td>
           <td>Borrar</td>
         </tr>
-        <TR>
-          <TD>1</TD>
-          <TD>admin</TD>
-          <TD>Pepe</TD>
-          <TD>Perez</TD>
-          <TD>665050670</TD>
-          <TD>pepe@pepe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-        <TR>
-          <TD>2</TD>
-          <TD>admin2</TD>
-          <TD>Pepe2</TD>
-          <TD>Perez2</TD>
-          <TD>6650502670</TD>
-          <TD>pepe@pe2pe.com</TD>
-          <TD><input type="checkbox"></TD>
-        </TR>
-      </TABLE>
-
-      <!-- Php -->
-      <?php
-      include('../modules/PDO.php');
-      $pdo = conectarBD("admin");
-      $consulta = "SELECT id, nivel_acceso, nombre, apellidos, telefono, email FROM usuarios;";
-      $resultado = $pdo->query($consulta);
-      $datosUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
-      foreach ($datosUsuarios as $usuario) {
-        echo "<tr>";
-        echo "<td>" . $usuario["id"] . "</td><br>";
-        echo "</tr>";
-      }
-      ?>
+        <?php
+        include('../modules/PDO.php');
+        $pdo = conectarBD("admin");
+        $consulta = "SELECT id, nivel_acceso, nombre, apellidos, telefono, email FROM usuarios;";
+        $resultado = $pdo->query($consulta);
+        $datosUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($datosUsuarios as $usuario) {
+          if($usuario["id"]>3){
+            echo "<tr>";
+            echo "<td>" . $usuario["id"] . "</td>";
+            echo "<td>" . $usuario["nivel_acceso"] . "</td>";
+            echo "<td>" . $usuario["nombre"] . "</td>";
+            echo "<td>" . $usuario["apellidos"] . "</td>";
+            echo "<td>" . $usuario["telefono"] . "</td>";
+            echo "<td>" . $usuario["email"] . "</td>";
+            echo "<td><input type='checkbox' name='borrar[]' value='" . $usuario["id"] . "'></td>";
+            echo "</tr>";
+          }
+        }
+        ?>
+      </table>
       <button type="submit">Enviar</button>
     </form>
   </div>
