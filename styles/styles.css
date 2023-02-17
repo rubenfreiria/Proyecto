@@ -157,6 +157,20 @@ a:active {
   color: var(--main-white);
 }
 
+#nombreUserArriba{
+  display: flex;
+  align-items: center;
+  color: var(--main-white);
+  margin-right: 16px;
+  background-color: rgba(128, 128, 128, .8);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+#imgUserArriba{
+  margin-right: 8px;
+}
+
 /* Animacion de desplazarse hacia abajo para el texto con el video de fondo */
 .slide-bottom {
   animation: slide-bottom 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
@@ -174,6 +188,10 @@ a:active {
 /* Menucontainer para movil */
 @media screen and (max-width: 660px) {
   #menuContainer {
+    display: none;
+  }
+
+  #nombreUserArriba{
     display: none;
   }
 
@@ -688,19 +706,33 @@ tr:nth-child(odd) {
   background-color: #ddd;
 }
 
-td{
-  padding: 12px; 
-} 
+td {
+  padding: 12px;
+  width: 220px;
+}
 
-#containerDarDeBaja{
+#tdID {
+  max-width: 50px;
+}
+
+#tdBorrar {
+  max-width: 90px;
+}
+
+#containerDarDeBaja {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
- #h1DarDeBaja{
+#h1DarDeBaja {
   margin-top: 32px;
- }
+  margin-bottom: 20px;
+}
 
+#btnAdministracionBaja {
+  padding: 10px;
+  font-size: 18px;
+}
 /* Fin estilos dar de baja */

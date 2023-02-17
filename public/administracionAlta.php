@@ -66,6 +66,7 @@
               id='registerAdminPhone'
               class='elementoForm'
               placeholder='Teléfono'
+              maxlength='9'
               required
             />
             <input

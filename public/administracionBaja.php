@@ -13,17 +13,21 @@
 <body>
   <div id="containerDarDeBaja">
     <h1 id="h1DarDeBaja">Dar de baja</h1>
+    <div class='aFormAdministracion'>
+      <a id='aAzul' href='../index.php'>Index</a>
+      <a id='aAzul' href='./administracionPanel.php'>Administracion</a>
+    </div>
 
     <form action="../modules/procesarBaja.php" method="post">
       <table>
         <tr id="trRed">
-          <td>id</td>
-          <td>Nivel de acceso</td>
-          <td>nombre</td>
-          <td>apellidos</td>
-          <td>telefono</td>
-          <Td>email</td>
-          <td>Borrar</td>
+          <td id='tdID'>id</td>
+          <td>Nivel acceso</td>
+          <td>Nombre</td>
+          <td>Apellidos</td>
+          <td>Teléfono</td>
+          <Td>Email</td>
+          <td id='tdBorrar'>Borrar</td>
         </tr>
         <?php
         include('../modules/PDO.php');
@@ -32,21 +36,21 @@
         $resultado = $pdo->query($consulta);
         $datosUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
         foreach ($datosUsuarios as $usuario) {
-          if($usuario["id"]>3){
+          if ($usuario["id"] > 3) {
             echo "<tr>";
-            echo "<td>" . $usuario["id"] . "</td>";
+            echo "<td id='tdID'>" . $usuario["id"] . "</td>";
             echo "<td>" . $usuario["nivel_acceso"] . "</td>";
             echo "<td>" . $usuario["nombre"] . "</td>";
             echo "<td>" . $usuario["apellidos"] . "</td>";
             echo "<td>" . $usuario["telefono"] . "</td>";
             echo "<td>" . $usuario["email"] . "</td>";
-            echo "<td><input type='checkbox' name='borrar[]' value='" . $usuario["id"] . "'></td>";
+            echo "<td id='tdBorrar'><input type='checkbox' name='borrar[]' value='" . $usuario["id"] . "'></td>";
             echo "</tr>";
           }
         }
         ?>
       </table>
-      <button type="submit">Enviar</button>
+      <button id="btnAdministracionBaja" type="submit">Enviar</button>
     </form>
   </div>
 </body>

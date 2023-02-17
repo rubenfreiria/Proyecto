@@ -26,7 +26,10 @@
         include("./modules/comprobarNivelAcceso.php");
         if (isset($_SESSION["userID"])) {
           if (comprobarNivelAcceso() == "admin") {
+            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
             echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./public/administracionPanel.php'>Administracion</a></button>";
+          } else {
+            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/user.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
           }
           echo "<form id='formCerrarSesion' action='./modules/cerrarSesion.php' method='post'>
                   <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
@@ -37,6 +40,7 @@
                 <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';
         }
         ?>
+
       </div>
     </nav>
   </header>

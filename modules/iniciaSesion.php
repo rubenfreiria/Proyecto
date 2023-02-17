@@ -14,11 +14,13 @@ function iniciaSesion()
         session_start();
         $loginEmail = $_POST['loginEmail'];
         $pdo = conectarBD("admin");
-        $consulta = "SELECT id FROM usuarios WHERE email = '$loginEmail';";
+        $consulta = "SELECT id, nombre FROM usuarios WHERE email = '$loginEmail';";
         $ejecucion = $pdo->query($consulta);
         $resultado = $ejecucion->fetch(PDO::FETCH_ASSOC);
         $userID = $resultado["id"];
+        $userNombre = $resultado["nombre"];
         $_SESSION["userID"] = $userID;
+        $_SESSION["userNombre"] = $userNombre;
         header("Location: ../index.php");
         exit();
     } else {
