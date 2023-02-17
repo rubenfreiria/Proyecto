@@ -11,24 +11,38 @@
     <style>
 
 .noticia {
-  display: flex;
-  flex-direction: column;
+  clear: both;
+  padding: 20px;
+  overflow: hidden;
+  max-width: 1600px;
+  margin: 50px;
+}
+
+@media screen and (max-width: 660px) {
+    .noticia {
+        margin: 12px;
+    }
 }
 
 .noticiaImagen {
-  width: 100%;
+  width: 500px;
+  height: 400px;
+  margin-right: 20px;
+  float: left;
 }
 
 .noticiaImagen img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .noticiaInfo {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  margin-left: 220px;
+  padding: 20px 0;
 }
 
 #noticiaTitulo {
@@ -95,7 +109,7 @@
                 echo "<div class='noticiaInfo'>";
                 echo "<p id='noticiaTitulo'>" . $noticia['titulo'] . "</p>";
                 echo "<p>Fecha: " . $noticia['fecha'] . "</p>";
-                echo "<p>Raza:" . $noticia['cuerpo'] . "</p>";
+                echo "<p>" . $noticia['cuerpo'] . "</p>";
                 echo "</div>";
                 echo "</div>";
             }
