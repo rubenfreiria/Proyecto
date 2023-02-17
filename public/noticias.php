@@ -8,6 +8,41 @@
     <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
     <link rel="stylesheet" href="../styles/styles.css" />
     <title>Noticias</title>
+    <style>
+
+.noticia {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticiaImagen {
+  width: 100%;
+}
+
+.noticiaImagen img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.noticiaInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#noticiaTitulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.noticiaInfo p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -58,9 +93,9 @@
                 echo "<img src=" . $noticia['foto'] . " alt='foto_noticia' />";
                 echo "</div>";
                 echo "<div class='noticiaInfo'>";
-                echo "<p id='noticiaTitulo'><b>" . $noticia['titulo'] . "</b></p>";
+                echo "<p id='noticiaTitulo'>" . $noticia['titulo'] . "</p>";
                 echo "<p>Fecha: " . $noticia['fecha'] . "</p>";
-                echo "<p>Raza: <b>" . $noticia['cuerpo'] . "</b></p>";
+                echo "<p>Raza:" . $noticia['cuerpo'] . "</p>";
                 echo "</div>";
                 echo "</div>";
             }
