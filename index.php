@@ -28,6 +28,9 @@
           if (comprobarNivelAcceso() == "admin") {
             echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
             echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./public/administracionPanel.php'>Administracion</a></button>";
+          } elseif (comprobarNivelAcceso() == "veterinario") {
+            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/userVeterinario.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
+            echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./public/veterinarioPanel.php'>Administracion</a></button>";
           } else {
             echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/user.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
           }
