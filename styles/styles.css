@@ -157,17 +157,22 @@ a:active {
   color: var(--main-white);
 }
 
-#nombreUserArriba{
+#btnPanelAdministracion{
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+#nombreUserArriba {
   display: flex;
   align-items: center;
   color: var(--main-white);
   margin-right: 16px;
-  background-color: rgba(128, 128, 128, .8);
+  background-color: rgba(128, 128, 128, 0.8);
   padding: 8px;
   border-radius: 10px;
 }
 
-#imgUserArriba{
+#imgUserArriba {
   margin-right: 8px;
 }
 
@@ -191,7 +196,7 @@ a:active {
     display: none;
   }
 
-  #nombreUserArriba{
+  #nombreUserArriba {
     display: none;
   }
 
@@ -674,10 +679,22 @@ form {
   font-weight: bold;
 }
 
-#btnPanelAdministracion {
+#aPanelAdministracion {
+  margin-top: 24px;
+  padding: 9px;
+  border-radius: 14px;
+  border: none;
+  background-color: var(--main-red);
+  color: var(--main-white);
   margin-bottom: 8px;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+#aPanelAdministracion:hover {
+  background-color: var(--ligth-red);
 }
 
 /* Fin panel de administracion */

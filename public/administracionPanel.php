@@ -19,9 +19,12 @@
         <h1 id='administracionH1'>Panel de administracion</h1>
         <div class='administracionPanel'>
           <h2 id='administracionH2'>Que necesitas?</h2>
+          <div class='aFormAdministracion'>
+            <a id='aAzul' href='../index.php'>Volver al index</a>
+          </div>
           <div class='containerBotonesFormAdministracion'>
-            <button><a href='./administracionAlta.php'>Dar de alta</a></button>
-            <button><a href='./administracionBaja.php'>Dar de baja</a></button>
+            <a id='aPanelAdministracion' href='./administracionAlta.php'>Dar de alta</a>
+            <a id='aPanelAdministracion' href='./administracionBaja.php'>Dar de baja</a>
           </div>
         </div>
       </div>";
