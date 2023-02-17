@@ -167,7 +167,7 @@ La carrera comenzó en el parque central de la ciudad y siguió un recorrido por
 Además de la carrera, la organización también organizó un mercado de comida y artesanías, donde se vendieron productos y se recaudaron fondos adicionales para la protección de los animales. Los voluntarios de la organización también ofrecieron información sobre la tenencia responsable de mascotas y la importancia de la adopción de animales.
 
 La carrera y el mercado fueron un gran éxito para la organización , y los fondos recaudados ayudarán a cubrir los costos de atención veterinaria, alimentos y refugio para los animales abandonados y maltratados que atienden. La organización agradece a todos los corredores, voluntarios y patrocinadores que hicieron posible el evento y contribuyeron a su importante labor."),
-("Apertura nuevo refugio para gatos callejeros", "2022-08-25", "../media/fotosNoticias25-08-2022.jpg",
+("Apertura nuevo refugio para gatos callejeros", "2022-08-25", "../media/fotosNoticias/25-08-2022.jpg",
 "Anunciamos la reciente apertura de un nuevo albergue para gatos callejeros. El albergue, ubicado en el centro de la ciudad, proporcionará un lugar seguro y cómodo para los gatos callejeros, mientras se buscan hogares permanentes para ellos.
 
 El albergue cuenta con amplias instalaciones que incluyen áreas de descanso, zonas de juegos y juguetes para gatos, y un personal altamente capacitado que se encargará de cuidar y atender las necesidades de los gatos. Trabajaremos con voluntarios y organizaciones de rescate de animales para identificar a los gatos callejeros más necesitados y traerlos al albergue para su cuidado.

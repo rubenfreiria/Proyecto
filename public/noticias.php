@@ -41,14 +41,17 @@
 }
 
 .noticiaInfo {
-  margin-left: 220px;
   padding: 20px 0;
 }
 
 #noticiaTitulo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-top: 0;
+}
+
+#noticiaFecha {
+    font-size: 20px;
 }
 
 .noticiaInfo p {
@@ -108,7 +111,7 @@
                 echo "</div>";
                 echo "<div class='noticiaInfo'>";
                 echo "<p id='noticiaTitulo'>" . $noticia['titulo'] . "</p>";
-                echo "<p>Fecha: " . $noticia['fecha'] . "</p>";
+                echo "<p id='noticiaFecha'>Fecha: " . $noticia['fecha'] . "</p>";
                 echo "<p>" . $noticia['cuerpo'] . "</p>";
                 echo "</div>";
                 echo "</div>";
