@@ -157,7 +157,7 @@ a:active {
   color: var(--main-white);
 }
 
-#btnPanelAdministracion{
+#btnPanelAdministracion {
   margin-bottom: 8px;
   font-size: 15px;
 }
@@ -615,7 +615,9 @@ form {
   background-color: var(--main-grey);
 }
 
-#registerAdminPermisos {
+#registerAdminPermisos,
+#altaAnimalGenero,
+#altaAnimalEspecie {
   border-width: 2px;
   border-color: var(--main-black);
 }
@@ -754,4 +756,42 @@ td {
 }
 /* Fin estilos dar de baja */
 
+/* Inicio estilos altaAnimal */
 
+#subirFoto {
+  text-align: center;
+  cursor: pointer;
+  padding: 8px;
+  background-color: var(--main-white);
+  border-radius: 8px;
+  border: 2px solid black;
+  margin-bottom: 12px;
+  max-width: 330px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.formFlexAltaAnimales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#h1AltaAnimal {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+#containerFormAltaAnimal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 540px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+}
+/* Fin estilos altaAnimal */
