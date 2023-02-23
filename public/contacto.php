@@ -7,7 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <title>Noticias</title>
+    <title>Contacto</title>
+    <style>
+        .mainContacto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contactoNum {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,55 +57,21 @@
         </div>
     </section>
     <div id="bodyAdopciones">
-        <h1>Noticias</h1>
-        <main id="mainAdopciones">
-
-            <!-- Formulario Selecion Vista Noticias 
-            <form>
-                <label for="orden">Ordenar noticias:</label>
-                <select name="orden" id="orden">
-                    <option value="desc">Más recientes primero</option>
-                    <option value="asc">Más antiguas primero</option>
-                </select>
-            </form>
-            -->
-
-            <?php
-            include('../modules/PDO.php');
-            $pdo = conectarBD("otro");
-            $orden = "DESC";
-            if (isset($_GET['orden']) && ($_GET['orden'] == "asc" || $_GET['orden'] == "desc")) {
-                $orden = $_GET['orden'];
-            }
-            $consulta = "SELECT titulo, fecha, cuerpo, foto FROM noticias ORDER BY fecha $orden;";
-            $resultado = $pdo->query($consulta);
-            $datosNoticia = $resultado->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($datosNoticia as $noticia) {
-                echo "<div class='noticia'>";
-                echo "<div class='noticiaImagen'>";
-                echo "<img src=" . $noticia['foto'] . " alt='foto_noticia' />";
-                echo "</div>";
-                echo "<div class='noticiaInfo'>";
-                echo "<p id='noticiaTitulo'>" . $noticia['titulo'] . "</p>";
-                echo "<p id='noticiaFecha'>Fecha: " . date('d - m - y', strtotime($noticia['fecha'])) . "</p>";
-                echo "<p>" . $noticia['cuerpo'] . "</p>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
-            <script>
-                document.getElementById("orden").addEventListener("change", function() {
-                    var orden = this.value;
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            document.getElementById("noticias").innerHTML = this.responseText;
-                        }
-                    };
-                    xhttp.open("GET", "actualizar_noticias.php?orden=" + orden, true);
-                    xhttp.send();
-                });
-            </script>
+        <h1>Contacto</h1>
+        <main id="mainContacto">
+            <section id="contactoNum">
+                <h2>Puede ponerse en contacto con nosotros a traves de nuestro</h2>
+                <p>Número de telefono: 690 420 123</p>
+                <p>Correo Electronico: protectoraTeis@procteis.com</p>
+            </section>
+            <section id="direccion">
+                <div id="map"></div>
+                <div id="textMap">
+                    <h3>Dirección:</h3>
+                    <p>Angela Iglesias Rebollar 91</p>
+                    <p>36216 Vigo, Pontevedra</p>
+                </div>
+            </section>
         </main>
     </div>
     <footer id="footer-index">
@@ -110,6 +89,21 @@
     </footer>
     <button class="scroll-top-btn hidden">&#11014;</button>
     <script src="../js/scrollTopBtn.js"></script>
+    <script src="https://maps.google.com/maps/api/js">
+        window.onload = function () {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: new google.maps.LatLng(42.15072,  8.41299),
+                zoom: 13
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Ubicación Protectora Teis'
+            });
+        }
+    </script>
 </body>
 
 </html>

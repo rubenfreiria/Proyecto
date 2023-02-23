@@ -35,12 +35,12 @@
         </nav>
     </header>
     <section>
-        <div id="menuContainer">
+    <div id="menuContainer">
             <a class="menuLink" href="../public/adopciones.php">Adopciones</a>
-            <a class="menuLink" href="">Donaciones</a>
-            <a class="menuLink" href="">Noticias</a>
-            <a class="menuLink" href="">Calendario</a>
-            <a class="menuLink" href="">Contacto</a>
+            <a class="menuLink" href="../public/donaciones.php">Donaciones</a>
+            <a class="menuLink" href="../public/noticias.php">Noticias</a>
+            <a class="menuLink" href="../public/calendario.php">Calendario</a>
+            <a class="menuLink" href="../public/contacto.php">Contacto</a>
         </div>
     </section>
     <div id="bodyAdopciones">
@@ -61,7 +61,7 @@
                 echo "<p id='animalNombre'><b>" . $animal['nombre'] . "</b></p>";
                 echo "<p>Raza: <b>" . $animal['raza'] . "</b></p>";
                 echo "<p>Sexo: <b>" . $animal['genero'] . "</b></p>";
-                echo "<p>Fecha nacimiento: <b>" . $animal['fecha_nacimiento'] . "</b></p>";
+                echo "<p>Fecha nacimiento: <b>" . date('d - m - y', strtotime($animal['fecha_nacimiento'])) . "</b></p>";
                 echo "<div id='divBtnAdoptar'><button><b>Adoptar</b></button></div>";
                 echo "</div>";
                 echo "</div>";
