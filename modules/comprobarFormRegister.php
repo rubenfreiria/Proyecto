@@ -25,7 +25,7 @@ function comprobarEmailRegistradoBD()
         $consulta = "SELECT * FROM usuarios WHERE email = '$registerEmail';";
         $ocurrencias = $pdo->query($consulta);
         if ($ocurrencias->rowCount() == 0) {
-            // Happy path, no existe ningun usuario con este email en la BBDD 
+            // No existe ningun usuario con este email en la BBDD 
             $devolver = 0;
             return $devolver;
         } else {
