@@ -8,17 +8,63 @@
     <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
     <link rel="stylesheet" href="../styles/styles.css" />
     <title>Contacto</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/mapaContacto.js"></script>
+
     <style>
-        .mainContacto {
+        #mainContacto {
             display: flex;
             flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1800px;
+        }
+
+        #contactoNum {
+            display: flex;
+            margin: 40px;
+            flex-direction: column;
+            text-align: center;
             align-items: center;
         }
 
-        .contactoNum {
+        #contactoNum p {
+            margin: 8px;
+        }
+
+        #direccion {
             display: flex;
-            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
+            margin: 20px;
+            width: 100%;
+        }
+
+        #contMap {
+            height: 400px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+        }
+
+        #textMap {
+            height: 400px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 400px;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background-color: grey;
         }
     </style>
 </head>
@@ -59,19 +105,21 @@
     <div id="bodyAdopciones">
         <h1>Contacto</h1>
         <main id="mainContacto">
-            <section id="contactoNum">
-                <h2>Puede ponerse en contacto con nosotros a traves de nuestro</h2>
-                <p>Número de telefono: 690 420 123</p>
-                <p>Correo Electronico: protectoraTeis@procteis.com</p>
-            </section>
-            <section id="direccion">
-                <div id="map"></div>
+            <div id="contactoNum">
+                <h2>Donde encontrarnos</h2>
+                <p><b>Número de telefono:</b> 690 420 123</p>
+                <p><b>Correo Electronico:</b> protectoraTeis@procteis.com</p>
+            </div>
+            <div id="direccion">
+                <div id="contMap">
+                    <div id="map"></div>
+                </div>
                 <div id="textMap">
                     <h3>Dirección:</h3>
                     <p>Angela Iglesias Rebollar 91</p>
                     <p>36216 Vigo, Pontevedra</p>
                 </div>
-            </section>
+            </div>
         </main>
     </div>
     <footer id="footer-index">
@@ -89,21 +137,6 @@
     </footer>
     <button class="scroll-top-btn hidden">&#11014;</button>
     <script src="../js/scrollTopBtn.js"></script>
-    <script src="https://maps.google.com/maps/api/js">
-        window.onload = function () {
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: new google.maps.LatLng(42.15072,  8.41299),
-                zoom: 13
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Ubicación Protectora Teis'
-            });
-        }
-    </script>
 </body>
 
 </html>
