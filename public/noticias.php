@@ -59,7 +59,7 @@
 
             <?php
             include('../modules/PDO.php');
-            $pdo = conectarBD("otro");
+            $pdo = conectarBD("admin");
             $orden = "DESC";
             if (isset($_GET['orden']) && ($_GET['orden'] == "asc" || $_GET['orden'] == "desc")) {
                 $orden = $_GET['orden'];
@@ -80,7 +80,7 @@
                 echo "</div>";
             }
             ?>
-            <script>
+            <!-- <script>
                 document.getElementById("orden").addEventListener("change", function() {
                     var orden = this.value;
                     var xhttp = new XMLHttpRequest();
@@ -92,7 +92,7 @@
                     xhttp.open("GET", "actualizar_noticias.php?orden=" + orden, true);
                     xhttp.send();
                 });
-            </script>
+            </script> -->
         </main>
     </div>
     <footer id="footer-index">

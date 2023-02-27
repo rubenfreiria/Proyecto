@@ -48,7 +48,7 @@
         <main id="mainAdopciones">
             <?php
             include('../modules/PDO.php');
-            $pdo = conectarBD("otro");
+            $pdo = conectarBD("admin");
             $consulta = "SELECT nombre, genero, raza, fecha_nacimiento, foto FROM animales;";
             $resultado = $pdo->query($consulta);
             $datosAnimal = $resultado->fetchAll(PDO::FETCH_ASSOC);
