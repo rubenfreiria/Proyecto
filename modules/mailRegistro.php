@@ -6,6 +6,7 @@ require("phpmailer/src/Exception.php");
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
+function mailRegistro(){
 try {
     $mail = new PHPMailer();
     $mail->CharSet = 'UTF-8';
@@ -29,41 +30,40 @@ try {
      * Para especificar el asunto. Utilizamos la función mb_convert_encoding para que muestre
      * correctamente los acentos.
      */
-    $str="Envío foto de playa";
+    $str="Confiramacion de registro";
     $mail->Subject = mb_convert_encoding($str,'UTF-8');
-    $texto = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Pregunta</title><meta charset = "UTF-8"></head><body>	
-    <form action = "" method = "POST">	
-            ¿Te está gustando el curso de PHP?<br>	
-            <input type="radio" id="si" name="eleccion" value="Si">
-            <label for="si">SÍ</label><br>
-            <input type="radio" id="no" name="eleccion" value="No">
-            <label for="no">NO</label><br>									
-            <input type = "submit" name="Enviar" value="Enviar">
-        </form>
+    $nombre = $_POST['registerName'];
+$apellidos = $_POST['registerApellidos'];
+$email = $_POST['registerEmail'];
+$telefono = $_POST['registerPhone'];
+    $texto = "<html>
+    <head>
+      <title>Confirmación de registro</title>
+    </head>
+    <body>
+      <p>Estimado/a $nombre $apellidos,</p>
+      <p>Gracias por registrarse en nuestra protectora de animales. Hemos recibido su solicitud y estamos revisando su información. En breve le enviaremos un correo electrónico de confirmación.</p>
+      <p>A continuación, le recordamos los detalles de su registro:</p>
+      <ul>
+        <li>Nombre completo: $nombre $apellidos</li>
+        <li>Correo electrónico: $email</li>
+        <li>Teléfono: $telefono</li>
+      </ul>
+      <p>Si tiene alguna pregunta o inquietud, no dude en ponerse en contacto con nosotros.</p>
+      <p>Atentamente,</p>
+      <p>El equipo de la Protectora de Animales</p>
     </body>
-</html>';
+  </html>";
 // cuerpo
     $mail->MsgHTML($texto);
-    /*
-     * bool AddAttachment ( $path, $name, [$encoding = "base64"], [$type = "application/octet-stream"] )	
-     * Añade un fichero adjunto al mensaje. Retorna false si el fichero no pudo ser encontrado.
-     * $path, es la ruta del archivo puede ser relativa al script php (no a la clase PHPMailer) 
-     * o una ruta absoluta. Se aconseja usar rutas relativas
-     * $name, nombre del fichero
-     * $encoding, tipo de codificación. Se aconseja dejar la predeterminada
-     * $type, el valor por defecto funciona con cualquier clase de archivo. Se puede 
-     * usar un tipo específico como por ejemplo image/jpeg
-     */
-    $mail->addAttachment("foto_playa.jpg");
-
+ 
 // destinatario
-    $address = "rubenfrteis@gmail.com";
+    $address = $_POST["registerEmail"];
     /*
      * AddAddress	void AddAddress ( $address, $name )	
      * Añade una dirección de destino del mensaje. El parámetro $name es opcional
      */
-    $mail->AddAddress($address, "rubenfrteis@gmail.com");
+    $mail->AddAddress($address, $_POST["registerName"]);
 
     /*
      * bool Send ( )	
@@ -79,5 +79,6 @@ try {
     }
 } catch (Exception $e) {
     echo "No se pudo enviar el mensaje. Error de correo : " . $mail->ErrorInfo;
+}
 }
 ?>

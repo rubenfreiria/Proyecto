@@ -24,6 +24,8 @@ function insertRegisterUser()
         $insert->bindParam(':passwd', $encryptedPasswd);
         $insert->execute();
         session_start();
+        include('./mailRegistro.php');
+        mailRegistro();
         $_SESSION['registro_exitoso'] = "Registro realizado, ya puedes iniciar sesion con tu email";
         header('Location: ../public/register.php');
     } else {
