@@ -47,16 +47,6 @@
         <h1>Noticias</h1>
         <main id="mainAdopciones">
 
-            <!-- Formulario Selecion Vista Noticias 
-            <form>
-                <label for="orden">Ordenar noticias:</label>
-                <select name="orden" id="orden">
-                    <option value="desc">Más recientes primero</option>
-                    <option value="asc">Más antiguas primero</option>
-                </select>
-            </form>
-            -->
-
             <?php
             include('../modules/PDO.php');
             $pdo = conectarBD("admin");
@@ -80,19 +70,6 @@
                 echo "</div>";
             }
             ?>
-            <!-- <script>
-                document.getElementById("orden").addEventListener("change", function() {
-                    var orden = this.value;
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            document.getElementById("noticias").innerHTML = this.responseText;
-                        }
-                    };
-                    xhttp.open("GET", "actualizar_noticias.php?orden=" + orden, true);
-                    xhttp.send();
-                });
-            </script> -->
         </main>
     </div>
     <footer id="footer-index">
