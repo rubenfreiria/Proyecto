@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS protectora_teis;
 
-CREATE DATABASE protectora_teis;
+CREATE DATABASE protectora_teis CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE protectora_teis;
 
@@ -13,7 +13,7 @@ CREATE TABLE usuarios (
     apellidos VARCHAR(60) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla noticias*/
 CREATE TABLE noticias (
@@ -25,7 +25,7 @@ CREATE TABLE noticias (
     id_usuario INT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla animales */
 CREATE TABLE animales (
@@ -36,7 +36,7 @@ CREATE TABLE animales (
     raza VARCHAR(40) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
     foto VARCHAR(200) NOT NULL
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla adopciones */
 CREATE TABLE adopciones (
@@ -46,7 +46,7 @@ CREATE TABLE adopciones (
     id_adoptante INT NOT NULL,
     FOREIGN KEY (id_animal) REFERENCES animales(id),
     FOREIGN KEY (id_adoptante) REFERENCES usuarios(id)
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla de donaciones */
 CREATE TABLE donaciones (
@@ -55,7 +55,7 @@ CREATE TABLE donaciones (
     cantidad DECIMAL(10, 2) NOT NULL,
     donador_id INT,
     FOREIGN KEY (donador_id) REFERENCES usuarios(id)
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla de historial médico */
 /* Comprobar si se puede crear la clave con las dos foreing keys */
@@ -68,7 +68,7 @@ CREATE TABLE historial_medico (
     id_veterinario INT NOT NULL,
     FOREIGN KEY (id_animal) REFERENCES animales(id),
     FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
-);
+) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Insert a tabla usuarios */
 INSERT INTO
