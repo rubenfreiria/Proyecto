@@ -17,6 +17,10 @@
       <a class="backToIndex" href="../index.php">
         <h3 class="h3Login">Protectora</h3>
         <img id="logoHeader" src="../media/logos/logo.png" />
+        <div class='aFormAdministracion'>
+              <a id='aAzul' href='../index.php'>Index</a>
+              <a id='aAzul' href='./veterinarioPanel.php'>Panel veterinario</a>
+            </div>
       </a>
       <form action="../modules/insertAnimal.php" method="post" enctype="multipart/form-data">
         <input type="text" name="altaAnimalNombre" id="altaAnimalNombre" class="elementoForm"
@@ -44,7 +48,6 @@
           echo "<p id='infoLoginYRegister'>" . $_SESSION['error_alta_animal'] . "</p>";
           unset($_SESSION['error_alta_animal']);
         }
-        session_destroy();
         ?>
         <button class="btnForm" type="submit">Enviar</button>
       </form>
