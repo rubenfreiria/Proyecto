@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="./media/logos/logoWhite.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="stylesheet" href=".\styles\styles.css" />
   <title>Protectora</title>
 </head>
@@ -35,12 +36,12 @@
             echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='./media/logos/user.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
           }
           echo "<form id='formCerrarSesion' action='./modules/cerrarSesion.php' method='post'>
-                  <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
-                </form>";
+          <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
+          </form>";
 
         } else {
           echo '<a class="elementoMenu" id="inicioSesionA" href="public/register.php">Registrarse</a>
-                <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';
+          <a class="elementoMenu" id="registerA" href="public/login.php">Login</a>';
         }
         ?>
 
@@ -48,13 +49,27 @@
     </nav>
   </header>
   <section>
-  <div id="menuContainer">
-            <a class="menuLink" href="public/adopciones.php">Adopciones</a>
-            <a class="menuLink" href="public/donaciones.php">Donaciones</a>
-            <a class="menuLink" href="public/noticias.php">Noticias</a>
-            <a class="menuLink" href="public/calendario.php">Calendario</a>
-            <a class="menuLink" href="public/contacto.php">Contacto</a>
-        </div>
+    <button class="panelr-btn hamburger--vortex" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="panelr is-active">
+      <nav class="menuReducido">
+        <a href="./index.php">Inicio</a>
+        <a href="./public/adopciones">Adopciones</a>
+        <a href="./public/noticias.php">Noticias</a>
+        <a href="./public/contacto.php">Contacto</a>
+      </nav>
+    </aside>
+
+    <div id="menuContainer" class="panel">
+      <a class="menuLink" href="public/adopciones.php">Adopciones</a>
+      <a class="menuLink" href="public/donaciones.php">Donaciones</a>
+      <a class="menuLink" href="public/noticias.php">Noticias</a>
+      <a class="menuLink" href="public/calendario.php">Calendario</a>
+      <a class="menuLink" href="public/contacto.php">Contacto</a>
+    </div>
   </section>
   <main id="index-main">
     <h1 class="slide-bottom">Perro</h1>
@@ -107,6 +122,7 @@
   </footer>
   <button class="scroll-top-btn hidden">&#11014;</button>
   <script src="js/scrollTopBtn.js"></script>
+  <script src="./js/menuResponsive.js" type="module"></script>
 </body>
 
 </html>
