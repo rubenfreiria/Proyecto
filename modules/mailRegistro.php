@@ -17,21 +17,21 @@ function mailRegistro()
     $mail->SMTPDebug = 0;
     //	Establece la autentificación SMTP. Por defecto a False
     $mail->SMTPAuth = true;
-    $mail->SMTPSecure = "tls";
+    $mail->SMTPSecure = 'tls';
     //	Establece el servidor SMTP. Pueden ser varios separados por ;
-    $mail->Host = "iesteis-es.correoseguro.dinaserver.com";
+    $mail->Host = 'iesteis-es.correoseguro.dinaserver.com';
     $mail->Port = 587;
 
     // Introducir usuario de correo completo
-    $mail->Username = "protectora@b07.daw2d.iesteis.gal";
+    $mail->Username = 'protectora@b07.daw2d.iesteis.gal';
     // Introducir clave
-    $mail->Password = "ProtectoraTeis1.";
+    $mail->Password = 'ProtectoraTeis1.';
     $mail->SetFrom('protectora@b07.daw2d.iesteis.gal', 'protectora@b07.daw2d.iesteis.gal');
     /*
      * Para especificar el asunto. Utilizamos la función mb_convert_encoding para que muestre
      * correctamente los acentos.
      */
-    $str = "Confiramacion de registro";
+    $str = 'Confiramacion de registro';
     $mail->Subject = mb_convert_encoding($str, 'UTF-8');
     $nombre = $_POST['registerName'];
     $apellidos = $_POST['registerApellidos'];
@@ -64,7 +64,7 @@ function mailRegistro()
      * AddAddress	void AddAddress ( $address, $name )	
      * Añade una dirección de destino del mensaje. El parámetro $name es opcional
      */
-    $mail->AddAddress($_POST["registerEmail"], $_POST["registerName"]);
+    $mail->AddAddress($_POST['registerEmail'], $_POST['registerName']);
     $mail->Send();
 }
 ?>
