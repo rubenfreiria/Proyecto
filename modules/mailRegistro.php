@@ -56,7 +56,10 @@ function mailRegistro()
                 </html>";
     // cuerpo
     $mail->MsgHTML($texto);
-
+    /* Envio Horario
+    $mail->addAttachment('../media/horario/horario_protectoraTeis.pdf');
+    */
+    
     /*
      * AddAddress	void AddAddress ( $address, $name )	
      * Añade una dirección de destino del mensaje. El parámetro $name es opcional
