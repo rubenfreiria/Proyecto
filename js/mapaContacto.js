@@ -7,7 +7,7 @@ window.onload = function () {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
         maxZoom: 18,
         tileSize: 512,
-        zoomOffset: -1
+        zoomOffset: -1,
     }).addTo(map);
 
     var marker = L.marker(myLatLng).addTo(map);
