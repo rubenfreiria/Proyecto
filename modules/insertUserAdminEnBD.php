@@ -13,7 +13,6 @@ function insertRegisterAdmin()
     $comprobacion = comprobarEmailRegistradoBD();
     if ($comprobacion == 0) {
         $pdo = conectarBD("admin");
-
         $encryptedPasswd = password_hash($_POST['registerPassword'], PASSWORD_DEFAULT);
         $insert = $pdo->prepare("INSERT INTO usuarios (nivel_acceso, email, nombre, apellidos, telefono, passwd) VALUES (:nivel_acceso, :email, :nombre, :apellidos, :telefono, :passwd)");
         $insert->bindParam(':nivel_acceso', $_POST["registerPermisos"]);

@@ -6,11 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
+  <link rel="stylesheet" href="../libraries/hamburguers/hamburguers.css">
   <link rel="stylesheet" href="../styles/styles.css" />
   <title>Register</title>
 </head>
 
 <body>
+  <button class="panelr-btn hamburger--spring" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <aside class="panelr is-active">
+    <nav class="menuReducido">
+      <a href="../index.php">Inicio</a>
+      <a href="./adopciones.php">Adopciones</a>
+      <a href="./noticias.php">Noticias</a>
+      <a href="./contacto.php">Contacto</a>
+    </nav>
+  </aside>
   <div class="formFlex">
     <div id="containerFormRegister">
       <a class="backToIndex" href="../index.php">
@@ -20,12 +34,13 @@
       <form action="../modules/insertRegisterUser.php" method="post">
         <input type="email" name="registerEmail" id="registerEmail" class="elementoForm"
           placeholder="Correo electronico" maxlength="32" required />
-        <input type="text" name="registerName" id="registerName" class="elementoForm" placeholder="Nombre" maxlength="16" required />
-        <input type="text" name="registerApellidos" id="registerApellidos" class="elementoForm" placeholder="Apellidos" maxlength="28"
-          required />
-        <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono" maxlength="9"
-          required />
-        <input type="password" name="registerPassword" id="registerPassword" class="elementoForm" 
+        <input type="text" name="registerName" id="registerName" class="elementoForm" placeholder="Nombre"
+          maxlength="16" required />
+        <input type="text" name="registerApellidos" id="registerApellidos" class="elementoForm" placeholder="Apellidos"
+          maxlength="28" required />
+        <input type="tel" name="registerPhone" id="registerPhone" class="elementoForm" placeholder="Teléfono"
+          maxlength="9" required />
+        <input type="password" name="registerPassword" id="registerPassword" class="elementoForm"
           placeholder="Contaseña" required />
         <?php
         session_start();
@@ -46,6 +61,7 @@
       </p>
     </div>
   </div>
+  <script src="../js/menuResponsive.js" type="module"></script>
 </body>
 
 </html>

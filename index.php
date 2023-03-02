@@ -109,14 +109,14 @@
 
   <footer id="footer-index">
     <div id="social">
-      <a>
-        <img id="twitter" src="./media/social/instagram.svg" alt="twitter" />
+      <a href="https://www.instagram.com/">
+        <img id="instagram" src="./media/social/instagram.svg" alt="instagram" />
       </a>
-      <a>
-        <img id="instagram" src="./media/social/tiktok.svg" alt="instagram" />
+      <a href="https://www.tiktok.com/">
+        <img id="tiktok" src="./media/social/tiktok.svg" alt="tiktok" />
       </a>
-      <a>
-        <img id="tiktok" src="./media/social/twitter.svg" alt="tiktok" />
+      <a href="https://twitter.com/">
+        <img id="twitter" src="./media/social/twitter.svg" alt="twitter" />
       </a>
     </div>
   </footer>
