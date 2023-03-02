@@ -97,7 +97,7 @@
                 echo "<p>Fecha nacimiento: <b>" . date('d - m - y', strtotime($animal['fecha_nacimiento'])) . "</b></p>";
                 echo "<form method='POST' action='../modules/mailAdopciones.php'>";
                 echo "<div id='divBtnAdoptar'>";
-                echo "<input type='submit' name='btnAdoptar' value='Adoptar'>";
+                echo "<input id='btnFormAdopciones' type='submit' name='btnAdoptar' value='Adoptar'>";
                 echo "</div>";
                 echo "</form>";
                 echo "</div>";

@@ -549,6 +549,20 @@ form {
   max-width: 660px;
 }
 
+#btnFormAdopciones{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 14px;
+    border: none;
+    background-color: var(--main-red);
+    color: var(--main-white);
+}
+
+#btnFormAdopciones:hover {
+  background-color: var(--ligth-red);
+}
+
 @media screen and (max-width: 660px) {
   #mensajeAdopciones {
     max-width: 330px;
