@@ -56,7 +56,7 @@
     <aside class="panelr is-active">
       <nav class="menuReducido">
         <a href="../index.php">Inicio</a>
-        <a href="./adopciones">Adopciones</a>
+        <a href="./adopciones.php">Adopciones</a>
         <a href="./noticias.php">Noticias</a>
         <a href="./contacto.php">Contacto</a>
       </nav>
