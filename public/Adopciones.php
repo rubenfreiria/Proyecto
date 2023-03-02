@@ -24,18 +24,18 @@
                 session_start();
                 if (isset($_SESSION["userID"])) {
                     echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
-                        <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
-                </form>";
+                    <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
+                    </form>";
                 } else {
                     echo '<a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
-                          <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>';
+                    <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>';
                 }
                 ?>
             </div>
         </nav>
     </header>
     <section>
-    <div id="menuContainer">
+        <div id="menuContainer">
             <a class="menuLink" href="../public/adopciones.php">Adopciones</a>
             <a class="menuLink" href="../public/donaciones.php">Donaciones</a>
             <a class="menuLink" href="../public/noticias.php">Noticias</a>
@@ -45,6 +45,15 @@
     </section>
     <div id="bodyAdopciones">
         <h1>Adopciones</h1>
+        <div>
+            <?php
+            if (isset($_SESSION["adopciones_nologed"])) {
+                echo "<h3 id='mensajeAdopciones'>" . $_SESSION["adopciones_nologed"] . "</h3>";
+            } else if (isset($_SESSION["adopciones_enviado"])) {
+                echo "<h3 id='mensajeAdopciones'>" . $_SESSION["adopciones_enviado"] . "</h3>";
+            }
+            ?>
+        </div>
         <main id="mainAdopciones">
             <?php
             include('../modules/PDO.php');
@@ -62,10 +71,15 @@
                 echo "<p>Raza: <b>" . $animal['raza'] . "</b></p>";
                 echo "<p>Sexo: <b>" . $animal['genero'] . "</b></p>";
                 echo "<p>Fecha nacimiento: <b>" . date('d - m - y', strtotime($animal['fecha_nacimiento'])) . "</b></p>";
-                echo "<div id='divBtnAdoptar'><button><b>Adoptar</b></button></div>";
+                echo "<form method='POST' action='../modules/mailAdopciones.php'>";
+                echo "<div id='divBtnAdoptar'>";
+                echo "<input type='submit' name='btnAdoptar' value='Adoptar'>";
+                echo "</div>";
+                echo "</form>";
                 echo "</div>";
                 echo "</div>";
             }
+
             ?>
         </main>
     </div>

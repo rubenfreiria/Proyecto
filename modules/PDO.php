@@ -53,6 +53,8 @@ function conectarBD($permisos)
     } catch (PDOException $e) {
         echo $e->getMessage();
         exit();
+    } finally {
+        $pdo = null;
     }
 }
 ?>
