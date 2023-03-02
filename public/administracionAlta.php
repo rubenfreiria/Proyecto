@@ -12,63 +12,22 @@
 </head>
 
 <body>
-  <header>
-    <nav id="menu">
-      <div id="menuIzquierda">
-        <img class="elementoMenu" id="logoHeader" src="../media/logos/logoWhite.png" />
-        <h3>
-          <a class="elementoMenu" id="h3Menu" href="../index.php">Protectora</a>
-        </h3>
-      </div>
-      <div id="menuDerecha">
-        <?php
-        session_start();
-        include("../modules/comprobarNivelAcceso.php");
-        if (isset($_SESSION["userID"])) {
-          if (comprobarNivelAcceso() == "admin") {
-            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
-            echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./administracionPanel.php'>Administracion</a></button>";
-          } elseif (comprobarNivelAcceso() == "veterinario") {
-            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userVeterinario.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
-            echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./veterinarioPanel.php'>Administracion</a></button>";
-          } else {
-            echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/user.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
-          }
-          echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
-                    <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
-                    </form>";
-
-        } else {
-          echo '<a class="elementoMenu" id="inicioSesionA" href="./register.php">Registrarse</a>
-                    <a class="elementoMenu" id="registerA" href="./login.php">Login</a>';
-        }
-        ?>
-      </div>
+  <button class="panelr-btn hamburger--spring" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <aside class="panelr is-active">
+    <nav class="menuReducido">
+      <a href="../index.php">Inicio</a>
+      <a href="./adopciones.php">Adopciones</a>
+      <a href="./noticias.php">Noticias</a>
+      <a href="./contacto.php">Contacto</a>
     </nav>
-  </header>
-  <section>
-        <button class="panelr-btn hamburger--spring" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-        <aside class="panelr is-active">
-            <nav class="menuReducido">
-                <a href="../index.php">Inicio</a>
-                <a href="./adopciones.php">Adopciones</a>
-                <a href="./noticias.php">Noticias</a>
-                <a href="./contacto.php">Contacto</a>
-            </nav>
-        </aside>
-        <div id="menuContainer">
-            <a class="menuLink" href="./adopciones.php">Adopciones</a>
-            <a class="menuLink" href="./donaciones.php">Donaciones</a>
-            <a class="menuLink" href="./noticias.php">Noticias</a>
-            <a class="menuLink" href="./calendario.php">Calendario</a>
-            <a class="menuLink" href="./contacto.php">Contacto</a>
-        </div>
-    </section>
+  </aside>
   <?php
+  include("../modules/comprobarNivelAcceso.php");
+  session_start();
   if (comprobarNivelAcceso() == "admin") {
     echo "<div class='formFlex'>
         <div id='containerFormAdmin'>
