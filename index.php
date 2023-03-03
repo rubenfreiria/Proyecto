@@ -72,9 +72,9 @@
     </div>
   </section>
   <main id="index-main">
-    <h1 class="slide-bottom">Perro</h1>
-    <h1 class="slide-bottom">De</h1>
-    <h1 class="slide-bottom">Ejemplo</h1>
+    <h1 class="slide-bottom">Contigo podemos</h1>
+    <h1 class="slide-bottom">salvar vidas</h1>
+ 
     <video src=".\media\video\vd01.mp4" autoplay="true" muted="true" loop="true"></video>
   </main>
   <section id="quienesSomos">
@@ -92,17 +92,17 @@
       <div class="cardQuePuedohacer" id="cardAdopta">
         <h3>Adopta</h3>
         <p>Una oportunidad de mejorar la vida de un animal</p>
-        <button>Más información</button>
+        <button id="masInfo"><a href="./public/adopciones.php">Más información</a></button>
       </div>
       <div class="cardQuePuedohacer" id="cardApadrina">
         <h3>Apadrina</h3>
         <p>Si te gustan los animales pero no tienes el tiempo suficiente</p>
-        <button>Más información</button>
+        <button id="masInfo"><a href="./public/adopciones.php">Más información</a></button>
       </div>
       <div class="cardQuePuedohacer" id="cardDona">
         <h3>Dona</h3>
         <p>Apoya a los animales del refugio mientras encuentran un hogar</p>
-        <button>Más información</button>
+        <button id="masInfo"><a href="./public/donaciones.php">Más información</a></button>
       </div>
     </div>
   </section>

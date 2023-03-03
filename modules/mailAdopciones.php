@@ -105,8 +105,8 @@ function mailAdopciones()
                     <body>
                         <p>Estimado/a $nombre $apellidos,</p>
                         <p>Gracias por interesarse en una adopcion en nuestra web.</p>
-                        <p>Atentamente,</p>
-                        <p>El equipo de la Protectora de Animales de Teis</p>
+                        <p>Puede pasar por nuestro centro cuando quiera.</p>
+                        <p>A continuacion le dejamos nuestro horario:</p>
                     <table id='tablaHorario'>
             
                 <thead>
@@ -186,6 +186,8 @@ function mailAdopciones()
                     </tr>
                 </tbody>
             </table>
+            <p>Atentamente,</p>
+            <p>El equipo de la Protectora de Animales de Teis</p>
                     </body>
                 </html>";
         // cuerpo
