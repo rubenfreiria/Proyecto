@@ -53,6 +53,7 @@ CREATE TABLE donaciones (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fecha_donacion DATE NOT NULL,
     cantidad DECIMAL(10, 2) NOT NULL,
+    mensaje_donacion TEXT NOT NULL,
     donador_id INT,
     FOREIGN KEY (donador_id) REFERENCES usuarios(id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;

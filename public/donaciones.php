@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <title>Contacto</title>
+    <title>Donaciones</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="../js/mapaContacto.js"></script>
@@ -45,44 +45,38 @@
             <a class="menuLink" href="../public/contacto.php">Contacto</a>
         </div>
     </section>
-    <div>
+    <div id="mainDonacion">
         <h1>Donaciones</h1>
         <div>
-            <p>Desde Protectora Tesi aceptamos todo tipo de donaciones</p>
-            <p>Recogemos vienes como alimentos, ropa, juguetes, etc en nuestra propio edificio</p>
+            <p>Desde Protectora Teis <b>aceptamos todo tipo de donaciones</b></p>
+            <p>Recogemos vienes como alimentos, ropa, juguetes, etc en <b><a id="linkContacto"
+                        href="../public/contacto.php">nuestro edificio</a></b></p>
             <p>Ademas si quiere realizar una donacion monetaria la puede realizar con el siguiente formulario</p>
         </div>
-        <?php
+        <div id="contenidoDonacion">
+            <?php
 
-        if (isset($_SESSION["userID"])) {
-            echo '
-            <form action="../modules/insertarDonacion.php" method="post">
-
-                <label for="ipusuario">IP del usuario:</label>
-                <input type="text" id="ipusuario" name="ipusuario" required><br>
-
-                <label for="monto">Monto:</label>
-                <input type="number" id="monto" name="monto" min="1" max="999999" required><br>
-
-                <input type="submit" value="Donar">
-            </form>
-            ';
-        } else {
-            echo "<p>Por favor, se quere realizar </p>";
-        }
-
-
-        ?>
-        <form action="../modules/insertarDonacion.php" method="post">
-
-            <label for="ipusuario">IP del usuario:</label>
-            <input type="text" id="ipusuario" name="ipusuario" required><br>
-
-            <label for="monto">Monto:</label>
-            <input type="number" id="monto" name="monto" min="1" max="999999" required><br>
-
-            <input type="submit" value="Donar">
-        </form>
+            if (isset($_SESSION["userID"])) {
+                echo '
+                        <div id="formularioDonacion">
+                        <form action="../modules/insertarDonacion.php" method="post">
+                            <label for="cantidadDonacion">Cantidad:</label>
+                            <input type="number" id="cantidadDonacion" name="Cantidad" value="€" min="1" max="999999" required><br>
+                            <label for="mensajeDonacion">Mensaje:</label>
+                            <input type="text" id="mensajeDonacion" name="Mensaje"><br>
+                            <input type="submit" value="Donar">
+                        </form>
+                        </div>
+                    ';
+            } else {
+                echo '
+                        <p><b>Por favor, si quere realizar una donacion primero ha de estar registrado y logueado</b></p>
+                        <a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
+                        <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>
+                    ';
+            }
+            ?>
+        </div>
     </div>
     <footer id="footer-index">
         <div id="social">
