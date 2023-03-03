@@ -56,9 +56,15 @@
         <div id="contenidoDonacion">
             <?php
 
-            if(isset($_SESSION['alta_donacion_exitosa'])) {
-                echo $_SESSION['alta_donacion_exitosa'];
+            if (isset($_SESSION["alta_donacion_exitosa"])) {
+                echo "<h3 id='mensajeAdopciones'>" . $_SESSION["alta_donacion_exitosa"] . "</h3><p>Muchas Gracias por su aportacion</p>";
+                unset($_SESSION["alta_donacion_exitosa"]);
+            } else if (isset($_SESSION["error_alta_donacion"])) {
+                echo "<h3 id='mensajeAdopciones'>" . $_SESSION["error_alta_donacion"] . "</h3>";
+                unset($_SESSION["error_alta_donacion"]); 
             }
+
+
 
             if (isset($_SESSION["userID"])) {
                 echo '
