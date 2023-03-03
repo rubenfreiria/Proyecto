@@ -1086,8 +1086,17 @@ thead {
 }
 
 #mainDonacion h1,
-p {
+#mainDonacion p {
       margin: 20px;
+}
+
+#mainDonacion a {
+      text-decoration: none;
+      color: #0095f6;
+}
+
+#mainDonacion a:hover {
+      color: #29a9ff;
 }
 
 #contenidoDonacion {
@@ -1129,7 +1138,7 @@ p {
       box-sizing: border-box;
 }
 
-input[type="submit"] {
+#enviarDonacion {
       background-color: var(--main-red);
       color: white;
       border: none;
@@ -1138,7 +1147,7 @@ input[type="submit"] {
       cursor: pointer;
 }
 
-input[type="submit"]:hover {
+#enviarDonacion:hover {
       background-color: var(--ligth-red);
 }
 

@@ -56,15 +56,19 @@
         <div id="contenidoDonacion">
             <?php
 
+            if(isset($_SESSION['alta_donacion_exitosa'])) {
+                echo $_SESSION['alta_donacion_exitosa'];
+            }
+
             if (isset($_SESSION["userID"])) {
                 echo '
                         <div id="formularioDonacion">
                         <form action="../modules/insertarDonacion.php" method="post">
                             <label for="cantidadDonacion">Cantidad:</label>
-                            <input type="number" id="cantidadDonacion" name="Cantidad" value="€" min="1" max="999999" required><br>
+                            <input type="number" id="cantidadDonacion" name="cantidadDonacion" value="€" min="1" max="999999" required><br>
                             <label for="mensajeDonacion">Mensaje:</label>
-                            <input type="text" id="mensajeDonacion" name="Mensaje"><br>
-                            <input type="submit" value="Donar">
+                            <input type="text" id="mensajeDonacion" name="mensajeDonacion"><br>
+                            <input type="submit" id="enviarDonacion" value="Donar">
                         </form>
                         </div>
                     ';
