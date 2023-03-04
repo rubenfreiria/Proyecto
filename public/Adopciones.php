@@ -64,7 +64,6 @@
             <a class="menuLink" href="./adopciones.php">Adopciones</a>
             <a class="menuLink" href="./donaciones.php">Donaciones</a>
             <a class="menuLink" href="./noticias.php">Noticias</a>
-            <a class="menuLink" href="./calendario.php">Calendario</a>
             <a class="menuLink" href="./contacto.php">Contacto</a>
         </div>
     </section>
