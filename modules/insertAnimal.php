@@ -8,7 +8,7 @@ function insertAnimal()
         $nombreArchivo = $nombreAnimal . ".jpg";
         $rutaArchivo = "../media/fotosAdopciones/" . $nombreArchivo;
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaArchivo);
-        $pdo = conectarBD("admin");
+        $pdo = conectarBD("veterinario");
         $insert = $pdo->prepare("INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimiento, foto) VALUES (:nombre, :genero, :especie, :raza, :fecha_nacimiento, :foto)");
         $insert->bindParam(':nombre', $_POST["altaAnimalNombre"]);
         $insert->bindParam(':genero', $_POST["altaAnimalGenero"]);

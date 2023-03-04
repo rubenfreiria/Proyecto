@@ -13,7 +13,7 @@ function mailAdopciones()
     if (isset($_SESSION["userID"])) {
         $mail = new PHPMailer();
         $userID = $_SESSION["userID"];
-        $pdo = conectarBD("admin");
+        $pdo = conectarBD("otro");
         $consulta = "SELECT nombre, apellidos, email FROM usuarios WHERE id = $userID;";
         $ejecucion = $pdo->query($consulta);
         $resultado = $ejecucion->fetch(PDO::FETCH_ASSOC);

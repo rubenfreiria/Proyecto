@@ -13,7 +13,7 @@ function iniciaSesion()
     if ($resultadoComprobarUserEnDB == true) {
         session_start();
         $loginEmail = $_POST['loginEmail'];
-        $pdo = conectarBD("admin");
+        $pdo = conectarBD("otro");
         $consulta = "SELECT id, nombre FROM usuarios WHERE email = '$loginEmail';";
         $ejecucion = $pdo->query($consulta);
         $resultado = $ejecucion->fetch(PDO::FETCH_ASSOC);

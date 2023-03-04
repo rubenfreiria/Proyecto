@@ -21,7 +21,7 @@ function comprobarEmailRegistradoBD()
     //Los datos del formulario de register estan cubiertos
     if ($resultadoComprobarRegister == true) {
         $registerEmail = $_POST['registerEmail'];
-        $pdo = conectarBD("admin");
+        $pdo = conectarBD("otro");
         $consulta = "SELECT * FROM usuarios WHERE email = '$registerEmail';";
         $ocurrencias = $pdo->query($consulta);
         if ($ocurrencias->rowCount() == 0) {

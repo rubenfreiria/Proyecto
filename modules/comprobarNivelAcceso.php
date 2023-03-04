@@ -4,7 +4,7 @@ function comprobarNivelAcceso()
 {
     if (isset($_SESSION["userID"])) {
         $userID = $_SESSION["userID"];
-        $pdo = conectarBD("admin");
+        $pdo = conectarBD("otro");
         $consulta = "SELECT nivel_acceso FROM usuarios WHERE id = $userID;";
         $ejecucion = $pdo->query($consulta);
         $resultado = $ejecucion->fetch(PDO::FETCH_ASSOC);

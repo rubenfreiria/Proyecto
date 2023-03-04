@@ -74,7 +74,7 @@
         <main id="mainAdopciones">
 
             <?php
-            $pdo = conectarBD("admin");
+            $pdo = conectarBD("otro");
             $orden = "DESC";
             if (isset($_GET['orden']) && ($_GET['orden'] == "asc" || $_GET['orden'] == "desc")) {
                 $orden = $_GET['orden'];

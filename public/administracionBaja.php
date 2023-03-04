@@ -92,7 +92,7 @@
           <td id='tdBorrar'>Borrar</td>
         </tr>";
 
-    $pdo = conectarBD('admin');
+    $pdo = conectarBD('otro');
     $consulta = 'SELECT id, nivel_acceso, nombre, apellidos, telefono, email FROM usuarios;';
     $resultado = $pdo->query($consulta);
     $datosUsuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);

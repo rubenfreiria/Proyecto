@@ -41,13 +41,13 @@ function conectarBD($permisos)
         su fichero de configuracion */
         if ($permisos === "admin") {
             $res = leer_config(dirname(__FILE__) . "/config/configuracionAdmin.xml", dirname(__FILE__) . "/config/configuracion.xsd");
-            $pdo = new PDO($res[0], $res[1], $res[2]);
+            $pdo = new PDO($res[0], $res[1], $res[2],array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         } else if ($permisos === "veterinario") {
             $res = leer_config(dirname(__FILE__) . "/config/configuracionVeterinario.xml", dirname(__FILE__) . "/config/configuracion.xsd");
-            $pdo = new PDO($res[0], $res[1], $res[2]);
+            $pdo = new PDO($res[0], $res[1], $res[2],array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         } else if ($permisos === "otro") {
             $res = leer_config(dirname(__FILE__) . "/config/configuracionOtro.xml", dirname(__FILE__) . "/config/configuracion.xsd");
-            $pdo = new PDO($res[0], $res[1], $res[2]);
+            $pdo = new PDO($res[0], $res[1], $res[2],array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         }
         return $pdo;
     } catch (PDOException $e) {
