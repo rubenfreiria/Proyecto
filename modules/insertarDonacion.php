@@ -1,6 +1,7 @@
 <?php
 include('./PDO.php');
 
+
 function insertarDonacion()
 {
     if (!empty($_POST['cantidadDonacion']) ) {

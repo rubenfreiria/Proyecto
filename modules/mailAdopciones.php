@@ -7,6 +7,12 @@ require '../libraries/phpmailer/PHPMailer.php';
 require '../libraries/phpmailer/SMTP.php';
 include('../modules/PDO.php');
 
+/**
+ * [Funcion que envia un correo a la direccion de correo del usuario que ha solicitado la adopcion]
+ *
+ * @return  [void]  [Nos muestra por pantalla un mensaje de que se ha enviado el correo o uno de que no se esta logrado]
+ */
+
 function mailAdopciones()
 {
     session_start();
