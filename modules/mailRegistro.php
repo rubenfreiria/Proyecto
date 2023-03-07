@@ -6,6 +6,11 @@ require('../libraries/phpmailer/Exception.php');
 require '../libraries/phpmailer/PHPMailer.php';
 require '../libraries/phpmailer/SMTP.php';
 
+/**
+ * Envia un correo de confirmación de registro
+ *
+ * @return  void Envia un correo de confirmación de registro
+ */
 function mailRegistro()
 {
 
@@ -54,12 +59,8 @@ function mailRegistro()
                         <p>El equipo de la Protectora de Animales de Teis</p>
                     </body>
                 </html>";
-    // cuerpo
     $mail->MsgHTML($texto);
-    /* Envio Horario
-    $mail->addAttachment('../media/horario/horario_protectoraTeis.pdf');
-    */
-    
+   
     /*
      * AddAddress	void AddAddress ( $address, $name )	
      * Añade una dirección de destino del mensaje. El parámetro $name es opcional

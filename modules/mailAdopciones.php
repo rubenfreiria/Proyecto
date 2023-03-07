@@ -8,9 +8,9 @@ require '../libraries/phpmailer/SMTP.php';
 include('../modules/PDO.php');
 
 /**
- * [Funcion que envia un correo a la direccion de correo del usuario que ha solicitado la adopcion]
+ * Funcion que envia un correo de confirmacion de cita de adopcion
  *
- * @return  [void]  [Nos muestra por pantalla un mensaje de que se ha enviado el correo o uno de que no se esta logrado]
+ * @return  void Envia un correo de confirmacion de cita de adopcion
  */
 
 function mailAdopciones()
@@ -196,7 +196,7 @@ function mailAdopciones()
             <p>El equipo de la Protectora de Animales de Teis</p>
                     </body>
                 </html>";
-        // cuerpo
+    
         $mail->MsgHTML($texto);
 
         /*

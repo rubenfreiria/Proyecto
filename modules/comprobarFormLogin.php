@@ -1,9 +1,9 @@
 <?php
 
 /**
- * [Comprueba que el formulario este cubierto]
+ * Comprueba si los campos del formulario de login estan completos
  *
- * @return  [bool]  [Devuelve true si los campos del formulario de login estan completos]
+ * @return  boolean Devuelve true si el formulario de login esta completo, false si falta algun campo por cubrir
  */
 function comprobarFormLogin()
 {

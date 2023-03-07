@@ -2,10 +2,9 @@
 include("./comprobarUserEnBD.php");
 
 /**
- * [Si los datos recibidos en el formulario se corresponden con los de la base
- * de datos, se inicia sesion, si no se redirige nuevamente al formulario de login]
+ * Inicia sesión y redirige a la página de inicio
  *
- * @return  [type]  [return description]
+ * @return  void Redirige a la página de inicio si la información de inicio de sesión es correcta, o a la página de login con un mensaje de error
  */
 function iniciaSesion()
 {

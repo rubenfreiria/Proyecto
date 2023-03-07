@@ -1,9 +1,9 @@
 <?php
 
 /**
- * [Comprueba que el formilario de register esté cubierto]
+ * Comprueba si el formulario de login esta completo
  *
- * @return  [int]  [Devuelve true si esta bien o false si no]
+ * @return  boolean Devuelve true si el formulario de login esta completo, false si falta algun campo por cubrir
  */
 function comprobarFormRegister()
 {
@@ -14,6 +14,11 @@ function comprobarFormRegister()
     }
 }
 
+/**
+ * Comprueba si el email introducido en el formulario de registro ya existe en la base de datos
+ *
+ * @return  int Devuelve 0 si el email no existe en la base de datos, 1 si faltan campos por cubrir en el formulario de registro y 2 si el email ya existe en la base de datos
+ */
 function comprobarEmailRegistradoBD()
 {
     $devolver = 0;

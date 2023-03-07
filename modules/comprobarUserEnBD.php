@@ -1,8 +1,12 @@
 <?php
 include './comprobarFormLogin.php';
 include('./PDO.php');
-/* Funcion que comprueba si los datos instroducidos en el formulario de login sean correctos
-Si son correctos devuelve true, si falla el correo o la contrasenha, devuelve false*/
+
+/**
+ * Comprueba si el usuario existe en la base de datos
+ *
+ * @return  boolean Devuelve true si el usuario existe y las credenciales son correctas, false si el usuario no existe o las credenciales son incorrectas
+ */
 function comprobarUserEnDB()
 {
     $resultadoComprobarLogin = comprobarFormLogin();

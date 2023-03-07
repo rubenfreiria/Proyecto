@@ -5,7 +5,6 @@ $pdo = conectarBD("admin");
 /**
  * Borra los campos seleccionados con checkbox en el formulario de dar de baja
  * Luego redirige a la pagina de bajas, que se actualiza y se puede volver a ver la tabla con las bajas
- * 
  */
 
 if (isset($_POST['borrar'])) {

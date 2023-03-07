@@ -1,6 +1,6 @@
 <?php
 /**
- * [Se borrar la variable de sesion userID, se finaliza la sesion y se redirige al login]
+ * Cierra la sesion y redirige a la pagina de login
  */
 
 unset($_SESSION["userID"]);

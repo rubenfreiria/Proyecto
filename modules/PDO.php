@@ -1,12 +1,12 @@
 <?php
-/**
- * Funcion que lee la configuracion de los parametros de ficheros XML
- *
- * @param   [xml file]  $fichero_config_BBDD    [fichero xml con los parametros para conectarse a la base de datos
- * @param   [xsd file]  $esquema                [fichero xsd que comprueba que el xml esta bien formado]
- *
- * @return  [array]                             [array con los valores de conexion a la base de datos]
- */
+ /**
+  * Lee el fichero de configuración y devuelve un array con los datos de la conexión
+  *
+  * @param   string  $fichero_config_BBDD  fichero de configuracion XML
+  * @param   string  $esquema              esquema de validacion XSD
+  *
+  * @return  array datos de la conexion
+  */
 function leer_config($fichero_config_BBDD, $esquema)
 {
     $config = new DOMDocument();
@@ -30,15 +30,14 @@ function leer_config($fichero_config_BBDD, $esquema)
  * Recibe una cadena con los permisos de la conexion que se desean
  * Devuelve un objeto pdo listo para lanzar consultas a la base de datos con el usuario indicado
  *
- * @param   [string]  $permisos  [cadena que corresponda con los permisos que se deseen acceder a la BBDD]
+ * @param   string  $permisos   cadena con los permisos de la conexion que se desean
  *
- * @return  [PDO object]             [return objeto PDO con los permisos selecionados]
+ * @return  object  objeto pdo listo para lanzar consultas a la base de datos con el usuario indicado
  */
 function conectarBD($permisos)
 {
     try {
-        /* Usuarios disponibles para la base de datos, cada uno con
-        su fichero de configuracion */
+        // Usuarios disponibles para la base de datos, cada uno con su fichero de configuracion 
         if ($permisos === "admin") {
             $res = leer_config(dirname(__FILE__) . "/config/configuracionAdmin.xml", dirname(__FILE__) . "/config/configuracion.xsd");
             $pdo = new PDO($res[0], $res[1], $res[2], array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));

@@ -1,6 +1,11 @@
 <?php
 include('./PDO.php');
 
+/**
+ * Recibe información del animal y la inserta en la base de datos
+ *
+ * @return void Redirige a la página de donaciones con un mensaje de error o de éxito
+ */
 function insertAnimal()
 {
     if (!empty($_POST['altaAnimalNombre']) && !empty($_POST['altaAnimalGenero']) && !empty($_POST['altaAnimalEspecie']) && !empty($_POST['altaAnimalRaza']) && !empty($_POST['altaAnimalFecha']) && !empty($_FILES["foto"]["tmp_name"])) {

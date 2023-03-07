@@ -3,10 +3,9 @@ include("./comprobarFormRegister.php");
 include('./PDO.php');
 
 /**
- * [Funcion que inserta en la base de datos el usuario a registrar
- * si este no se encuentra vacio y si los campos eatan correctamente cubiertos]
+ * Comprueba si el email introducido en el formulario de registro ya existe en la base de datos
  *
- * @return  [void]  [nos muestra por pantalla que ha creado el usuario o un aviso de lo que ha pasado]
+ * @return  void Redirige a la pagina de alta con un mensaje de error o de éxito
  */
 function insertRegisterAdmin()
 {

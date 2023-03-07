@@ -1,5 +1,11 @@
 <?php
 include('PDO.php');
+
+/**
+ * Recibe el id del usuario y devuelve su nivel de acceso
+ *
+ * @return  string Devuelve el nivel de acceso del usuario
+ */
 function comprobarNivelAcceso()
 {
     if (isset($_SESSION["userID"])) {

@@ -1,7 +1,11 @@
 <?php
 include('./PDO.php');
 
-
+/**
+ * Recibe información de la donación y la inserta en la base de datos
+ *
+ * @return  void Redirige a la página de donaciones con un mensaje de error o de éxito
+ */
 function insertarDonacion()
 {
     if (!empty($_POST['cantidadDonacion']) ) {
