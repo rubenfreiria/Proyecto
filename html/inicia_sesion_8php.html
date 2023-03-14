@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Referencia del Archivo modules/iniciaSesion.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo iniciaSesion.php</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a324e7c48937761b258daab9a91291a8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inicia_sesion_8php.html#a324e7c48937761b258daab9a91291a8a">iniciaSesion</a> ()</td></tr>
+<tr class="separator:a324e7c48937761b258daab9a91291a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a324e7c48937761b258daab9a91291a8a" name="a324e7c48937761b258daab9a91291a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324e7c48937761b258daab9a91291a8a">&#9670;&#160;</a></span>iniciaSesion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iniciaSesion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicia sesión y redirige a la página de inicio</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void Redirige a la página de inicio si la información de inicio de sesión es correcta, o a la página de login con un mensaje de error </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{</div>
+<div class="line"><span class="lineno">   11</span>    $resultadoComprobarUserEnDB = <a class="code hl_function" href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a>();</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">if</span> ($resultadoComprobarUserEnDB == <span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">   13</span>        session_start();</div>
+<div class="line"><span class="lineno">   14</span>        $loginEmail = $_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>];</div>
+<div class="line"><span class="lineno">   15</span>        <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <a class="code hl_function" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(<span class="stringliteral">&quot;otro&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = <span class="stringliteral">&quot;SELECT id, nombre FROM usuarios WHERE email = &#39;$loginEmail&#39;;&quot;</span>;</div>
+<div class="line"><span class="lineno">   17</span>        $ejecucion = <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>-&gt;query(<a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a>);</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = $ejecucion-&gt;fetch(PDO::FETCH_ASSOC);</div>
+<div class="line"><span class="lineno">   19</span>        $userID = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;id&quot;</span>];</div>
+<div class="line"><span class="lineno">   20</span>        $userNombre = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;nombre&quot;</span>];</div>
+<div class="line"><span class="lineno">   21</span>        $_SESSION[<span class="stringliteral">&quot;userID&quot;</span>] = $userID;</div>
+<div class="line"><span class="lineno">   22</span>        $_SESSION[<span class="stringliteral">&quot;userNombre&quot;</span>] = $userNombre;</div>
+<div class="line"><span class="lineno">   23</span>        header(<span class="stringliteral">&quot;Location: ../index.php&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line"><span class="lineno">   25</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   26</span>        session_start();</div>
+<div class="line"><span class="lineno">   27</span>        $_SESSION[<span class="stringliteral">&quot;error_login&quot;</span>] = <span class="stringliteral">&quot;Email o contraseña incorrecto&quot;</span>;</div>
+<div class="line"><span class="lineno">   28</span>        header(<span class="stringliteral">&quot;Location: ../public/login.php&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span>}</div>
+<div class="ttc" id="a_adopciones_8php_html_a06face0ef35c41554d8f4fe115363f58"><div class="ttname"><a href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a></div><div class="ttdeci">$resultado</div><div class="ttdef"><b>Definition:</b> Adopciones.php:85</div></div>
+<div class="ttc" id="a_adopciones_8php_html_a8b1625884d3b429a31ff07be097b7083"><div class="ttname"><a href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a></div><div class="ttdeci">$consulta</div><div class="ttdef"><b>Definition:</b> Adopciones.php:84</div></div>
+<div class="ttc" id="a_p_d_o_8php_html_a7258573d0f12873c87ec0ce410e64f9e"><div class="ttname"><a href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a></div><div class="ttdeci">conectarBD($permisos)</div><div class="ttdef"><b>Definition:</b> PDO.php:37</div></div>
+<div class="ttc" id="acerrar_sesion_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition:</b> cerrarSesion.php:9</div></div>
+<div class="ttc" id="acomprobar_user_en_b_d_8php_html_a17c860f7c4a414186df49f6dab85e2eb"><div class="ttname"><a href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a></div><div class="ttdeci">comprobarUserEnDB()</div><div class="ttdef"><b>Definition:</b> comprobarUserEnBD.php:10</div></div>
+<div class="ttc" id="aprocesar_baja_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> procesarBaja.php:3</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

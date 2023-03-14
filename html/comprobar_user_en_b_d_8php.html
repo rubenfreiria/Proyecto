@@ -74,8 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Funciones</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Funciones</a>  </div>
   <div class="headertitle"><div class="title">Referencia del Archivo comprobarUserEnBD.php</div></div>
 </div><!--header-->
 <div class="contents">
@@ -84,13 +83,6 @@ $(function() {
 Funciones</h2></td></tr>
 <tr class="memitem:a17c860f7c4a414186df49f6dab85e2eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a> ()</td></tr>
 <tr class="separator:a17c860f7c4a414186df49f6dab85e2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:af2a6e9c1d879c14d4c6971fbe2d27a19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comprobar_user_en_b_d_8php.html#af2a6e9c1d879c14d4c6971fbe2d27a19">$resultadoComprobarUserEnDB</a> = <a class="el" href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a>()</td></tr>
-<tr class="separator:af2a6e9c1d879c14d4c6971fbe2d27a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af24cb10eafb44800aeb3d42a25782d68"><td class="memItemLeft" align="right" valign="top">if($resultadoComprobarUserEnDB==true)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comprobar_user_en_b_d_8php.html#af24cb10eafb44800aeb3d42a25782d68">else</a></td></tr>
-<tr class="separator:af24cb10eafb44800aeb3d42a25782d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de las funciones</h2>
 <a id="a17c860f7c4a414186df49f6dab85e2eb" name="a17c860f7c4a414186df49f6dab85e2eb"></a>
@@ -107,79 +99,42 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
-<div class="line"><span class="lineno">    8</span>    $resultadoComprobarLogin = <a class="code hl_function" href="comprobar_form_login_8php.html#a531c6cdd3a565dfffea7a2603df2930e">comprobarFormLogin</a>();</div>
-<div class="line"><span class="lineno">    9</span>    <span class="comment">//Llama a la funcion comprobarFormLogin()</span></div>
-<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span> ($resultadoComprobarLogin == <span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">   11</span>        $loginEmail = $_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>];</div>
-<div class="line"><span class="lineno">   12</span>        $loginpasswd = $_POST[<span class="stringliteral">&#39;loginPassword&#39;</span>];</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <a class="code hl_function" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(<span class="stringliteral">&quot;admin&quot;</span>);</div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = <span class="stringliteral">&quot;SELECT * FROM usuarios WHERE email = &#39;$loginEmail&#39;;&quot;</span>;</div>
-<div class="line"><span class="lineno">   15</span>        <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>-&gt;query(<a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a>);</div>
-<div class="line"><span class="lineno">   16</span>        $user = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>-&gt;fetch(PDO::FETCH_ASSOC);</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>-&gt;rowCount() &gt; 0 &amp;&amp; password_verify($loginpasswd, $user[<span class="stringliteral">&#39;passwd&#39;</span>])) {</div>
-<div class="line"><span class="lineno">   18</span>            <span class="comment">//El usuario existe y las credenciales son correctas</span></div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   20</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   21</span>            <span class="comment">//El usuario no existe o las credenciales son incorrectas</span></div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   25</span>        echo <span class="stringliteral">&quot;Los datos introducidos no son correctos&quot;</span>;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="line"><span class="lineno">   28</span>}</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span><a class="code hl_variable" href="comprobar_user_en_b_d_8php.html#af2a6e9c1d879c14d4c6971fbe2d27a19">$resultadoComprobarUserEnDB</a> = <a class="code hl_function" href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a>();</div>
-<div class="line"><span class="lineno">   31</span><span class="keywordflow">if</span> (<a class="code hl_variable" href="comprobar_user_en_b_d_8php.html#af2a6e9c1d879c14d4c6971fbe2d27a19">$resultadoComprobarUserEnDB</a> == <span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">   32</span>    echo <span class="stringliteral">&quot;Tiro jiji&quot;</span>;</div>
-<div class="line"><span class="lineno">   33</span>    <span class="comment">/* Caso de datos introducidos correctos. Continuar haciendo el inicio de sesion */</span></div>
-<div class="line"><span class="lineno">   34</span>} <span class="keywordflow">else</span> {</div>
-<div class="ttc" id="a_adopciones_8php_html_a06face0ef35c41554d8f4fe115363f58"><div class="ttname"><a href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a></div><div class="ttdeci">$resultado</div><div class="ttdef"><b>Definition:</b> Adopciones.php:21</div></div>
-<div class="ttc" id="a_adopciones_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> Adopciones.php:19</div></div>
-<div class="ttc" id="a_adopciones_8php_html_a8b1625884d3b429a31ff07be097b7083"><div class="ttname"><a href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a></div><div class="ttdeci">$consulta</div><div class="ttdef"><b>Definition:</b> Adopciones.php:20</div></div>
-<div class="ttc" id="a_p_d_o_8php_html_a7258573d0f12873c87ec0ce410e64f9e"><div class="ttname"><a href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a></div><div class="ttdeci">conectarBD($permisos)</div><div class="ttdef"><b>Definition:</b> PDO.php:33</div></div>
-<div class="ttc" id="acomprobar_form_login_8php_html_a531c6cdd3a565dfffea7a2603df2930e"><div class="ttname"><a href="comprobar_form_login_8php.html#a531c6cdd3a565dfffea7a2603df2930e">comprobarFormLogin</a></div><div class="ttdeci">comprobarFormLogin()</div><div class="ttdef"><b>Definition:</b> comprobarFormLogin.php:2</div></div>
-<div class="ttc" id="acomprobar_user_en_b_d_8php_html_a17c860f7c4a414186df49f6dab85e2eb"><div class="ttname"><a href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a></div><div class="ttdeci">comprobarUserEnDB()</div><div class="ttdef"><b>Definition:</b> comprobarUserEnBD.php:6</div></div>
-<div class="ttc" id="acomprobar_user_en_b_d_8php_html_af2a6e9c1d879c14d4c6971fbe2d27a19"><div class="ttname"><a href="comprobar_user_en_b_d_8php.html#af2a6e9c1d879c14d4c6971fbe2d27a19">$resultadoComprobarUserEnDB</a></div><div class="ttdeci">$resultadoComprobarUserEnDB</div><div class="ttdef"><b>Definition:</b> comprobarUserEnBD.php:30</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Documentación de las variables</h2>
-<a id="af2a6e9c1d879c14d4c6971fbe2d27a19" name="af2a6e9c1d879c14d4c6971fbe2d27a19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2a6e9c1d879c14d4c6971fbe2d27a19">&#9670;&#160;</a></span>$resultadoComprobarUserEnDB</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$resultadoComprobarUserEnDB = <a class="el" href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af24cb10eafb44800aeb3d42a25782d68" name="af24cb10eafb44800aeb3d42a25782d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af24cb10eafb44800aeb3d42a25782d68">&#9670;&#160;</a></span>else</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">if ( $resultadoComprobarUserEnDB==true) else</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    echo <span class="stringliteral">&quot;El usuario no existe o las credenciales son incorrectas.&quot;</span></div>
+<p>Comprueba si el usuario existe en la base de datos</p>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean Devuelve true si el usuario existe y las credenciales son correctas, false si el usuario no existe o las credenciales son incorrectas </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    $resultadoComprobarLogin = <a class="code hl_function" href="comprobar_form_login_8php.html#a531c6cdd3a565dfffea7a2603df2930e">comprobarFormLogin</a>();</div>
+<div class="line"><span class="lineno">   13</span>    <span class="comment">//Llama a la funcion comprobarFormLogin()</span></div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span> ($resultadoComprobarLogin == <span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">   15</span>        $loginEmail = $_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>];</div>
+<div class="line"><span class="lineno">   16</span>        $loginpasswd = $_POST[<span class="stringliteral">&#39;loginPassword&#39;</span>];</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <a class="code hl_function" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(<span class="stringliteral">&quot;otro&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = <span class="stringliteral">&quot;SELECT * FROM usuarios WHERE email = &#39;$loginEmail&#39;;&quot;</span>;</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>-&gt;query(<a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a>);</div>
+<div class="line"><span class="lineno">   20</span>        $user = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>-&gt;fetch(PDO::FETCH_ASSOC);</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>-&gt;rowCount() &gt; 0 &amp;&amp; password_verify($loginpasswd, $user[<span class="stringliteral">&#39;passwd&#39;</span>])) {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="comment">//El usuario existe y las credenciales son correctas</span></div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   24</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="comment">//El usuario no existe o las credenciales son incorrectas</span></div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   29</span>        echo <span class="stringliteral">&quot;Los datos introducidos no son correctos&quot;</span>;</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="a_adopciones_8php_html_a06face0ef35c41554d8f4fe115363f58"><div class="ttname"><a href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a></div><div class="ttdeci">$resultado</div><div class="ttdef"><b>Definition:</b> Adopciones.php:85</div></div>
+<div class="ttc" id="a_adopciones_8php_html_a8b1625884d3b429a31ff07be097b7083"><div class="ttname"><a href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a></div><div class="ttdeci">$consulta</div><div class="ttdef"><b>Definition:</b> Adopciones.php:84</div></div>
+<div class="ttc" id="a_p_d_o_8php_html_a7258573d0f12873c87ec0ce410e64f9e"><div class="ttname"><a href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a></div><div class="ttdeci">conectarBD($permisos)</div><div class="ttdef"><b>Definition:</b> PDO.php:37</div></div>
+<div class="ttc" id="acomprobar_form_login_8php_html_a531c6cdd3a565dfffea7a2603df2930e"><div class="ttname"><a href="comprobar_form_login_8php.html#a531c6cdd3a565dfffea7a2603df2930e">comprobarFormLogin</a></div><div class="ttdeci">comprobarFormLogin()</div><div class="ttdef"><b>Definition:</b> comprobarFormLogin.php:8</div></div>
+<div class="ttc" id="aprocesar_baja_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> procesarBaja.php:3</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Jueves, 9 de Febrero de 2023 10:43:37 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

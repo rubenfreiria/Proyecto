@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "$aceilpr",
-  1: "acilpr",
-  2: "cl",
-  3: "$e"
+  0: "$_abcdefghilmnopqrstuvw",
+  1: "eops",
+  2: "p",
+  3: "acdeilmnoprsv",
+  4: "_abcdefghilmnpqrstuvw",
+  5: "$cdefilmosvw"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "variables"
+  1: "classes",
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables"
 };
 
 var indexSectionLabels =
 {
   0: "Todo",
-  1: "Archivos",
-  2: "Funciones",
-  3: "Variables"
+  1: "Clases",
+  2: "Namespaces",
+  3: "Archivos",
+  4: "Funciones",
+  5: "Variables"
 };
 

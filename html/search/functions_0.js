@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['comprobarformlogin_0',['comprobarFormLogin',['../comprobar_form_login_8php.html#a531c6cdd3a565dfffea7a2603df2930e',1,'comprobarFormLogin.php']]],
-  ['comprobaruserendb_1',['comprobarUserEnDB',['../comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb',1,'comprobarUserEnBD.php']]],
-  ['conectarbd_2',['conectarBD',['../_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e',1,'PDO.php']]]
+  ['_5f_5fconstruct_0',['__construct',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a29c8ddd01ae18fa75d02e14005efce22',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['_5f_5fdestruct_1',['__destruct',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#ae6d9332d9dab73c4745740248e117023',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['_5fmime_5ftypes_2',['_mime_types',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a53ddd3a03dd163fbc8397005770304ce',1,'PHPMailer::PHPMailer::PHPMailer']]]
 ];

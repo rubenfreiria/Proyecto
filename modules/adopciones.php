@@ -24,6 +24,7 @@
                 <?php
                 session_start();
                 include("../modules/comprobarNivelAcceso.php");
+                // Si el usuario esta logueado, se muestra su nombre y un boton para cerrar sesion, si no, se muestran los botones de login y registro
                 if (isset($_SESSION["userID"])) {
                     if (comprobarNivelAcceso() == "admin") {
                         echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
@@ -71,6 +72,8 @@
         <h1>Adopciones</h1>
         <div>
             <?php
+            // Si el usuario no esta logueado, se muestra un mensaje de error
+            // Si se realiza una adopcion, se muestra un mensaje de confirmacion
             if (isset($_SESSION["adopciones_nologed"])) {
                 echo "<h3 id='mensajeAdopciones'>" . $_SESSION["adopciones_nologed"] . "</h3>";
             } else if (isset($_SESSION["adopciones_enviado"])) {
@@ -81,6 +84,7 @@
         <main id="mainAdopciones">
             <?php
             $pdo = conectarBD("otro");
+            // Se cargan los animales de la base de datos y se muestran en la pagina
             $consulta = "SELECT nombre, genero, raza, fecha_nacimiento, foto FROM animales;";
             $resultado = $pdo->query($consulta);
             $datosAnimal = $resultado->fetchAll(PDO::FETCH_ASSOC);

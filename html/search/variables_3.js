@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['else_0',['else',['../index_8php.html#aff3e03e668f9a511227614a3d0740573',1,'else():&#160;index.php'],['../administracion_alta_8php.html#acfb94ad6c3cf26758c9d5874da399b03',1,'else():&#160;administracionAlta.php'],['../administracion_baja_8php.html#acfb94ad6c3cf26758c9d5874da399b03',1,'else():&#160;administracionBaja.php'],['../administracion_panel_8php.html#acfb94ad6c3cf26758c9d5874da399b03',1,'else():&#160;administracionPanel.php'],['../_adopciones_8php.html#aff3e03e668f9a511227614a3d0740573',1,'else():&#160;Adopciones.php'],['../alta_animal_8php.html#af214f22a2e8a6e31aae5c2e588154c78',1,'else():&#160;altaAnimal.php'],['../contacto_8php.html#aff3e03e668f9a511227614a3d0740573',1,'else():&#160;contacto.php'],['../donaciones_8php.html#ab4bf909c1527ed2fedd0bd63294ff659',1,'else():&#160;donaciones.php'],['../noticias_8php.html#aff3e03e668f9a511227614a3d0740573',1,'else():&#160;noticias.php'],['../veterinario_panel_8php.html#af214f22a2e8a6e31aae5c2e588154c78',1,'else():&#160;veterinarioPanel.php']]],
+  ['encoding_5f7bit_1',['ENCODING_7BIT',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a2360d0b8fbc95e93ed5fa0f28b70d8c0',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encoding_5f8bit_2',['ENCODING_8BIT',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#ad1e82a43b47e0badc99eebea0a5ac83f',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encoding_5fbase64_3',['ENCODING_BASE64',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a05746b54063edb7ee2547164d73c3d96',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encoding_5fbinary_4',['ENCODING_BINARY',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#adff19061934cb1a20740b5abee1920ca',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encoding_5fquoted_5fprintable_5',['ENCODING_QUOTED_PRINTABLE',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a55bfd5c0778354dc6e094805652c6de1',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encryption_5fsmtps_6',['ENCRYPTION_SMTPS',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a922eeb6827be0787c5cf824651bc494b',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['encryption_5fstarttls_7',['ENCRYPTION_STARTTLS',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a28679a6ee7d66572b5a4cc21f102e179',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['exit_8',['exit',['../cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e',1,'cerrarSesion.php']]]
+];

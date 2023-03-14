@@ -30,6 +30,7 @@
   <?php
   session_start();
   include("../modules/comprobarNivelAcceso.php");
+  // Si el usuario es admin o veterinario, se muestra el formulario de registro de animales, si no, se muestra un mensaje de que no tiene permisos para acceder a esta pagina
   if (comprobarNivelAcceso() == "admin" || comprobarNivelAcceso() == "veterinario") {
     echo "<div class='formFlexAltaAnimales'>
     <h1 id='h1AltaAnimal'>Formulario de Animales</h1>

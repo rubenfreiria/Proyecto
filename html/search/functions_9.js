@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['idnsupported_0',['idnSupported',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a6f89dbfadb825aaf98a4589da298a20e',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['iniciasesion_1',['iniciaSesion',['../inicia_sesion_8php.html#a324e7c48937761b258daab9a91291a8a',1,'iniciaSesion.php']]],
+  ['inlineimageexists_2',['inlineImageExists',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a1bfcf7a9b594b407859fe0a8cdc2392a',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['insertanimal_3',['insertAnimal',['../insert_animal_8php.html#a4adb5bce85e2c2e1da97ef0e60e490a0',1,'insertAnimal.php']]],
+  ['insertardonacion_4',['insertarDonacion',['../insertar_donacion_8php.html#af9b8133ea0fcee44ee31f937a83d4ed1',1,'insertarDonacion.php']]],
+  ['insertregisteradmin_5',['insertRegisterAdmin',['../insert_user_admin_en_b_d_8php.html#a26f56b74e6f6c79a574e5d3ee57134f0',1,'insertUserAdminEnBD.php']]],
+  ['insertregisteruser_6',['insertRegisterUser',['../insert_register_user_8php.html#adb46e1e6f64bd34a68c392746ef7c917',1,'insertRegisterUser.php']]],
+  ['iserror_7',['isError',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a4f473f38c0b61b399dd1331809c8097f',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['ishtml_8',['isHTML',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#aedd9844698b991335735d31ca6b634e6',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['ismail_9',['isMail',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#abf1825344fbbb71223ffd0a1cf069c6a',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['ispermittedpath_10',['isPermittedPath',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a70915efb9c7554c42158fa7aac3cc4dd',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['isqmail_11',['isQmail',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a97b8e092331ece317fbf9f54aa5f4a26',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['issendmail_12',['isSendmail',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a21b42f88f6fa9ca1866c5810a03e780c',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['isshellsafe_13',['isShellSafe',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a2dea4de035a3f823cb341c8488dffe75',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['issmtp_14',['isSMTP',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#ade9300b24162e685f7b3bb27d77ce523',1,'PHPMailer::PHPMailer::PHPMailer']]],
+  ['isvalidhost_15',['isValidHost',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a9396e56991c20b230e9f7a7fb54db64b',1,'PHPMailer::PHPMailer::PHPMailer']]]
+];

@@ -99,20 +99,22 @@ Funciones</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    3</span>{</div>
-<div class="line"><span class="lineno">    4</span>    <span class="keywordflow">if</span> (!empty($_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>]) &amp;&amp; !empty($_POST[<span class="stringliteral">&#39;loginPassword&#39;</span>])) {</div>
-<div class="line"><span class="lineno">    5</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">    6</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">    8</span>    }</div>
-<div class="line"><span class="lineno">    9</span>}</div>
+<p>Comprueba si los campos del formulario de login estan completos</p>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean Devuelve true si el formulario de login esta completo, false si falta algun campo por cubrir </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span> (!empty($_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>]) &amp;&amp; !empty($_POST[<span class="stringliteral">&#39;loginPassword&#39;</span>])) {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Jueves, 9 de Febrero de 2023 10:43:37 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

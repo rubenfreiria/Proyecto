@@ -81,8 +81,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5766efd703cef0e00bfc06b3f3acbe0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <a class="el" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(&quot;admin&quot;)</td></tr>
-<tr class="separator:a5766efd703cef0e00bfc06b3f3acbe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3e03e668f9a511227614a3d0740573"><td class="memItemLeft" align="right" valign="top">if(isset($_SESSION[&quot;userID&quot;]))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_adopciones_8php.html#aff3e03e668f9a511227614a3d0740573">else</a></td></tr>
+<tr class="separator:aff3e03e668f9a511227614a3d0740573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78b206ec704a9ad20d2dd5eb3429229"><td class="memItemLeft" align="right" valign="top">if(isset( $_SESSION[&quot;adopciones_nologed&quot;])) <a class="el" href="index_8php.html#aff3e03e668f9a511227614a3d0740573">else</a> if(isset($_SESSION[&quot;adopciones_enviado&quot;]))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_adopciones_8php.html#aa78b206ec704a9ad20d2dd5eb3429229">$pdo</a> = <a class="el" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(&quot;otro&quot;)</td></tr>
+<tr class="separator:aa78b206ec704a9ad20d2dd5eb3429229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b1625884d3b429a31ff07be097b7083"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = &quot;SELECT nombre, genero, raza, fecha_nacimiento, foto FROM animales;&quot;</td></tr>
 <tr class="separator:a8b1625884d3b429a31ff07be097b7083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06face0ef35c41554d8f4fe115363f58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = $pdo-&gt;query($consulta)</td></tr>
@@ -119,14 +121,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5766efd703cef0e00bfc06b3f3acbe0e" name="a5766efd703cef0e00bfc06b3f3acbe0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5766efd703cef0e00bfc06b3f3acbe0e">&#9670;&#160;</a></span>$pdo</h2>
+<a id="aa78b206ec704a9ad20d2dd5eb3429229" name="aa78b206ec704a9ad20d2dd5eb3429229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78b206ec704a9ad20d2dd5eb3429229">&#9670;&#160;</a></span>$pdo</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">$pdo = <a class="el" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(&quot;admin&quot;)</td>
+          <td class="memname">if(isset($_SESSION[&quot;adopciones_nologed&quot;])) <a class="el" href="index_8php.html#aff3e03e668f9a511227614a3d0740573">else</a> if (isset( $_SESSION[&quot;adopciones_enviado&quot;])) $pdo = <a class="el" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(&quot;otro&quot;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -147,10 +149,27 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aff3e03e668f9a511227614a3d0740573" name="aff3e03e668f9a511227614a3d0740573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3e03e668f9a511227614a3d0740573">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if (isset( $_SESSION[&quot;userID&quot;])) else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">{</div>
+<div class="line">                    echo <span class="stringliteral">&#39;&lt;a class=&quot;elementoMenu&quot; id=&quot;inicioSesionA&quot; href=&quot;./register.php&quot;&gt;Registrarse&lt;/a&gt;</span></div>
+<div class="line"><span class="stringliteral">                    &lt;a class=&quot;elementoMenu&quot; id=&quot;registerA&quot; href=&quot;./login.php&quot;&gt;Login&lt;/a&gt;&#39;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Jueves, 9 de Febrero de 2023 10:43:37 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

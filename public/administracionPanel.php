@@ -24,6 +24,7 @@
                 <?php
                 session_start();
                 include("../modules/comprobarNivelAcceso.php");
+                // Si el usuario esta logueado, se muestra su nombre y un boton para cerrar sesion, si no, se muestran los botones de login y registro
                 if (isset($_SESSION["userID"])) {
                     if (comprobarNivelAcceso() == "admin") {
                         echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
@@ -68,7 +69,7 @@
         </div>
     </section>
   <?php
-  
+  // Si el usuario es admin, se muestra el panel de administracion, si no, se muestra un mensaje de que no tiene permisos
   if (comprobarNivelAcceso() == "admin") {
     echo "<div id='containerPanelAdministracion'>
         <h1 id='administracionH1'>Panel de administracion</h1>

@@ -22,6 +22,7 @@
       </div>
       <div id='menuDerecha'>
         <?php
+        // Se comprueba si el usuario esta logueado, si lo esta, se muestra su nombre y un boton para cerrar sesion, si no, se muestran los botones de login y registro
         session_start();
         include('../modules/comprobarNivelAcceso.php');
         if (isset($_SESSION['userID'])) {
@@ -70,6 +71,8 @@
 
 
   <?php
+  //Se comprueba si el usuario esta logueado y si es admin, si lo esta se le muestra la tabla con los usuarios registrados. 
+  //Si no, se le muestra un mensaje de que no tiene permisos para acceder a esta pagina.
   if (comprobarNivelAcceso() == "admin") {
 
     echo "<div id='containerDarDeBaja'>

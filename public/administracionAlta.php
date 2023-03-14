@@ -28,6 +28,7 @@
   <?php
   include("../modules/comprobarNivelAcceso.php");
   session_start();
+  // Si el usuario es admin, se muestra el formulario de registro de usuarios, si no, se muestra un mensaje de que no tiene permisos para acceder a esta pagina
   if (comprobarNivelAcceso() == "admin") {
     echo "<div class='formFlex'>
         <div id='containerFormAdmin'>
@@ -102,7 +103,6 @@
     }
     echo "<button class='btnForm' type='submit'>Enviar</button>
           </form>
-          
         </div>
       </div>";
   } else {

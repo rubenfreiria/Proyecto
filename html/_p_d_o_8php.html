@@ -102,30 +102,38 @@ Funciones</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="comment">/* Usuarios disponibles para la base de datos, cada uno con</span></div>
-<div class="line"><span class="lineno">   37</span><span class="comment">        su fichero de configuracion */</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;admin&quot;</span>) {</div>
-<div class="line"><span class="lineno">   39</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracionAdmin.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracion.xsd&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2]);</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;veterinario&quot;</span>) {</div>
-<div class="line"><span class="lineno">   43</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracionVeterinario.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracion.xsd&quot;</span>);</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2]);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;otro&quot;</span>) {</div>
-<div class="line"><span class="lineno">   47</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracionOtro.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;./config/configuracion.xsd&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2]);</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>;</div>
-<div class="line"><span class="lineno">   51</span>    } <span class="keywordflow">catch</span> (PDOException $e) {</div>
-<div class="line"><span class="lineno">   52</span>        echo $e-&gt;getMessage();</div>
-<div class="line"><span class="lineno">   53</span>        exit();</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="line"><span class="lineno">   55</span>}</div>
-<div class="ttc" id="a_adopciones_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="_adopciones_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> Adopciones.php:19</div></div>
-<div class="ttc" id="a_p_d_o_8php_html_a2fa68a4043ed1d07a9058e7a2a74a1b8"><div class="ttname"><a href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a></div><div class="ttdeci">leer_config($fichero_config_BBDD, $esquema)</div><div class="ttdef"><b>Definition:</b> PDO.php:3</div></div>
+<p>Recibe una cadena con los permisos de la conexion que se desean Devuelve un objeto pdo listo para lanzar consultas a la base de datos con el usuario indicado</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$permisos</td><td>cadena con los permisos de la conexion que se desean</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>object objeto pdo listo para lanzar consultas a la base de datos con el usuario indicado </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="comment">// Usuarios disponibles para la base de datos, cada uno con su fichero de configuracion </span></div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;admin&quot;</span>) {</div>
+<div class="line"><span class="lineno">   42</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracionAdmin.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracion.xsd&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2], array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; <span class="stringliteral">&#39;SET NAMES utf8&#39;</span>));</div>
+<div class="line"><span class="lineno">   44</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;veterinario&quot;</span>) {</div>
+<div class="line"><span class="lineno">   45</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracionVeterinario.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracion.xsd&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2], array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; <span class="stringliteral">&#39;SET NAMES utf8&#39;</span>));</div>
+<div class="line"><span class="lineno">   47</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ($permisos === <span class="stringliteral">&quot;otro&quot;</span>) {</div>
+<div class="line"><span class="lineno">   48</span>            $res = <a class="code hl_function" href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a>(dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracionOtro.xml&quot;</span>, dirname(__FILE__) . <span class="stringliteral">&quot;/config/configuracion.xsd&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">new</span> PDO($res[0], $res[1], $res[2], array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; <span class="stringliteral">&#39;SET NAMES utf8&#39;</span>));</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>;</div>
+<div class="line"><span class="lineno">   52</span>    } <span class="keywordflow">catch</span> (PDOException $e) {</div>
+<div class="line"><span class="lineno">   53</span>        echo $e-&gt;getMessage();</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
+<div class="line"><span class="lineno">   55</span>    } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>}</div>
+<div class="ttc" id="a_p_d_o_8php_html_a2fa68a4043ed1d07a9058e7a2a74a1b8"><div class="ttname"><a href="_p_d_o_8php.html#a2fa68a4043ed1d07a9058e7a2a74a1b8">leer_config</a></div><div class="ttdeci">leer_config($fichero_config_BBDD, $esquema)</div><div class="ttdef"><b>Definition:</b> PDO.php:10</div></div>
+<div class="ttc" id="acerrar_sesion_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition:</b> cerrarSesion.php:9</div></div>
+<div class="ttc" id="aprocesar_baja_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> procesarBaja.php:3</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -154,40 +162,38 @@ Funciones</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
-<div class="line"><span class="lineno">    5</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    6</span><span class="comment">     * $fichero_config_BBDD es la ruta del fichero con los datos de conexión a la BBDD</span></div>
-<div class="line"><span class="lineno">    7</span><span class="comment">     * $esquema es la ruta del fichero XSD para validar la estructura del fichero anterior</span></div>
-<div class="line"><span class="lineno">    8</span><span class="comment">     * Si el fichero de configuración existe y es válido, devuelve un array con tres</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment">     * valores: la cadena de conexión, el nombre de usuario y la clave.</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment">     * Si no encuentra el fichero o no es válido, lanza una excepción.</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   12</span> </div>
-<div class="line"><span class="lineno">   13</span>    $config = <span class="keyword">new</span> DOMDocument();</div>
-<div class="line"><span class="lineno">   14</span>    $config-&gt;load($fichero_config_BBDD);</div>
-<div class="line"><span class="lineno">   15</span>    $res = $config-&gt;schemaValidate($esquema);</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">if</span> ($res === FALSE) {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Revise el fichero de configuración&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
-<div class="line"><span class="lineno">   19</span>    $datos = simplexml_load_file($fichero_config_BBDD);</div>
-<div class="line"><span class="lineno">   20</span>    $ip = $datos-&gt;xpath(<span class="stringliteral">&quot;//ip&quot;</span>);</div>
-<div class="line"><span class="lineno">   21</span>    $nombre = $datos-&gt;xpath(<span class="stringliteral">&quot;//nombre&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span>    $usu = $datos-&gt;xpath(<span class="stringliteral">&quot;//usuario&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>    $clave = $datos-&gt;xpath(<span class="stringliteral">&quot;//clave&quot;</span>);</div>
-<div class="line"><span class="lineno">   24</span>    $cad = sprintf(<span class="stringliteral">&quot;mysql:dbname=%s;host=%s&quot;</span>, $nombre[0], $ip[0]);</div>
-<div class="line"><span class="lineno">   25</span>    $resul = [];</div>
-<div class="line"><span class="lineno">   26</span>    $resul[] = $cad;</div>
-<div class="line"><span class="lineno">   27</span>    $resul[] = $usu[0];</div>
-<div class="line"><span class="lineno">   28</span>    $resul[] = $clave[0];</div>
-<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">return</span> $resul;</div>
-<div class="line"><span class="lineno">   30</span>}</div>
+<p>Lee el fichero de configuración y devuelve un array con los datos de la conexión</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$fichero_config_BBDD</td><td>fichero de configuracion XML </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$esquema</td><td>esquema de validacion XSD</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>array datos de la conexion </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    $config = <span class="keyword">new</span> DOMDocument();</div>
+<div class="line"><span class="lineno">   13</span>    $config-&gt;load($fichero_config_BBDD);</div>
+<div class="line"><span class="lineno">   14</span>    $res = $config-&gt;schemaValidate($esquema);</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span> ($res === FALSE) {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="stringliteral">&quot;Revise el fichero de configuración&quot;</span>);</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="line"><span class="lineno">   18</span>    $datos = simplexml_load_file($fichero_config_BBDD);</div>
+<div class="line"><span class="lineno">   19</span>    $ip = $datos-&gt;xpath(<span class="stringliteral">&quot;//ip&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>    $nombre = $datos-&gt;xpath(<span class="stringliteral">&quot;//nombre&quot;</span>);</div>
+<div class="line"><span class="lineno">   21</span>    $usu = $datos-&gt;xpath(<span class="stringliteral">&quot;//usuario&quot;</span>);</div>
+<div class="line"><span class="lineno">   22</span>    $clave = $datos-&gt;xpath(<span class="stringliteral">&quot;//clave&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>    $cad = sprintf(<span class="stringliteral">&quot;mysql:dbname=%s;host=%s&quot;</span>, $nombre[0], $ip[0]);</div>
+<div class="line"><span class="lineno">   24</span>    $resul = [$cad, $usu[0], $clave[0]];</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> $resul;</div>
+<div class="line"><span class="lineno">   26</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Jueves, 9 de Febrero de 2023 10:43:37 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>
