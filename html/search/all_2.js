@@ -17,7 +17,7 @@ var searchData=
   ['administracionalta_2ephp_14',['administracionAlta.php',['../administracion_alta_8php.html',1,'']]],
   ['administracionbaja_2ephp_15',['administracionBaja.php',['../administracion_baja_8php.html',1,'']]],
   ['administracionpanel_2ephp_16',['administracionPanel.php',['../administracion_panel_8php.html',1,'']]],
-  ['adopciones_2ephp_17',['Adopciones.php',['../_adopciones_8php.html',1,'']]],
+  ['adopciones_2ephp_17',['adopciones.php',['../adopciones_8php.html',1,'']]],
   ['altaanimal_2ephp_18',['altaAnimal.php',['../alta_animal_8php.html',1,'']]],
   ['alternativeexists_19',['alternativeExists',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a1a7ec7270ad4e8259c224251966f5867',1,'PHPMailer::PHPMailer::PHPMailer']]],
   ['attachall_20',['attachAll',['../class_p_h_p_mailer_1_1_p_h_p_mailer_1_1_p_h_p_mailer.html#a0c36e1bd1e5a83ad4edb4f7f3e0f211c',1,'PHPMailer::PHPMailer::PHPMailer']]],

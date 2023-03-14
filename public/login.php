@@ -38,6 +38,7 @@
           required />
         <?php
         session_start();
+        // Si ha habido un error en el login lo mostramos
         if (isset($_SESSION["error_login"])) {
           echo "<p id='infoLoginYRegister'>" . $_SESSION["error_login"] . "</p>";
           unset($_SESSION["error_login"]);

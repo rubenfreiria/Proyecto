@@ -107,11 +107,11 @@ Funciones</h2></td></tr>
 <div class="line"><span class="lineno">   13</span>        session_start();</div>
 <div class="line"><span class="lineno">   14</span>        $loginEmail = $_POST[<span class="stringliteral">&#39;loginEmail&#39;</span>];</div>
 <div class="line"><span class="lineno">   15</span>        <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a> = <a class="code hl_function" href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a>(<span class="stringliteral">&quot;otro&quot;</span>);</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = <span class="stringliteral">&quot;SELECT id, nombre FROM usuarios WHERE email = &#39;$loginEmail&#39;;&quot;</span>;</div>
-<div class="line"><span class="lineno">   17</span>        $ejecucion = <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>-&gt;query(<a class="code hl_variable" href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a>);</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = $ejecucion-&gt;fetch(PDO::FETCH_ASSOC);</div>
-<div class="line"><span class="lineno">   19</span>        $userID = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;id&quot;</span>];</div>
-<div class="line"><span class="lineno">   20</span>        $userNombre = <a class="code hl_variable" href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;nombre&quot;</span>];</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a> = <span class="stringliteral">&quot;SELECT id, nombre FROM usuarios WHERE email = &#39;$loginEmail&#39;;&quot;</span>;</div>
+<div class="line"><span class="lineno">   17</span>        $ejecucion = <a class="code hl_variable" href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a>-&gt;query(<a class="code hl_variable" href="adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a>);</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a> = $ejecucion-&gt;fetch(PDO::FETCH_ASSOC);</div>
+<div class="line"><span class="lineno">   19</span>        $userID = <a class="code hl_variable" href="adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;id&quot;</span>];</div>
+<div class="line"><span class="lineno">   20</span>        $userNombre = <a class="code hl_variable" href="adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a>[<span class="stringliteral">&quot;nombre&quot;</span>];</div>
 <div class="line"><span class="lineno">   21</span>        $_SESSION[<span class="stringliteral">&quot;userID&quot;</span>] = $userID;</div>
 <div class="line"><span class="lineno">   22</span>        $_SESSION[<span class="stringliteral">&quot;userNombre&quot;</span>] = $userNombre;</div>
 <div class="line"><span class="lineno">   23</span>        header(<span class="stringliteral">&quot;Location: ../index.php&quot;</span>);</div>
@@ -123,9 +123,9 @@ Funciones</h2></td></tr>
 <div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>();</div>
 <div class="line"><span class="lineno">   30</span>    }</div>
 <div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="a_adopciones_8php_html_a06face0ef35c41554d8f4fe115363f58"><div class="ttname"><a href="_adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a></div><div class="ttdeci">$resultado</div><div class="ttdef"><b>Definition:</b> Adopciones.php:85</div></div>
-<div class="ttc" id="a_adopciones_8php_html_a8b1625884d3b429a31ff07be097b7083"><div class="ttname"><a href="_adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a></div><div class="ttdeci">$consulta</div><div class="ttdef"><b>Definition:</b> Adopciones.php:84</div></div>
 <div class="ttc" id="a_p_d_o_8php_html_a7258573d0f12873c87ec0ce410e64f9e"><div class="ttname"><a href="_p_d_o_8php.html#a7258573d0f12873c87ec0ce410e64f9e">conectarBD</a></div><div class="ttdeci">conectarBD($permisos)</div><div class="ttdef"><b>Definition:</b> PDO.php:37</div></div>
+<div class="ttc" id="aadopciones_8php_html_a06face0ef35c41554d8f4fe115363f58"><div class="ttname"><a href="adopciones_8php.html#a06face0ef35c41554d8f4fe115363f58">$resultado</a></div><div class="ttdeci">$resultado</div><div class="ttdef"><b>Definition:</b> adopciones.php:89</div></div>
+<div class="ttc" id="aadopciones_8php_html_a8b1625884d3b429a31ff07be097b7083"><div class="ttname"><a href="adopciones_8php.html#a8b1625884d3b429a31ff07be097b7083">$consulta</a></div><div class="ttdeci">$consulta</div><div class="ttdef"><b>Definition:</b> adopciones.php:88</div></div>
 <div class="ttc" id="acerrar_sesion_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="cerrar_sesion_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition:</b> cerrarSesion.php:9</div></div>
 <div class="ttc" id="acomprobar_user_en_b_d_8php_html_a17c860f7c4a414186df49f6dab85e2eb"><div class="ttname"><a href="comprobar_user_en_b_d_8php.html#a17c860f7c4a414186df49f6dab85e2eb">comprobarUserEnDB</a></div><div class="ttdeci">comprobarUserEnDB()</div><div class="ttdef"><b>Definition:</b> comprobarUserEnBD.php:10</div></div>
 <div class="ttc" id="aprocesar_baja_8php_html_a5766efd703cef0e00bfc06b3f3acbe0e"><div class="ttname"><a href="procesar_baja_8php.html#a5766efd703cef0e00bfc06b3f3acbe0e">$pdo</a></div><div class="ttdeci">$pdo</div><div class="ttdef"><b>Definition:</b> procesarBaja.php:3</div></div>
@@ -135,7 +135,7 @@ Funciones</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 14 de Marzo de 2023 08:37:24 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generado el Martes, 14 de Marzo de 2023 13:23:48 para My Project por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

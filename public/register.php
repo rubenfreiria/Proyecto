@@ -44,6 +44,7 @@
           placeholder="Contaseña" required />
         <?php
         session_start();
+        // Sse muestra si ha habido un error en el registro o si se ha registrado correctamente
         if (isset($_SESSION["error_register"])) {
           echo "<p id='infoLoginYRegister'>" . $_SESSION["error_register"] . "</p>";
           unset($_SESSION["error_register"]);

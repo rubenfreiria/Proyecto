@@ -24,6 +24,7 @@
                 <?php
                 session_start();
                 include("../modules/comprobarNivelAcceso.php");
+                // Si hay una sesion iniciada mostramos el nombre del usuario y el boton de cerrar sesion, si no mostramos el boton de login y el de registrarse
                 if (isset($_SESSION["userID"])) {
                     if (comprobarNivelAcceso() == "admin") {
                         echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
@@ -73,6 +74,7 @@
         <main id="mainAdopciones">
 
             <?php
+            //Se cargan las noticias de la base de datos
             $pdo = conectarBD("otro");
             $orden = "DESC";
             if (isset($_GET['orden']) && ($_GET['orden'] == "asc" || $_GET['orden'] == "desc")) {

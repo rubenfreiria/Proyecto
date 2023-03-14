@@ -24,6 +24,8 @@
         <?php
         session_start();
         include("../modules/comprobarNivelAcceso.php");
+        //Comprobamos si hay una sesion iniciada y si el usuario es un administrador o un veterinario
+        // Si hay una sesion iniciada mostramos el nombre del usuario y el boton de cerrar sesion, si no mostramos el boton de login y el de registrarse
         if (isset($_SESSION["userID"])) {
           if (comprobarNivelAcceso() == "admin") {
             echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
@@ -69,6 +71,8 @@
     </div>
   </section>
   <?php
+  //Comprobamos si hay una sesion iniciada y si el usuario es un administrador o un veterinario, si no es asi mostramos un mensaje de que no tiene permisos para acceder a esta pagina
+  //Si es asi mostramos el panel de administracion
   if (comprobarNivelAcceso() == "admin" || comprobarNivelAcceso() == "veterinario") {
     echo "<div id='containerPanelAdministracion'>
         <h1 id='administracionH1'>Panel de veterinario</h1>

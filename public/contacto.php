@@ -27,6 +27,7 @@
                 <?php
                 session_start();
                 include("../modules/comprobarNivelAcceso.php");
+                // Comprobamos si el usuario esta logeado, si es asi mostramos su nombre y un boton para cerrar sesion, si no, mostramos un boton para iniciar sesion y otro para registrarse
                 if (isset($_SESSION["userID"])) {
                     if (comprobarNivelAcceso() == "admin") {
                         echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";

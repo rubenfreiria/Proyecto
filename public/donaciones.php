@@ -25,6 +25,7 @@
             <div id="menuDerecha">
                 <?php
                 session_start();
+                // Si el usuario esta logueado muestra el boton de cerrar sesion, si no muestra el boton de login y el de registrarse
                 if (isset($_SESSION["userID"])) {
                     echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
                         <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
@@ -55,7 +56,7 @@
         </div>
         <div id="contenidoDonacion">
             <?php
-
+            // Si se ha realizado una donacion con exito muestra un mensaje, si no muestra un mensaje de error
             if (isset($_SESSION["alta_donacion_exitosa"])) {
                 echo "<h3 id='mensajeAdopciones'>" . $_SESSION["alta_donacion_exitosa"] . "</h3><p>Muchas Gracias por su aportacion</p>";
                 unset($_SESSION["alta_donacion_exitosa"]);
@@ -65,7 +66,7 @@
             }
 
 
-
+            // Si el usuario esta logueado muestra el formulario de donacion, si no muestra un mensaje y los botones de login y registrarse
             if (isset($_SESSION["userID"])) {
                 echo '
                         <div id="formularioDonacion">
