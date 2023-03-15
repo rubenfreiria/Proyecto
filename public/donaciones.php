@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../media/logos/logoWhite.png" />
+    <link rel="stylesheet" href="../libraries/hamburguers/hamburguers.css">
     <link rel="stylesheet" href="../styles/styles.css" />
     <title>Donaciones</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -39,13 +40,27 @@
         </nav>
     </header>
     <section>
-        <div id="menuContainer">
-            <a class="menuLink" href="../public/adopciones.php">Adopciones</a>
-            <a class="menuLink" href="../public/donaciones.php">Donaciones</a>
-            <a class="menuLink" href="../public/noticias.php">Noticias</a>
-            <a class="menuLink" href="../public/contacto.php">Contacto</a>
-        </div>
-    </section>
+    <button class="panelr-btn hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="panelr is-active">
+      <nav class="menuReducido">
+        <a href="../index.php">Inicio</a>
+        <a href="./adopciones.php">Adopciones</a>
+        <a href="./donaciones.php">Donaciones</a>
+        <a href="./noticias.php">Noticias</a>
+        <a href="./contacto.php">Contacto</a>
+      </nav>
+    </aside>
+    <div id="menuContainer">
+      <a class="menuLink" href="./adopciones.php">Adopciones</a>
+      <a class="menuLink" href="./donaciones.php">Donaciones</a>
+      <a class="menuLink" href="./noticias.php">Noticias</a>
+      <a class="menuLink" href="./contacto.php">Contacto</a>
+    </div>
+  </section>
     <div id="mainDonacion">
         <h1>Donaciones</h1>
         <div>
@@ -104,6 +119,7 @@
     </footer>
     <button class="scroll-top-btn hidden">&#11014;</button>
     <script src="../js/scrollTopBtn.js"></script>
+    <script src="../js/menuResponsive.js" type="module"></script>
 </body>
 
 </html>
