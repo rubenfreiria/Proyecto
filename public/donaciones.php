@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <nav id="menu">
             <div id="menuIzquierda">
                 <img class="elementoMenu" id="logoHeader" src="../media/logos/logoWhite.png" />
@@ -26,14 +26,25 @@
             <div id="menuDerecha">
                 <?php
                 session_start();
-                // Si el usuario esta logueado muestra el boton de cerrar sesion, si no muestra el boton de login y el de registrarse
+                include("../modules/comprobarNivelAcceso.php");
+                // Comprobamos si el usuario esta logeado, si es asi mostramos su nombre y un boton para cerrar sesion, si no, mostramos un boton para iniciar sesion y otro para registrarse
                 if (isset($_SESSION["userID"])) {
+                    if (comprobarNivelAcceso() == "admin") {
+                        echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userAdmin.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
+                        echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./administracionPanel.php'>Administracion</a></button>";
+                    } elseif (comprobarNivelAcceso() == "veterinario") {
+                        echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/userVeterinario.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
+                        echo "<button id='btnPanelAdministracion' value='btnPanelAdministracion' class='elementoMenu'><a href='./veterinarioPanel.php'>Administracion</a></button>";
+                    } else {
+                        echo "<p id='nombreUserArriba'><img id='imgUserArriba' src='../media/logos/user.png' alt='Icono usuario'>" . $_SESSION['userNombre'] . "</p>";
+                    }
                     echo "<form id='formCerrarSesion' action='../modules/cerrarSesion.php' method='post'>
-                        <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
-                </form>";
+                    <button type='submit' id='btnCerrarSesion' value='btnCerrarSesion' class='elementoMenu'>Cerrar sesión</button>
+                    </form>";
+
                 } else {
-                    echo '<a class="elementoMenu" id="inicioSesionA" href="../public/register.php">Registrarse</a>
-                          <a class="elementoMenu" id="registerA" href="../public/login.php">Login</a>';
+                    echo '<a class="elementoMenu" id="inicioSesionA" href="./register.php">Registrarse</a>
+                    <a class="elementoMenu" id="registerA" href="./login.php">Login</a>';
                 }
                 ?>
             </div>
