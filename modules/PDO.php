@@ -25,7 +25,6 @@ function leer_config($fichero_config_BBDD, $esquema)
     return $resul;
 }
 
-
 /**
  * Recibe una cadena con los permisos de la conexion que se desean
  * Devuelve un objeto pdo listo para lanzar consultas a la base de datos con el usuario indicado
@@ -56,4 +55,4 @@ function conectarBD($permisos)
         $pdo = null;
     }
 }
-?>^^
+?>
