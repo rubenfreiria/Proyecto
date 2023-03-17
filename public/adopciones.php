@@ -77,8 +77,10 @@
             // Si se realiza una adopcion, se muestra un mensaje de confirmacion
             if (isset($_SESSION["adopciones_nologed"])) {
                 echo "<h3 id='mensajeAdopciones'>" . $_SESSION["adopciones_nologed"] . "</h3>";
+                unset($_SESSION["adopciones_nologed"]);
             } else if (isset($_SESSION["adopciones_enviado"])) {
                 echo "<h3 id='mensajeAdopciones'>" . $_SESSION["adopciones_enviado"] . "</h3>";
+                unset($_SESSION["adopciones_enviado"]);
             }
             ?>
         </div>
