@@ -88,26 +88,29 @@
             <?php
             $pdo = conectarBD("otro");
             // Se cargan los animales de la base de datos y se muestran en la pagina
-            $consulta = "SELECT nombre, genero, raza, fecha_nacimiento, foto FROM animales;";
+            $consulta = "SELECT nombre, genero, raza, fecha_nacimiento, foto, estado FROM animales;";
             $resultado = $pdo->query($consulta);
             $datosAnimal = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
             foreach ($datosAnimal as $animal) {
-                echo "<div class='animal'>";
-                echo "<div class='animalImagen'>";
-                echo "<img src=" . $animal['foto'] . " alt='foto_animal' />";
-                echo "</div>";
-                echo "<div class='animalInfo'>";
-                echo "<p id='animalNombre'><b>" . $animal['nombre'] . "</b></p>";
-                echo "<p>Raza: <b>" . $animal['raza'] . "</b></p>";
-                echo "<p>Sexo: <b>" . $animal['genero'] . "</b></p>";
-                echo "<p>Fecha nacimiento: <b>" . date('d - m - y', strtotime($animal['fecha_nacimiento'])) . "</b></p>";
-                echo "<form method='POST' action='../modules/mailAdopciones.php'>";
-                echo "<div id='divBtnAdoptar'>";
-                echo "<input id='btnFormAdopciones' type='submit' name='btnAdoptar' value='Adoptar'>";
-                echo "</div>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
+                if ($animal['estado'] === "disponible") {
+                    echo "<div class='animal'>";
+                    echo "<div class='animalImagen'>";
+                    echo "<img src=" . $animal['foto'] . " alt='foto_animal' />";
+                    echo "</div>";
+                    echo "<div class='animalInfo'>";
+                    echo "<p id='animalNombre'><b>" . $animal['nombre'] . "</b></p>";
+                    echo "<p>Raza: <b>" . $animal['raza'] . "</b></p>";
+                    echo "<p>Sexo: <b>" . $animal['genero'] . "</b></p>";
+                    echo "<p>Fecha nacimiento: <b>" . date('d - m - y', strtotime($animal['fecha_nacimiento'])) . "</b></p>";
+                    echo "<form method='POST' action='../modules/mailAdopciones.php'>";
+                    echo "<div id='divBtnAdoptar'>";
+                    echo "<input id='btnFormAdopciones' type='submit' name='btnAdoptar' value='Adoptar'>";
+                    echo "</div>";
+                    echo "</form>";
+                    echo "</div>";
+                    echo "</div>";
+                }
             }
 
             ?>

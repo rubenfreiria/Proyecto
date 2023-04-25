@@ -109,7 +109,6 @@
         echo '<td>' . $usuario['telefono'] . '</td>';
         echo '<td>' . $usuario['email'] . '</td>';
         echo "<td id='tdBorrar'><input type='checkbox' name='borrar[]' value='" . $usuario['id'] . "'></td>";
-
         echo '</tr>';
       }
     }

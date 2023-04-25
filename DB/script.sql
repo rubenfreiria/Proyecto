@@ -35,7 +35,8 @@ CREATE TABLE animales (
     especie ENUM('perro', 'gato') NOT NULL,
     raza VARCHAR(40) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
-    foto VARCHAR(200) NOT NULL
+    foto VARCHAR(200) NOT NULL,
+    estado ENUM('adoptado', 'disponible', 'baja') NOT NULL
 ) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla adopciones */
@@ -108,23 +109,23 @@ VALUES
     );
 
     /* Insert tabla animales */
-    INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimiento, foto) VALUES
-    ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "../media/fotosAdopciones/luna.jpg"),
-    ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "../media/fotosAdopciones/max.jpg"),
-    ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "../media/fotosAdopciones/buddy.jpg"),
-    ("Rocky", "macho", "perro", "Bulldog Francés", "2009-12-07", "../media/fotosAdopciones/rocky.jpg"),
-    ("Daisy", "hembra", "perro", "Beagle", "2010-09-13", "../media/fotosAdopciones/daisy.jpg"),
-    ("Charlie", "macho", "gato", "Siames", "2009-05-06", "../media/fotosAdopciones/charlie.jpg"),
-    ("Simba", "macho", "gato", "Persa", "2011-08-04", "../media/fotosAdopciones/simba.jpg"),
-    ("Sasha", "hembra", "gato", "Sphynx", "2008-12-01", "../media/fotosAdopciones/sasha.jpg"),
-    ("Mimi", "hembra", "gato", "Angora", "2011-01-26", "../media/fotosAdopciones/mimi.jpg"),
-    ("Tigre", "macho", "gato", "Maine Coon", "2009-04-08", "../media/fotosAdopciones/tigre.jpg"),
-    ("Nala", "hembra", "gato", "Siamés", "2008-02-23", "../media/fotosAdopciones/nala.jpg"),
-    ("Rufus", "macho", "perro", "Chihuahua", "2010-11-05", "../media/fotosAdopciones/rufus.jpg"),
-    ("Lola", "hembra", "perro", "Cocker Spaniel", "2011-07-12", "../media/fotosAdopciones/lola.jpg"),
-    ("Rock", "macho", "perro", "Doberman", "2007-12-31", "../media/fotosAdopciones/rock.jpg"),
-    ("Lulu", "hembra", "perro", "Poodle", "2008-06-06", "../media/fotosAdopciones/lulu.jpg"),
-    ("Bear", "macho", "perro", "San Bernardo", "2010-02-08", "../media/fotosAdopciones/bear.jpg");
+    INSERT INTO animales (nombre, genero, especie, raza, fecha_nacimiento, foto, estado) VALUES
+    ("Luna", "hembra", "perro", "Pastor Alemán", "2010-06-12", "../media/fotosAdopciones/luna.jpg", "adoptado"),
+    ("Max", "macho", "perro", "Golden Retriever", "2011-03-20", "../media/fotosAdopciones/max.jpg", "disponible"),
+    ("Buddy", "macho", "perro", "Labrador Retriever", "2008-01-17", "../media/fotosAdopciones/buddy.jpg", "adoptado"),
+    ("Rocky", "macho", "perro", "Bulldog Francés", "2009-12-07", "../media/fotosAdopciones/rocky.jpg", "adoptado"),
+    ("Daisy", "hembra", "perro", "Beagle", "2010-09-13", "../media/fotosAdopciones/daisy.jpg", "disponible"),
+    ("Charlie", "macho", "gato", "Siames", "2009-05-06", "../media/fotosAdopciones/charlie.jpg", "adoptado"),
+    ("Simba", "macho", "gato", "Persa", "2011-08-04", "../media/fotosAdopciones/simba.jpg", "baja"),
+    ("Sasha", "hembra", "gato", "Sphynx", "2008-12-01", "../media/fotosAdopciones/sasha.jpg", "adoptado"),
+    ("Mimi", "hembra", "gato", "Angora", "2011-01-26", "../media/fotosAdopciones/mimi.jpg", "disponible"),
+    ("Tigre", "macho", "gato", "Maine Coon", "2009-04-08", "../media/fotosAdopciones/tigre.jpg", "disponible"),
+    ("Nala", "hembra", "gato", "Siamés", "2008-02-23", "../media/fotosAdopciones/nala.jpg", "disponible"),
+    ("Rufus", "macho", "perro", "Chihuahua", "2010-11-05", "../media/fotosAdopciones/rufus.jpg", "disponible"),
+    ("Lola", "hembra", "perro", "Cocker Spaniel", "2011-07-12", "../media/fotosAdopciones/lola.jpg", "disponible"),
+    ("Rock", "macho", "perro", "Doberman", "2007-12-31", "../media/fotosAdopciones/rock.jpg", "disponible"),
+    ("Lulu", "hembra", "perro", "Poodle", "2008-06-06", "../media/fotosAdopciones/lulu.jpg", "disponible"),
+    ("Bear", "macho", "perro", "San Bernardo", "2010-02-08", "../media/fotosAdopciones/bear.jpg", "baja");
 
     /* Insert tabla adopciones */
     INSERT INTO adopciones (fecha_adopcion, id_animal, id_adoptante) VALUES 
