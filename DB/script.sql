@@ -60,7 +60,7 @@ CREATE TABLE donaciones (
 ) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Tabla de historial médico */
-/* Comprobar si se puede crear la clave con las dos foreing keys */
+/* Modificar para que se puedan guardar varios veterinario por cada historial medico */
 CREATE TABLE historial_medico (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fecha_visita DATE NOT NULL,
