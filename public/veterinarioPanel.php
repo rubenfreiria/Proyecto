@@ -84,6 +84,7 @@
           </div>
           <div class='containerBotonesFormAdministracion'>
             <a id='aPanelAdministracion' href='./altaAnimal.php'>Alta animal</a>
+            <a id='aPanelAdministracion' href='./historialMedico.php'>Consultar historial</a>
           </div>
         </div>
       </div>";

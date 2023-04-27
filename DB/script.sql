@@ -59,17 +59,15 @@ CREATE TABLE donaciones (
     FOREIGN KEY (donador_id) REFERENCES usuarios(id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-/* Tabla de historial médico */
-/* Modificar para que se puedan guardar varios veterinario por cada historial medico */
-CREATE TABLE historial_medico (
+/* Tabla de relaciones entre usuarios y animales */
+CREATE TABLE relacion_usuario_animal (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    fecha_visita DATE NOT NULL,
-    tratamiento VARCHAR(255) NOT NULL,
-    observaciones VARCHAR(255) NOT NULL,
+    id_usuario INT NOT NULL,
     id_animal INT NOT NULL,
-    id_veterinario INT NOT NULL,
-    FOREIGN KEY (id_animal) REFERENCES animales(id),
-    FOREIGN KEY (id_veterinario) REFERENCES usuarios(id)
+    fecha DATE NOT NULL,
+    tratamiento VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+    FOREIGN KEY (id_animal) REFERENCES animales(id)
 ) DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 /* Insert a tabla usuarios */
