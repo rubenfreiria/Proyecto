@@ -12,7 +12,7 @@
 <body>
     <div id="centrarTablaHistorial">
         <h1>Historial médico</h1>
-        <input type="text" id="buscador" placeholder="Buscar animal por nombre">
+        <input type="text" id="buscador" class="elementoForm" placeholder="Buscar animal por nombre">
         <div id="tablaHistorial">
             <?php
             // El código PHP para mostrar la tabla de animales permanece igual

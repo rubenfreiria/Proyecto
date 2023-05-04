@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="centrarFormulario">
+    <div id="centrarContainer">
         <h1>Modificar Animal</h1>
         <?php
         // Obtener el ID del animal a modificar
@@ -34,27 +34,37 @@
             exit;
         }
 
-        // Mostrar el formulario de modificación con los datos del animal
-        $fila = $resultado->fetch(PDO::FETCH_ASSOC);
-        echo "<form action='../modules/guardarModificacion.php' method='post'>
+       // Mostrar el formulario de modificación con los datos del animal
+$fila = $resultado->fetch(PDO::FETCH_ASSOC);
+echo "<div id='containerModificarAnimal'>
+        <form action='../modules/guardarModificacion.php' method='post'>
             <input type='hidden' name='id' value='" . $fila['id'] . "'>
             <label for='nombre'>Nombre:</label>
-            <input type='text' name='nombre' id='nombre' value='" . $fila['nombre'] . "'><br>
+            <input type='text' name='nombre' id='inputModificacionAnimal' value='" . $fila['nombre'] . "'><br>
             <label for='genero'>Género:</label>
-            <select name='genero' id='genero'>
-                <option value='Macho' " . ($fila['genero'] == 'Macho' ? 'selected' : '') . ">Macho</option>
-                <option value='Hembra' " . ($fila['genero'] == 'Hembra' ? 'selected' : '') . ">Hembra</option>
+            <select name='genero' id='inputModificacionAnimal'>
+                <option value='macho' " . ($fila['genero'] == 'macho' ? 'selected' : '') . ">Macho</option>
+                <option value='hembra' " . ($fila['genero'] == 'hembra' ? 'selected' : '') . ">Hembra</option>
             </select><br>
             <label for='especie'>Especie:</label>
-            <input type='text' name='especie' id='especie' value='" . $fila['especie'] . "'><br>
+            <select name='especie' id='inputModificacionAnimal'>
+                <option value='perro' " . ($fila['especie'] == 'perro' ? 'selected' : '') . ">Perro</option>
+                <option value='gato' " . ($fila['especie'] == 'gato' ? 'selected' : '') . ">Gato</option>
+            </select><br>
             <label for='raza'>Raza:</label>
-            <input type='text' name='raza' id='raza' value='" . $fila['raza'] . "'><br>
+            <input type='text' name='raza' id='inputModificacionAnimal' value='" . $fila['raza'] . "'><br>
             <label for='fecha_nacimiento'>Fecha de nacimiento:</label>
-            <input type='date' name='fecha_nacimiento' id='fecha_nacimiento' value='" . $fila['fecha_nacimiento'] . "'><br>
+            <input type='date' name='fecha_nacimiento' id='inputModificacionAnimal' value='" . $fila['fecha_nacimiento'] . "'><br>
             <label for='estado'>Estado:</label>
-            <input type='text' name='estado' id='estado' value='" . $fila['estado'] . "'><br>
-            <input type='submit' value='Guardar cambios'>
-        </form>";
+            <select name='estado' id='inputModificacionAnimal'>
+                <option value='adoptado' " . ($fila['estado'] == 'adoptado' ? 'selected' : '') . ">Adoptado</option>
+                <option value='disponible' " . ($fila['estado'] == 'disponible' ? 'selected' : '') . ">Disponible</option>
+                <option value='baja' " . ($fila['estado'] == 'baja' ? 'selected' : '') . ">Baja</option>
+            </select><br>
+            <input type='submit' id='inputEnviarModificacionAnimal' value='Guardar cambios'>
+        </form>
+    </div>";
+
         ?>
     </div>
 </body>

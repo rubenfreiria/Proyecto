@@ -1177,7 +1177,7 @@ thead {
   align-items: center;
   justify-content: center;
   max-width: 1400px;
-  margin-top: 14px;
+  margin-top: 8px;
 }
 
 #centrarTablaHistorial {
@@ -1185,12 +1185,14 @@ thead {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 #buscador {
-  margin-top: 16px;
-  width: 200px;
+  margin-top: 28px;
+  width: 240px;
+  font-size: 18px;
+  text-align: center;
 }
 
 td a {
@@ -1204,3 +1206,49 @@ td a:hover {
 }
 
 /* Fin estilos historial medico */
+
+/* Inicio estilos modificarAnimal*/
+
+#centrarContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+#containerModificarAnimal{
+  margin-top: 32px;
+  background-color: #dc191b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 570px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+}
+
+#inputModificacionAnimal{
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: solid 2px black;
+}
+
+#inputEnviarModificacionAnimal {
+  margin-top: 8px;
+  padding: 11px;
+  border-radius: 16px;
+  font-size: 15px;
+  border: none;
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+#inputEnviarModificacionAnimal:hover {
+  background-color: var(--ligth-red);
+}
+/* Fin estilos modificarAnimal */
