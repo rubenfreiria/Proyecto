@@ -44,7 +44,7 @@
                     echo "<td>" . $fila['fecha_nacimiento'] . "</td>";
                     echo "<td>" . $fila['estado'] . "</td>";
                     echo "<td><a href='../public/modificarAnimal.php?id=" . $fila['id'] . "'>Modificar</a></td>";
-                    echo "<td><a href='../public/historialMedico.php?id=" . $fila['id'] . "'>Historial medico</a></td>";
+                    echo "<td><a href='../public/consultarHistorialMedico.php?id=" . $fila['id'] . "'>Historial medico</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
