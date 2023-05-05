@@ -1252,3 +1252,66 @@ td a:hover {
   background-color: var(--ligth-red);
 }
 /* Fin estilos modificarAnimal */
+
+/* Inicio estilos consultarHistorialMedico */
+
+#visita{
+  width: 400px;
+  background-color: var(--main-grey);
+  border-radius: 6px;
+  margin-top: 12px;
+  padding: 16px;
+  border: solid 2px var(--ligth-red);
+  box-shadow: 2px 2px 2px 2px #f35e619c;
+}
+
+#formInsertarHistorial{
+  margin-top: 20px;
+  border-radius: 6px;
+  background-color: var(--main-grey);
+  width: 400px;
+  padding: 18px;
+  border: solid 2px var(--ligth-red);
+  box-shadow: 2px 2px 2px 2px #f35e619c;
+}
+
+#formInsertarHistorialMedico label{
+  margin-bottom: 6px;
+}
+
+#subeUsuario{
+  margin-top: -32px;
+}
+
+.inputFormHistorialMedico, #id_usuario{
+  width: 300px;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: solid 2px black;
+}
+
+#botonInsertarHistorialMedico{
+  margin-top: 16px;
+  width: 180px;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: solid 2px black;
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+#botonInsertarHistorialMedico:hover{
+  background-color: var(--ligth-red);
+}
+
+#bajarLabelHistorialMedico{
+  margin-top: 8px;
+}
+
+#tratamiento{
+  resize: none;
+  height: 70px;
+}
+/* Fin estilos consultarHistorialMedico */
