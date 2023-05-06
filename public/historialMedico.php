@@ -71,18 +71,21 @@
             <a class="menuLink" href="./contacto.php">Contacto</a>
         </div>
     </section>
-    <div id="centrarTablaHistorial">
+
+    <?php
+    if (comprobarNivelAcceso() == "admin" || comprobarNivelAcceso() == "veterinario") {
+        echo '<div id="centrarTablaHistorial">
         <h1>Historial médico</h1>
         <input type="text" id="buscador" class="elementoForm" placeholder="Buscar animal por nombre">
-        <div id="tablaHistorial">
-            <?php
-            // El código PHP para mostrar la tabla de animales permanece igual
-            $conexion = conectarBD("admin");
-            $consulta = "SELECT * FROM animales";
-            $resultado = $conexion->query($consulta);
+        <div id="tablaHistorial">';
 
-            if ($resultado->rowCount() > 0) {
-                echo "<table id='tablaHistorial'>
+        // El código PHP para mostrar la tabla de animales permanece igual
+        $conexion = conectarBD("admin");
+        $consulta = "SELECT * FROM animales";
+        $resultado = $conexion->query($consulta);
+
+        if ($resultado->rowCount() > 0) {
+            echo "<table id='tablaHistorial'>
                 <tr id='trRed'>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -94,25 +97,34 @@
                     <th>Modificar</th>
                     <th>Historial medico</th>
                 </tr>";
-                while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr>";
-                    echo "<td id='tdID'>" . $fila['id'] . "</td>";
-                    echo "<td>" . $fila['nombre'] . "</td>";
-                    echo "<td>" . $fila['genero'] . "</td>";
-                    echo "<td>" . $fila['especie'] . "</td>";
-                    echo "<td>" . $fila['raza'] . "</td>";
-                    echo "<td>" . $fila['fecha_nacimiento'] . "</td>";
-                    echo "<td>" . $fila['estado'] . "</td>";
-                    echo "<td><a href='../public/modificarAnimal.php?id=" . $fila['id'] . "'>Modificar</a></td>";
-                    echo "<td><a href='../public/consultarHistorialMedico.php?id=" . $fila['id'] . "'>Historial medico</a></td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "<p>No hay animales</p>";
+            while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                echo "<tr>";
+                echo "<td id='tdID'>" . $fila['id'] . "</td>";
+                echo "<td>" . $fila['nombre'] . "</td>";
+                echo "<td>" . $fila['genero'] . "</td>";
+                echo "<td>" . $fila['especie'] . "</td>";
+                echo "<td>" . $fila['raza'] . "</td>";
+                echo "<td>" . $fila['fecha_nacimiento'] . "</td>";
+                echo "<td>" . $fila['estado'] . "</td>";
+                echo "<td><a href='../public/modificarAnimal.php?id=" . $fila['id'] . "'>Modificar</a></td>";
+                echo "<td><a href='../public/consultarHistorialMedico.php?id=" . $fila['id'] . "'>Historial medico</a></td>";
+                echo "</tr>";
             }
-            ?>
-        </div>
+            echo "</table>";
+        } else {
+            echo "<p>No hay animales</p>";
+        }
+    } else {
+        echo "  <div id='containerFaltanPermisos'>
+                        <div id='faltanPermisos'>
+                            <h2 id='h2FaltanPermisos'>No tienes permisos para acceder a esta pagina</h2>
+                            <a id='aAzul' href='../index.php'>Volver a la pagina principal</a>
+                        </div>
+                    </div>";
+    }
+    ?>
+
+    </div>
     </div>
     <script src="../js/buscador.js"></script>
     <script src="../js/menuResponsive.js" type="module"></script>

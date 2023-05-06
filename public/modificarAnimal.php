@@ -71,32 +71,36 @@
             <a class="menuLink" href="./contacto.php">Contacto</a>
         </div>
     </section>
-    <div id="centrarContainer">
-        <h1>Modificar Animal</h1>
-        <?php
-        // Obtener el ID del animal a modificar
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-        } else {
-            echo "<p>No se ha especificado el ID del animal a modificar.</p>";
-            exit;
-        }
 
-        // Obtener los datos del animal a partir del ID
-        $conexion = conectarBD("admin");
-        $consulta = "SELECT * FROM animales WHERE id=:id";
-        $resultado = $conexion->prepare($consulta);
-        $resultado->bindParam(':id', $id);
-        $resultado->execute();
+    <?php
+    if (comprobarNivelAcceso() == "admin" || comprobarNivelAcceso() == "veterinario") {
+        ?>
+        <div id="centrarContainer">
+            <h1>Modificar Animal</h1>
+            <?php
+            // Obtener el ID del animal a modificar
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+            } else {
+                echo "<p>No se ha especificado el ID del animal a modificar.</p>";
+                exit;
+            }
 
-        if ($resultado->rowCount() == 0) {
-            echo "<p>No se encontró el animal con el ID especificado.</p>";
-            exit;
-        }
+            // Obtener los datos del animal a partir del ID
+            $conexion = conectarBD("admin");
+            $consulta = "SELECT * FROM animales WHERE id=:id";
+            $resultado = $conexion->prepare($consulta);
+            $resultado->bindParam(':id', $id);
+            $resultado->execute();
 
-        // Mostrar el formulario de modificación con los datos del animal
-        $fila = $resultado->fetch(PDO::FETCH_ASSOC);
-        echo "<div id='containerModificarAnimal'>
+            if ($resultado->rowCount() == 0) {
+                echo "<p>No se encontró el animal con el ID especificado.</p>";
+                exit;
+            }
+
+            // Mostrar el formulario de modificación con los datos del animal
+            $fila = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo "<div id='containerModificarAnimal'>
         <form action='../modules/guardarModificacion.php' method='post'>
             <input type='hidden' name='id' value='" . $fila['id'] . "'>
             <label for='nombre'>Nombre:</label>
@@ -125,8 +129,18 @@
         </form>
     </div>";
 
-        ?>
-    </div>
+            ?>
+        </div>
+        <?php
+    } else {
+        echo "  <div id='containerFaltanPermisos'>
+                            <div id='faltanPermisos'>
+                                <h2 id='h2FaltanPermisos'>No tienes permisos para acceder a esta pagina</h2>
+                                <a id='aAzul' href='../index.php'>Volver a la pagina principal</a>
+                            </div>
+                        </div>";
+    }
+    ?>
     <script src="../js/menuResponsive.js" type="module"></script>
 </body>
 
